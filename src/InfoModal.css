@@ -1,0 +1,27 @@
+.infoModal a {
+	color: var(--text-color);
+}
+
+.infoModal a:hover {
+	text-decoration-thickness: 3px;
+}
+
+.infoModal-desc {
+	font-size: 1.25rem;
+	padding: 1rem 0;
+	text-align: center;
+}
+
+.infoModal-credits {
+	opacity: 0.8;
+}
+
+.infoModal-historyTitle {
+	font-size: 1.5rem;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.infoModal-historyTitle .firstLetter:first-letter {
+	background-color: var(--yellow);
+}

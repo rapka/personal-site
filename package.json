@@ -1,0 +1,67 @@
+{
+  "name": "personal-site",
+  "version": "1.1.4",
+  "description": "A simple app for finding all your daily Wordle games!",
+  "scripts": {
+    "clean": "rm -rf build/",
+    "build": "npm run build:js && npm run build:md",
+    "build:md": "node ./util/generateReadme.js",
+    "build:js": "NODE_ENV=production rollup -c rollup.config.js",
+    "dev": "NODE_ENV=development rollup -c rollup.config.js -w",
+    "start": "npm run dev",
+    "createCname": "touch build/CNAME && echo 'wordlebookmarks.app' > build/CNAME",
+    "push": "git subtree split --prefix build -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages",
+    "deploy": "npm run clean && npm run build && npm run createCname && npm run push",
+    "postversion": "npm run build && git push && git push --tags && npm run deploy",
+    "flickr": "node scripts/processFlickr.mjs",
+    "format": "prettier-eslint \"{src,scripts}/**/*.{js,mjs,json}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rapka/personal-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rapka/personal-site/issues"
+  },
+  "homepage": "https://github.com/rapka/personal-site#readme",
+  "dependencies": {
+    "array-move": "^4.0.0",
+    "classnames": "^2.3.1",
+    "lodash": "^4.17.21",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-dnd": "^15.1.1",
+    "react-dnd-html5-backend": "^15.1.2",
+    "react-dnd-touch-backend": "^15.1.1",
+    "react-dom": "^17.0.2",
+    "react-html-parser": "^2.0.2",
+    "react-modal": "^3.15.1",
+    "react-router-dom": "^6.3.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^21.0.2",
+    "@rollup/plugin-html": "^0.2.4",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "@rollup/plugin-replace": "^4.0.0",
+    "@rollup/plugin-url": "^6.1.0",
+    "@svgr/rollup": "^6.2.1",
+    "autoprefixer": "^10.4.4",
+    "node-fetch": "^3.2.4",
+    "prettier": "^2.6.2",
+    "prettier-eslint-cli": "^6.0.1",
+    "rollup": "^2.70.1",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-polyfill-node": "^0.8.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-serve": "^1.1.0",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}

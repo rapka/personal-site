@@ -1,0 +1,121 @@
+.clickableImage {
+  margin: 4px;
+  object-fit: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clickableImage-container {
+  object-fit: cover;
+  transition: transform 200ms ease-in-out;
+  transform: scale(1.0);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: none;
+}
+
+.clickableImage-container:hover {
+  transform: scale(1.3);
+  z-index: 10;
+  animation-name: slide;
+  animation-delay: 0.1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+}
+
+@keyframes slide {
+  0% {
+    transform: scale(1.3) translate(0px, 0px) rotate(0deg);
+  }
+
+  20% {
+    transform: scale(1.3) translate(3px, 3px) rotate(0.3deg);
+  }
+
+  40% {
+    transform: scale(1.3) translate(0px, 6px) rotate(-0.3deg);
+  }
+
+  80% {
+    transform: scale(1.3) translate(-3px, 3px)
+  }
+
+  100% {
+    transform: scale(1.3) translate(0px, 0px) rotate(0deg);
+  }
+}
+
+.clickableImage-container:hover .clickableImage-focusedOverlay {
+  opacity: 1;
+}
+
+.clickableImage .clickableImage-img {
+  width: 100%;
+  /*height: 300px;*/
+  display: block;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+.clickableImage-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 -3px;
+  text-align: center;
+}
+
+.clickableImage-title::before {
+  font-size: ;
+  content: '\201C';
+  letter-spacing: 3px;
+}
+
+.clickableImage-title::after {
+  content: '\201D';
+  letter-spacing: -4px;
+}
+
+.clickableImage-title::before,
+.clickableImage-title::after {
+  font-family: Times, 'Times New Roman', Georgia, serif;
+  font-size: 36px;
+  opacity: 0.75;
+  /*color: transparent;*/
+  /*text-shadow: 0 0 2px #000;*/
+  /*margin: 0 -3px;*/
+}
+
+.clickableImage-description {
+  font-size: 14px;
+}
+
+.clickableImage-focusedOverlay {
+  backdrop-filter: blur(4px);
+  object-fit: cover;
+  opacity: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.clickableImage-fullSize {
+  cursor: pointer;
+}
+
+.clickableImage-fullSize:hover {
+  text-decoration: underline;
+}

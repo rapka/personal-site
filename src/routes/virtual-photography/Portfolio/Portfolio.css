@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Red Hat';
+  src: url('/public/redhat.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.react-portfolio {
+  font-family: 'Red Hat';
+  font-size: 24px;
+  margin: 0 auto;
+  z-index: 0;
+}
+
+.reactPortfolio-modal {
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  /*pointer-events: none;*/
+  z-index: 10;
+}

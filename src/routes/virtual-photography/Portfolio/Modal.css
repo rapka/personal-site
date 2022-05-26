@@ -1,0 +1,38 @@
+.reactPortfolio-modalContents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reactPortfolio-modalImageContainer {
+  position: relative;
+}
+
+
+.reactPortfolio-modalImage,
+.reactPortfolio-modalImageGlow {
+  max-width: 100%;
+}
+.reactPortfolio-modalImage {
+  z-index: 2;
+}
+
+.reactPortfolio-modalImageGlow {
+  filter: blur(4px);
+  transform: scale(1.02);
+  opacity: 0.5;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+}
+
+.reactPortfolio-modalImageText {
+  z-index: 2;
+  margin-bottom: 1rem;
+}
+
+.ReactModal__Overlay {
+  z-index: 10;
+  background-color: rgba(10, 10, 10, 0.6) !important;
+}
