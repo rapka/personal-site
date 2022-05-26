@@ -4,9 +4,7 @@
   "description": "A simple app for finding all your daily Wordle games!",
   "scripts": {
     "clean": "rm -rf build/",
-    "build": "npm run build:js && npm run build:md",
-    "build:md": "node ./util/generateReadme.js",
-    "build:js": "NODE_ENV=production rollup -c rollup.config.js",
+    "build": "NODE_ENV=production rollup -c rollup.config.js",
     "dev": "NODE_ENV=development rollup -c rollup.config.js -w",
     "start": "npm run dev",
     "createCname": "touch build/CNAME && echo 'wordlebookmarks.app' > build/CNAME",
