@@ -7,7 +7,7 @@
     "build": "NODE_ENV=production rollup -c rollup.config.js",
     "dev": "NODE_ENV=development rollup -c rollup.config.js -w",
     "start": "npm run dev",
-    "createCname": "touch build/CNAME && echo 'wordlebookmarks.app' > build/CNAME",
+    "createCname": "touch build/CNAME && echo 'collegehill.io' > build/CNAME",
     "push": "git subtree split --prefix build -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages",
     "deploy": "npm run clean && npm run build && npm run createCname && npm run push",
     "postversion": "npm run build && git push && git push --tags && npm run deploy",
