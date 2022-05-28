@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -7,15 +7,13 @@ import './ClickableImage.css';
 function ClickableImage({
   url, thumbnail, title, description, isFocused, onFocus, openModal,
 }) {
-
-
   const imgUrl = thumbnail || url;
 
   const onClick = (event) => {
     event.preventDefault();
     onFocus();
     openModal();
-  }
+  };
 
   const focusedOverlay = (
     <div className="clickableImage-focusedOverlay">
@@ -24,13 +22,12 @@ function ClickableImage({
     </div>
   );
 
-
   return (
     <div className={classNames('clickableImage', { isFocused })}>
       <div className="clickableImage-container">
-      <img src={imgUrl} className="clickableImage-img" style={{ backgroundImage: imgUrl }}/>
-      {false && <div className="clickableImage-img" style={{ backgroundImage: `url(${imgUrl})` }} />}
-      {true && focusedOverlay}
+        <img src={imgUrl} className="clickableImage-img" style={{ backgroundImage: imgUrl }} />
+        {false && <div className="clickableImage-img" style={{ backgroundImage: `url(${imgUrl})` }} />}
+        {true && focusedOverlay}
       </div>
     </div>
   );

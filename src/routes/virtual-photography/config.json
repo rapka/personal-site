@@ -675,8 +675,9 @@
     }
   ]
 },
-    "division-2": {
+  "division-2": {
   "title": "The Division Photo Mode",
+  "description": "Captured @ 1440p using the in-game Photo Mode. Interestingly, the mode does not use standard aspect ratios.",
   "year": 2021,
   "images": [
     {
@@ -1112,368 +1113,297 @@
   "images": [
     {
       "url": "https://live.staticflickr.com/1677/23592508574_241aed6003_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1677/23592508574_b9f10c0310.jpg",
-      "title": "2014-02-28_00090"
-    },
+      "thumbnail": "https://live.staticflickr.com/1677/23592508574_b9f10c0310.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1510/24112671412_1bbc890758_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1510/24112671412_bdc278295e.jpg",
-      "title": "2014-03-03_00006"
-    },
+      "thumbnail": "https://live.staticflickr.com/1510/24112671412_bdc278295e.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1647/24138147971_fe6a21e0c5_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1647/24138147971_e764ef000c.jpg",
-      "title": "2014-03-03_00009"
-    },
+      "thumbnail": "https://live.staticflickr.com/1647/24138147971_e764ef000c.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1603/23925142030_561f99010f_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1603/23925142030_b31e143640.jpg",
-      "title": "2014-03-03_00012"
-    },
+      "thumbnail": "https://live.staticflickr.com/1603/23925142030_b31e143640.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1564/24138147881_f8829fb996_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1564/24138147881_83ea0833f8.jpg",
-      "title": "2014-03-03_00018"
-    },
+      "thumbnail": "https://live.staticflickr.com/1564/24138147881_83ea0833f8.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1551/23592508324_5d66f66518_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1551/23592508324_0196b3a229.jpg",
-      "title": "2014-03-04_00023"
-    },
+      "thumbnail": "https://live.staticflickr.com/1551/23592508324_0196b3a229.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1673/23852898809_4e96b64823_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1673/23852898809_972aa3bc3d.jpg",
-      "title": "2014-03-04_00045"
-    },
+      "thumbnail": "https://live.staticflickr.com/1673/23852898809_972aa3bc3d.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1589/23593907563_af659d9ecf_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1589/23593907563_9f2ffb771b.jpg",
-      "title": "2014-03-04_00046"
-    },
+      "thumbnail": "https://live.staticflickr.com/1589/23593907563_9f2ffb771b.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1449/23925141820_9fd1bcf696_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1449/23925141820_0cc162eb13.jpg",
-      "title": "2014-03-04_00049"
-    },
+      "thumbnail": "https://live.staticflickr.com/1449/23925141820_0cc162eb13.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1496/24194645226_c34a39f468_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1496/24194645226_ec87e47913.jpg",
-      "title": "2014-03-04_00058"
-    },
+      "thumbnail": "https://live.staticflickr.com/1496/24194645226_ec87e47913.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1670/23852898639_ac1a025b51_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1670/23852898639_4290c5ca8f.jpg",
-      "title": "2014-03-04_00060"
-    },
+      "thumbnail": "https://live.staticflickr.com/1670/23852898639_4290c5ca8f.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1465/24220731755_18c7c5e836_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1465/24220731755_af5a1211dd.jpg",
-      "title": "2014-03-04_00069"
-    },
+      "thumbnail": "https://live.staticflickr.com/1465/24220731755_af5a1211dd.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1642/24138147481_6bcceed314_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1642/24138147481_68f296443d.jpg",
-      "title": "2014-03-04_00072"
-    },
+      "thumbnail": "https://live.staticflickr.com/1642/24138147481_68f296443d.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1627/23925141680_3199beb7fe_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1627/23925141680_278fa8e5be.jpg",
-      "title": "2014-03-04_00076"
-    },
+      "thumbnail": "https://live.staticflickr.com/1627/23925141680_278fa8e5be.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1486/23592507904_f3f34d2842_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1486/23592507904_7248eed106.jpg",
-      "title": "2014-03-04_00079"
-    },
+      "thumbnail": "https://live.staticflickr.com/1486/23592507904_7248eed106.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1608/24220731595_5535f6f406_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1608/24220731595_c9606184ee.jpg",
-      "title": "2014-03-05_00005"
-    },
+      "thumbnail": "https://live.staticflickr.com/1608/24220731595_c9606184ee.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1580/23592507724_bf55279d28_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1580/23592507724_a5e731663a.jpg",
-      "title": "2014-03-05_00017"
-    },
+      "thumbnail": "https://live.staticflickr.com/1580/23592507724_a5e731663a.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1479/23925141430_0f06e3a115_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1479/23925141430_70f0fca43c.jpg",
-      "title": "2014-03-05_00019"
-    },
+      "thumbnail": "https://live.staticflickr.com/1479/23925141430_70f0fca43c.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1539/23593907113_2a81d3d9c1_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1539/23593907113_85c630484e.jpg",
-      "title": "2014-06-18_00005"
-    },
+      "thumbnail": "https://live.staticflickr.com/1539/23593907113_85c630484e.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1504/23593907033_7a632fc923_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1504/23593907033_5c5087e2c5.jpg",
-      "title": "2014-06-18_00016"
-    },
+      "thumbnail": "https://live.staticflickr.com/1504/23593907033_5c5087e2c5.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1464/23592507524_6b1764d185_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1464/23592507524_44551a2a0a.jpg",
-      "title": "2014-06-18_00019"
-    },
+      "thumbnail": "https://live.staticflickr.com/1464/23592507524_44551a2a0a.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1620/23852897959_ce33a61d30_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1620/23852897959_acd0d7709a.jpg",
-      "title": "2014-06-18_00028"
-    },
+      "thumbnail": "https://live.staticflickr.com/1620/23852897959_acd0d7709a.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1533/23593906883_5a9702c883_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1533/23593906883_f1fb82c3dd.jpg",
-      "title": "2014-06-21_00023"
-    },
+      "thumbnail": "https://live.staticflickr.com/1533/23593906883_f1fb82c3dd.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1698/24112670192_3123a5f50d_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1698/24112670192_ce90ee4211.jpg",
-      "title": "2014-06-21_00024"
-    },
+      "thumbnail": "https://live.staticflickr.com/1698/24112670192_ce90ee4211.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1681/23593906613_ac393c5fd3_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1681/23593906613_1b1db287a7.jpg",
-      "title": "2014-06-21_00029"
-    },
+      "thumbnail": "https://live.staticflickr.com/1681/23593906613_1b1db287a7.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1627/23592506944_0d6a2a4c94_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1627/23592506944_79fe7afe19.jpg",
-      "title": "2014-06-21_00037"
-    },
+      "thumbnail": "https://live.staticflickr.com/1627/23592506944_79fe7afe19.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1526/24112669892_68d49627c7_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1526/24112669892_2487a1d68b.jpg",
-      "title": "2014-08-02_00002"
-    },
+      "thumbnail": "https://live.staticflickr.com/1526/24112669892_2487a1d68b.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1549/23925140580_e1cf4170fb_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1549/23925140580_a2b9bbebbd.jpg",
-      "title": "2014-08-02_00022"
-    },
+      "thumbnail": "https://live.staticflickr.com/1549/23925140580_a2b9bbebbd.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1711/24112669822_f15ed2f852_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1711/24112669822_1e8f8d737c.jpg",
-      "title": "2014-08-15_00010"
-    },
+      "thumbnail": "https://live.staticflickr.com/1711/24112669822_1e8f8d737c.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1485/23592506684_0dfee42bcc_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1485/23592506684_6d1eff90ac.jpg",
-      "title": "2014-08-15_00024"
-    },
+      "thumbnail": "https://live.staticflickr.com/1485/23592506684_6d1eff90ac.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1451/23592506654_19aff1737b_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1451/23592506654_526bcb7b54.jpg",
-      "title": "2014-08-15_00034"
-    },
+      "thumbnail": "https://live.staticflickr.com/1451/23592506654_526bcb7b54.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1620/23592506564_d805b41b7f_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1620/23592506564_dd63a89a23.jpg",
-      "title": "2014-08-15_00037"
-    },
+      "thumbnail": "https://live.staticflickr.com/1620/23592506564_dd63a89a23.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1719/24194643536_6551874af2_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1719/24194643536_7cb55999a0.jpg",
-      "title": "2014-08-15_00038"
-    },
+      "thumbnail": "https://live.staticflickr.com/1719/24194643536_7cb55999a0.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1512/24112669582_f20a70c4bd_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1512/24112669582_31bff8d004.jpg",
-      "title": "2014-08-15_00072"
-    },
+      "thumbnail": "https://live.staticflickr.com/1512/24112669582_31bff8d004.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1671/23592506414_7f91348af3_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1671/23592506414_84f5947fea.jpg",
-      "title": "2014-08-23_00010"
-    },
+      "thumbnail": "https://live.staticflickr.com/1671/23592506414_84f5947fea.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1582/24138146261_02bd4b8658_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1582/24138146261_849f9b6514.jpg",
-      "title": "2014-08-23_00019"
-    },
+      "thumbnail": "https://live.staticflickr.com/1582/24138146261_849f9b6514.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1447/24138146181_c8a4a8767e_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1447/24138146181_06bb812d2c.jpg",
-      "title": "2014-08-23_00043"
-    },
+      "thumbnail": "https://live.staticflickr.com/1447/24138146181_06bb812d2c.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1668/23925139850_5570e7f36b_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1668/23925139850_8a075ae7ef.jpg",
-      "title": "2014-08-23_00053"
-    },
+      "thumbnail": "https://live.staticflickr.com/1668/23925139850_8a075ae7ef.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1537/24138145971_c73f4f4163_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1537/24138145971_111e4dd336.jpg",
-      "title": "2014-08-23_00066"
-    },
+      "thumbnail": "https://live.staticflickr.com/1537/24138145971_111e4dd336.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1560/23925139620_7af7a63db1_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1560/23925139620_e5656a2bf2.jpg",
-      "title": "2014-08-23_00069"
-    },
+      "thumbnail": "https://live.staticflickr.com/1560/23925139620_e5656a2bf2.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1674/24112669122_1f41e41a30_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1674/24112669122_ee32204a37.jpg",
-      "title": "2014-08-23_00075"
-    },
+      "thumbnail": "https://live.staticflickr.com/1674/24112669122_ee32204a37.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1627/23925139490_ce2a7aefa9_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1627/23925139490_d3f92d6de9.jpg",
-      "title": "2014-08-23_00081"
-    },
+      "thumbnail": "https://live.staticflickr.com/1627/23925139490_d3f92d6de9.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1711/23592505774_d9481f2bb3_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1711/23592505774_6689450c9a.jpg",
-      "title": "2014-09-13_00016"
-    },
+      "thumbnail": "https://live.staticflickr.com/1711/23592505774_6689450c9a.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1468/24112668812_76527b0d92_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1468/24112668812_1ae49b0150.jpg",
-      "title": "2014-09-13_00029"
-    },
+      "thumbnail": "https://live.staticflickr.com/1468/24112668812_1ae49b0150.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1681/24112668742_cd91b9ebfe_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1681/24112668742_b30868260b.jpg",
-      "title": "2014-09-13_00041"
-    },
+      "thumbnail": "https://live.staticflickr.com/1681/24112668742_b30868260b.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1626/24220729435_7c358d53e6_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1626/24220729435_4882030d7d.jpg",
-      "title": "2014-09-13_00043"
-    },
+      "thumbnail": "https://live.staticflickr.com/1626/24220729435_4882030d7d.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1446/23925139070_48790145eb_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1446/23925139070_feab2e0622.jpg",
-      "title": "2014-09-13_00049"
-    },
+      "thumbnail": "https://live.staticflickr.com/1446/23925139070_feab2e0622.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1603/24194642616_0e4fb13a57_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1603/24194642616_60721a10e0.jpg",
-      "title": "2014-09-13_00060"
-    },
+      "thumbnail": "https://live.staticflickr.com/1603/24194642616_60721a10e0.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1515/24220729245_f6220bd458_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1515/24220729245_70bc5eae95.jpg",
-      "title": "2014-09-14_00022"
-    },
+      "thumbnail": "https://live.staticflickr.com/1515/24220729245_70bc5eae95.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1630/23592505424_a542ac536e_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1630/23592505424_c6ac09f5ca.jpg",
-      "title": "2014-09-20_00013"
-    },
+      "thumbnail": "https://live.staticflickr.com/1630/23592505424_c6ac09f5ca.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1558/24194642366_3a1002e82f_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1558/24194642366_d25d058e9d.jpg",
-      "title": "2014-09-20_00016"
-    },
+      "thumbnail": "https://live.staticflickr.com/1558/24194642366_d25d058e9d.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1716/24112668322_555cffae7d_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1716/24112668322_57f7e837d2.jpg",
-      "title": "2014-09-20_00017"
-    },
+      "thumbnail": "https://live.staticflickr.com/1716/24112668322_57f7e837d2.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1530/23852896239_f54265e234_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1530/23852896239_ea87d074b2.jpg",
-      "title": "2014-09-20_00030"
-    },
+      "thumbnail": "https://live.staticflickr.com/1530/23852896239_ea87d074b2.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1585/24194642256_411e10e8af_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1585/24194642256_9a8564b28c.jpg",
-      "title": "2014-09-20_00039"
-    },
+      "thumbnail": "https://live.staticflickr.com/1585/24194642256_9a8564b28c.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1570/23593905003_df9f64ca53_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1570/23593905003_5f5970d5da.jpg",
-      "title": "2014-09-20_00049"
-    },
+      "thumbnail": "https://live.staticflickr.com/1570/23593905003_5f5970d5da.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1551/24194642146_04886af76c_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1551/24194642146_691f845031.jpg",
-      "title": "2014-09-20_00068"
-    },
+      "thumbnail": "https://live.staticflickr.com/1551/24194642146_691f845031.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1518/23592505114_e6300a0e97_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1518/23592505114_a7aae5d9af.jpg",
-      "title": "2014-09-20_00080"
-    },
+      "thumbnail": "https://live.staticflickr.com/1518/23592505114_a7aae5d9af.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1585/24220728815_42047ae3ce_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1585/24220728815_1729827cce.jpg",
-      "title": "2014-09-20_00088"
+      "thumbnail": "https://live.staticflickr.com/1585/24220728815_1729827cce.jpg"
     },
     {
       "url": "https://live.staticflickr.com/1683/24112667982_150d0a450f_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1683/24112667982_3323ec4af6.jpg",
-      "title": "2014-09-20_00096"
+      "thumbnail": "https://live.staticflickr.com/1683/24112667982_3323ec4af6.jpg"
     },
     {
       "url": "https://live.staticflickr.com/1492/23925138370_a25e9f38e2_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1492/23925138370_bd71045744.jpg",
-      "title": "2014-11-01_00006"
-    },
+      "thumbnail": "https://live.staticflickr.com/1492/23925138370_bd71045744.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1631/23925138270_c3ba9e5abd_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1631/23925138270_69dedde24b.jpg",
-      "title": "2014-11-01_00026"
-    },
+      "thumbnail": "https://live.staticflickr.com/1631/23925138270_69dedde24b.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1504/24194641926_575582155d_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1504/24194641926_51dcd5f65d.jpg",
-      "title": "2014-11-01_00032"
-    },
+      "thumbnail": "https://live.staticflickr.com/1504/24194641926_51dcd5f65d.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1547/24112667742_8fc00b32e1_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1547/24112667742_8a86ac5288.jpg",
-      "title": "2015-07-03_00006"
-    },
+      "thumbnail": "https://live.staticflickr.com/1547/24112667742_8a86ac5288.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1561/24194641736_f83647d54a_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1561/24194641736_a96b91f3d3.jpg",
-      "title": "2015-07-03_00020"
-    },
+      "thumbnail": "https://live.staticflickr.com/1561/24194641736_a96b91f3d3.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1702/24112667602_79cfb28f33_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1702/24112667602_65b4f279ee.jpg",
-      "title": "2015-07-03_00031"
-    },
+      "thumbnail": "https://live.staticflickr.com/1702/24112667602_65b4f279ee.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1679/24112667572_9a5be37d42_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1679/24112667572_da7a1e69b3.jpg",
-      "title": "2015-07-03_00039"
-    },
+      "thumbnail": "https://live.staticflickr.com/1679/24112667572_da7a1e69b3.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1472/23925137900_2638d0a97f_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1472/23925137900_b15625412a.jpg",
-      "title": "2015-07-03_00054"
-    },
+      "thumbnail": "https://live.staticflickr.com/1472/23925137900_b15625412a.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1446/23852895619_02f377c0e0_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1446/23852895619_2b1fd43eb1.jpg",
-      "title": "2015-07-03_00059"
-    },
+      "thumbnail": "https://live.staticflickr.com/1446/23852895619_2b1fd43eb1.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1634/24112667342_d500919722_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1634/24112667342_5eeebbf26e.jpg",
-      "title": "2015-07-03_00075"
-    },
+      "thumbnail": "https://live.staticflickr.com/1634/24112667342_5eeebbf26e.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1505/23592539104_b66ded2feb_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1505/23592539104_b4e6f1d559.jpg",
-      "title": "2014-03-05_00010"
-    },
+      "thumbnail": "https://live.staticflickr.com/1505/23592539104_b4e6f1d559.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1691/24112724392_a647084015_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1691/24112724392_f96bfbdb3b.jpg",
-      "title": "2014-08-02_00002"
-    },
+      "thumbnail": "https://live.staticflickr.com/1691/24112724392_f96bfbdb3b.jpg"
+          },
     {
       "url": "https://live.staticflickr.com/1542/23852965859_37a42bc4cb_o.jpg",
-      "thumbnail": "https://live.staticflickr.com/1542/23852965859_3927df33e7.jpg",
-      "title": "2015-07-03_00003"
-    }
+      "thumbnail": "https://live.staticflickr.com/1542/23852965859_3927df33e7.jpg"
+          }
   ]
 },
   "quake-3": {
-  "title": "Quake 3 Screens",
+  "title": "Quake 3 Arena Photograpy: Defrag",
+  "description": "Shots of maps for the Defrag mod. Captured @ 1080p",
   "images": [
     {
       "url": "https://live.staticflickr.com/8183/8120374459_9eef13883c_o.png",
@@ -1809,6 +1739,8 @@
 },
   "gotg": {
   "title": "Guardians of the Galaxy Photo Mode",
+  "description": "Captured @ 1440p on PC using the in-game Photo Mode.",
+  "year": 2022,
   "images": [
     {
       "url": "https://live.staticflickr.com/65535/51980609223_30c375cef8_o.png",
@@ -2154,7 +2086,6 @@
     {
       "url": "https://live.staticflickr.com/65535/51981088975_c07e23376e_o.jpg",
       "thumbnail": "https://live.staticflickr.com/65535/51981088975_1efa37a85d.jpg"
-
     }
   ]
 }

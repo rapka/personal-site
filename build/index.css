@@ -11,7 +11,7 @@
 .clickableImage-container {
   -o-object-fit: cover;
      object-fit: cover;
-  transition: transform 200ms ease-in-out;
+  transition: transform 150ms ease-in-out;
   transform: scale(1.0);
   position: relative;
   display: flex;
@@ -155,13 +155,21 @@
   /*color: red;*/
   flex-shrink: 2;
   display: flex;
+  justify-content: center;
   /*min-width: 250px;*/
 }
 
-.galleryItem-title {
+.galleryItem-row {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
   margin-top: 1rem;
+}
+
+.galleryItem-title {
   font-size: 48px;
   display: block;
+  margin: 0;
 }
 
 .galleryItem-year {
@@ -175,6 +183,7 @@
 }
 
 .galleryItem-description {
+  font-family: 'Cutive';
   font-size: 20px;
   display: inline-block;
   margin:  0 4px;
@@ -281,9 +290,17 @@
 	cursor: pointer;
 }
 
-.wordleHeader {
-	color: var(--text-color);
+.header {
+	color: white;
 	padding: 1rem 1rem 0 1rem;
+}
+
+.header::visited {
+	color: white;
+}
+
+.header::hover {
+	text-decoration: underline;
 }
 
 .wordleHeader-title {

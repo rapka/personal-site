@@ -7,11 +7,11 @@ import config from './config.json';
 const style = {
   background: 'black',
   color: '#F03E88',
-}
+};
 
 function App() {
   return (
-    <div >
+    <div>
       <Header />
       <Portfolio {...config} style={style} />
     </div>

@@ -15,7 +15,6 @@ function GalleryPage({ galleryKey }) {
     setIsOpen(true);
   };
 
-
   function openImage(galleryIndex, imageIndex) {
     setActiveGallery(galleryIndex);
     setActiveImage(imageIndex);
@@ -43,7 +42,7 @@ function GalleryPage({ galleryKey }) {
       </ReactModal>
       <div>
         <Gallery
-          expanded={true}
+          expanded
           {...config.galleries[activeGallery || 'gotg']}
           maxColumns={8}
           openModal={openModal}
@@ -58,6 +57,5 @@ function GalleryPage({ galleryKey }) {
 GalleryPage.propTypes = {
   galleryKey: PropTypes.string.isRequired,
 };
-
 
 export default GalleryPage;

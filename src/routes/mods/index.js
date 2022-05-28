@@ -4,11 +4,11 @@ import Header from '../../Header';
 const style = {
   background: 'black',
   color: '#F03E88',
-}
+};
 
 function App() {
   return (
-    <div >
+    <div>
       <Header />
       MODS
     </div>

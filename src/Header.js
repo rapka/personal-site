@@ -1,16 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
-import { Link } from "react-router-dom";
-
-import Gear from './img/gear.svg';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './Header.css';
 
-const markdownLinkToHref = (str) => str.replace(/\[(.*)\]\((.*)\)/, '<a href="$2">$1</a>');
-
 function Header() {
   return (
-    <header className="wordleHeader">
+    <header className="header">
       <Link to="/">root</Link>
       <Link to="/music">music</Link>
       <Link to="/mods">game modding</Link>

@@ -21,12 +21,11 @@ function Portfolio({ galleries, maxColumns, style }) {
     setIsOpen(true);
   };
 
-
   const activeImageData = (activeImage > -1 && activeGallery) ? galleries[activeGallery].images[activeImage] : null;
 
   console.log('hihi222', activeImage, activeGallery, galleries, activeImageData);
   let subtitle;
-  let galleryComponents = [];
+  const galleryComponents = [];
   each(galleries, (galleryData, key) => galleryComponents.push((
     <Gallery
       expanded={false}
@@ -38,7 +37,6 @@ function Portfolio({ galleries, maxColumns, style }) {
       activeImage={activeGallery === key ? activeImage : -1}
     />
   )));
-
 
   function openImage(galleryIndex, imageIndex) {
     setActiveGallery(galleryIndex);
@@ -52,7 +50,7 @@ function Portfolio({ galleries, maxColumns, style }) {
 
   const closeModal = () => {
     setIsOpen(false);
-  }
+  };
 
   return (
     <div className="react-portfolio" id="react-portfolio" style={style}>

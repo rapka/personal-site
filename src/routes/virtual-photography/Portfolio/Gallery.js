@@ -24,11 +24,13 @@ function Gallery({
 
   return (
     <div className="react-portfolio-gallery">
+      <div className="galleryItem-row">
       <h2 className="galleryItem-title">{title}</h2>
       <div className="galleryItem-label">
         {location && <div className="galleryItem-location">{location}</div>}
-        {year && <div className="galleryItem-divider">|</div>}
-        {year && <div className="galleryItem-year">{year}</div>}
+        {!!year && <div className="galleryItem-divider">|</div>}
+        {!!year && <div className="galleryItem-year">{year}</div>}
+      </div>
       </div>
       <div className="galleryItem-description">{description}</div>
       <div className="galleryItem-images">

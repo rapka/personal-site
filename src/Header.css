@@ -14,9 +14,17 @@
 	cursor: pointer;
 }
 
-.wordleHeader {
-	color: var(--text-color);
+.header {
+	color: white;
 	padding: 1rem 1rem 0 1rem;
+}
+
+.header::visited {
+	color: white;
+}
+
+.header::hover {
+	text-decoration: underline;
 }
 
 .wordleHeader-title {
