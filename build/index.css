@@ -162,7 +162,7 @@
 .galleryItem-row {
   display: flex;
   flex-direction: row;
-  align-items: end;
+  align-items: flex-end;
   margin-top: 1rem;
 }
 
@@ -295,7 +295,7 @@
 	padding: 1rem 1rem 0 1rem;
 }
 
-.header::visited {
+.header a {
 	color: white;
 }
 
@@ -343,6 +343,10 @@
   .gearIcon {
   	right: -12px;
   }
+}
+.virtualPhotography {
+	background: black;
+	color: #F03E88;
 }
 :root {
 	--wordle-yellow: rgb(255, 204, 0);

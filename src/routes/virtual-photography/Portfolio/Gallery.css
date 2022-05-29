@@ -9,7 +9,7 @@
 .galleryItem-row {
   display: flex;
   flex-direction: row;
-  align-items: end;
+  align-items: flex-end;
   margin-top: 1rem;
 }
 

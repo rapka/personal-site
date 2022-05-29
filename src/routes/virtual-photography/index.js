@@ -4,16 +4,13 @@ import Header from '../../Header';
 
 import config from './config.json';
 
-const style = {
-  background: 'black',
-  color: '#F03E88',
-};
+import './VirtualPhotography.css';
 
 function App() {
   return (
-    <div>
+    <div className="virtualPhotography">
       <Header />
-      <Portfolio {...config} style={style} />
+      <Portfolio {...config} />
     </div>
   );
 }

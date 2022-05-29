@@ -18,9 +18,8 @@ function PersonalSite() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="virtual-photography" element={<VirutalPhotography />}>
-          <Route path=":galleryKey" element={<GalleryPage />} />
-        </Route>
+        <Route path="virtual-photography/:galleryKey" element={<GalleryPage />} />
+        <Route path="virtual-photography" element={<VirutalPhotography />} />
         <Route path="resume" element={<Resume />} />
         <Route path="mods" element={<Mods />} />
         <Route path="music" element={<Music />} />

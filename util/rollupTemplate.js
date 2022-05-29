@@ -29,8 +29,7 @@ const rollupTemplate = async ({
     })
     .join('\n');
 
-  return `
-<!doctype html>
+  return `<!doctype html>
 <html${makeHtmlAttributes(attributes.html)}>
   <head>
     ${metas}
@@ -40,7 +39,6 @@ const rollupTemplate = async ({
     <link rel="icon" href="public/favicon.png" type="image/x-icon">
     <link rel="apple-touch-icon-precomposed" sizes="128x128"
       href="public/favicon.png" type="image/png">
-
   </head>
   <body>
     ${scripts}

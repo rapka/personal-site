@@ -65,6 +65,7 @@ const plugins = [
   commonjs(),
   nodePolyfills(),
   html({
+    publicPath: '/',
     title: 'College Hill',
     template: rollupTemplate,
     meta: [

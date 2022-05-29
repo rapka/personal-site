@@ -30,6 +30,7 @@ function Portfolio({ galleries, maxColumns, style }) {
     <Gallery
       expanded={false}
       key={key}
+      id={key}
       {...galleryData}
       maxColumns={maxColumns}
       openModal={openModal}

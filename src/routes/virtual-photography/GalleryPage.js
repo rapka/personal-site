@@ -1,24 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
+import { useParams } from 'react-router-dom';
 import each from 'lodash/each';
-import Modal from './Portfolio/Modal.js';
-import Gallery from './Portfolio/Gallery.js';
+import Header from '../../Header';
+import Modal from './Portfolio/Modal';
+import Gallery from './Portfolio/Gallery';
+
+import './VirtualPhotography.css';
 
 import config from './config.json';
 
-function GalleryPage({ galleryKey }) {
+function GalleryPage() {
+  const { galleryKey } = useParams();
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [activeImage, setActiveImage] = React.useState(-1);
+
+  const galleryData = config.galleries[galleryKey];
+
+  console.log('fff', galleryData);
+
+  const activeImageData = galleryData[activeImage];
 
   const openModal = () => {
     setIsOpen(true);
   };
 
-  function openImage(galleryIndex, imageIndex) {
-    setActiveGallery(galleryIndex);
+  const openImage = (imageIndex) => {
     setActiveImage(imageIndex);
-  }
+  };
 
   function afterOpenModal() {
     // subtitle.style.color = '#f00';
@@ -29,7 +39,8 @@ function GalleryPage({ galleryKey }) {
   };
 
   return (
-    <div className="react-portfolio" id="react-portfolio" style={style}>
+    <div className="virtualPhotography" id="react-portfolio">
+      <Header />
       <ReactModal
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}
@@ -43,19 +54,15 @@ function GalleryPage({ galleryKey }) {
       <div>
         <Gallery
           expanded
-          {...config.galleries[activeGallery || 'gotg']}
+          {...galleryData}
           maxColumns={8}
           openModal={openModal}
-          onFocus={openImage.bind(null, index)}
+          onFocus={openImage}
           activeImage={activeImage}
         />
       </div>
     </div>
   );
 }
-
-GalleryPage.propTypes = {
-  galleryKey: PropTypes.string.isRequired,
-};
 
 export default GalleryPage;
