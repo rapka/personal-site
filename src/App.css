@@ -11,6 +11,8 @@
 	--darkGray: #939598;
 	--white: #fff;
 	--black: #212121;
+
+	--pink: #F03E88;
 }
 
 @font-face {
@@ -34,7 +36,7 @@ body {
 	background: black;
 	/*color: var(--text-color);*/
 
-	color: #F03E88;
+	color: var(--pink);
 }
 
 

@@ -1,12 +1,12 @@
 {
   "$schema": "https://json.schemastore.org/web-manifest-combined.json",
-  "name": "Wordle Bookmarks",
-  "short_name": "WordleBookmarks",
-  "start_url": ".",
+  "name": "collegehill.io",
+  "short_name": "collegehill.io",
+  "start_url": "https://collegehill.io",
   "display": "standalone",
-  "theme_color": "#000",
-  "background_color": "#fff",
-  "description": "A simple app for finding all your daily Wordle games!",
+  "theme_color": "#F03E88",
+  "background_color": "#000",
+  "description": "collegehill.io",
   "icons": [{
     "src": "favicon.png",
     "sizes": "128x128",

@@ -2,4 +2,4 @@
 
  My personal website. It lives at https://collegehill.io
 
- Built with React +
+ Built with React + Rollup
