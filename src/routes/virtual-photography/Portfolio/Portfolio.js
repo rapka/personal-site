@@ -11,7 +11,7 @@ const customStyles = {
 
 };
 
-function Portfolio({ galleries, maxColumns, style }) {
+function Portfolio({ galleries, style }) {
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [activeImage, setActiveImage] = React.useState(-1);
   const [activeGallery, setActiveGallery] = React.useState('');
@@ -32,7 +32,6 @@ function Portfolio({ galleries, maxColumns, style }) {
       key={key}
       id={key}
       {...galleryData}
-      maxColumns={maxColumns}
       openModal={openModal}
       onFocus={openImage.bind(null, key)}
       activeImage={activeGallery === key ? activeImage : -1}
@@ -77,12 +76,10 @@ Portfolio.propTypes = {
     title: PropTypes.string,
     images: PropTypes.array,
   }),
-  maxColumns: PropTypes.number,
   style: PropTypes.object,
 };
 
 Portfolio.defaultProps = {
-  maxColumns: 4,
   galleries: {},
   style: {},
 };

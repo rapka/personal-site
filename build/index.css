@@ -80,6 +80,25 @@
   }
 }
 
+.clickableImage-focusedOverlay {
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .clickableImage-container:hover .clickableImage-focusedOverlay {
   opacity: 1;
 }
@@ -125,25 +144,6 @@
   font-size: 14px;
 }
 
-.clickableImage-focusedOverlay {
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
-  -o-object-fit: cover;
-     object-fit: cover;
-  opacity: 0;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.2);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .clickableImage-fullSize {
   cursor: pointer;
 }
@@ -151,18 +151,27 @@
 .clickableImage-fullSize:hover {
   text-decoration: underline;
 }
+.galleryItem-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .galleryItem {
   /*color: red;*/
-  flex-shrink: 2;
   display: flex;
   justify-content: center;
   /*min-width: 250px;*/
+  flex: 0 1 25%;
+}
+
+@media (max-width: 450px) {
+  .galleryItem {
+    flex: 0 1 50%;
+  }
 }
 
 .galleryItem-row {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
+  display: inline-block;
   margin-top: 1rem;
 }
 
@@ -183,7 +192,7 @@
 }
 
 .galleryItem-description {
-  font-family: 'Cutive';
+  font-family: 'Cutive', sans-serif;
   font-size: 20px;
   display: inline-block;
   margin:  0 4px;
@@ -251,15 +260,8 @@
   z-index: 10;
   background-color: rgba(10, 10, 10, 0.6) !important;
 }
-@font-face {
-  font-family: 'Red Hat';
-  src: url('/public/redhat.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
 .react-portfolio {
-  font-family: 'Red Hat';
+  font-family: 'Red Hat', sans-serif;
   font-size: 24px;
   margin: 0 auto;
   z-index: 0;
@@ -297,9 +299,11 @@
 
 .header a {
 	color: white;
+	margin: 0 5px;
+	font-size: 1.2rem;
 }
 
-.header::hover {
+.header:hover {
 	text-decoration: underline;
 }
 
@@ -344,15 +348,33 @@
   	right: -12px;
   }
 }
-.virtualPhotography {
-	background: black;
-	color: #F03E88;
+.galleryPage.galleryItem {
+	flex-basis: 12.5%;
+}
+.aliasOption {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+
+.aliasOption.selected {
+  font-size: 1.75rem;
+}
+
+.aliasSelector-container {
+  padding: 1rem 0;
+  font-size: 1.25rem;
+}
+#alias-collegehill {
+	text-align: center;
+}
+#alias-morpgologist {
+	text-align: center;
+}
+#alias-fury {
+	text-align: center;
 }
 :root {
-	--wordle-yellow: rgb(255, 204, 0);
-	--worlde-green: rgb(0, 204, 136);
-	--wordle-black: rgb(24, 26, 27);
-
 	--color-tone-1: #000000;
 	--color-tone-2: #787c7e;
 	--color-tone-3: #878a8c;
@@ -360,34 +382,43 @@
 	--color-tone-5: #edeff1;
 	--color-tone-6: #f6f7f8;
 	--color-tone-7: #ffffff;
-	--green: #6aaa64;
-	--darkenedGreen: #538d4e;
-	--yellow: #c9b458;
-	--darkenedYellow: #b59f3b;
 	--lightGray: #d8d8d8;
 	--gray: #86888a;
 	--darkGray: #939598;
 	--white: #fff;
 	--black: #212121;
-	--orange: #f5793a;
-	--blue: #85c0f9;
-	--red: #9F0000;
-	--darkenedRed: #850000;
 }
 
-#wordleList-app {
+@font-face {
+	font-family: 'Cutive';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/public/cutive.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Red Hat';
+  src: url('/public/redhat.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+	margin: 0;
+	font-family: 'Cutive', sans-serif;
+
+	background: black;
+	/*color: var(--text-color);*/
+
+	color: #F03E88;
+}
+
+
+#personal-site {
 	--text-color: var(--color-tone-1);
 	--tile-text-color: var(--color-tone-7);
 	--background2: var(--color-tone-5);
 	--background:  var(--color-tone-7);
-
-	color: var(--text-color);
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-
 }
 
 @media (prefers-color-scheme: dark) {
@@ -404,7 +435,7 @@
 	}
 }
 
-#wordleList-app.nightMode-on {
+#personal-site.nightMode-on {
 	--color-tone-1: #ffffff;
 	--color-tone-2: #818384;
 	--color-tone-3: #565758;
@@ -416,7 +447,7 @@
 	--tile-text-color: var(--color-tone-1);
 }
 
-#wordleList-app.nightMode-off {
+#personal-site.nightMode-off {
 	--color-tone-1: #000000;
 	--color-tone-2: #787c7e;
 	--color-tone-3: #878a8c;
@@ -428,28 +459,16 @@
 	/*--tile-text-color: var(--color-tone-1);*/
 }
 
-@font-face {
-	font-family: 'Cutive';
-	font-style: normal;
-	font-weight: 400;
-	src: url('/public/cutive.ttf') format('truetype');
-}
-
-body {
-	margin: 0;
-	font-family: 'Cutive';
-}
-
 body.noscroll {
 	overflow: hidden;
 }
 
 button {
-	font-family: 'Cutive';
+	font-family: 'Cutive', sans-serif;
 }
 
 a {
-	font-family: 'Cutive';
+	font-family: 'Cutive', sans-serif;
 }
 
 .f-row {
@@ -463,10 +482,7 @@ a {
 }
 
 #root {
-	width: 100vw;
-	display: flex;
-	justify-content: center;
-	font-family: 'Cutive';
+	font-family: 'Cutive', sans-serif;
 	color: var(--text-color);
 }
 

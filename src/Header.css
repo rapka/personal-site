@@ -21,9 +21,11 @@
 
 .header a {
 	color: white;
+	margin: 0 5px;
+	font-size: 1.2rem;
 }
 
-.header::hover {
+.header:hover {
 	text-decoration: underline;
 }
 

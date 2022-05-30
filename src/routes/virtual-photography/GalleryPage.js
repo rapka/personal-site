@@ -39,7 +39,7 @@ function GalleryPage() {
   };
 
   return (
-    <div className="virtualPhotography" id="react-portfolio">
+    <div className="virtualPhotography" id="galleryPage">
       <Header />
       <ReactModal
         isOpen={modalIsOpen}
@@ -55,7 +55,6 @@ function GalleryPage() {
         <Gallery
           expanded
           {...galleryData}
-          maxColumns={8}
           openModal={openModal}
           onFocus={openImage}
           activeImage={activeImage}

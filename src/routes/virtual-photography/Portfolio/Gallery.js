@@ -6,24 +6,23 @@ import ClickableImage from './ClickableImage.js';
 import './Gallery.css';
 
 function Gallery({
-  title, images, description, year, location, maxColumns, openModal, activeImage, onFocus, expanded, id,
+  title, images, description, year, location, openModal, activeImage, onFocus, expanded, id,
 }) {
-  const MAX_IMAGES = maxColumns * 2;
+  const MAX_IMAGES = 8;
 
   const imageComponents = images.map((imageProps, i) => (
-    <div className="galleryItem" style={{ flex: `0 1 ${100 / maxColumns}%` }}>
+    <div className="galleryItem">
       <ClickableImage
         isFocused={activeImage === i}
         onFocus={() => onFocus(i)}
         openModal={openModal}
-        maxColumns={maxColumns}
         {...imageProps}
       />
     </div>
   ));
 
   return (
-    <div className="react-portfolio-gallery">
+    <div className="galleryItem-container">
       <div className="galleryItem-row">
         <h2 className="galleryItem-title">{title}</h2>
         <div className="galleryItem-label">
@@ -46,7 +45,6 @@ Gallery.propTypes = {
   activeImage: PropTypes.number.isRequired,
   onFocus: PropTypes.func,
   openModal: PropTypes.func,
-  maxColumns: PropTypes.number,
   title: PropTypes.string,
   description: PropTypes.string,
   images: PropTypes.array,
@@ -57,7 +55,6 @@ Gallery.propTypes = {
 
 Gallery.defaultProps = {
   expanded: false,
-  maxColumns: 4,
   year: 0,
   description: '',
   images: '',
