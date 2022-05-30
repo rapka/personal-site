@@ -1,13 +1,13 @@
 import React from 'react';
 import Header from '../../Header';
 
-function App() {
+function AMVs() {
   return (
     <div>
       <Header />
-      Resume
+      AMVs
     </div>
   );
 }
 
-export default App;
+export default AMVs;
