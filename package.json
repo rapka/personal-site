@@ -13,7 +13,10 @@
     "postversion": "npm run build && git push && git push --tags && npm run deploy",
     "flickr": "node scripts/processFlickr.mjs",
     "lint:style": "stylelint \"src/**/*.css\"",
-    "lint": "eslint src",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "lint:js": "eslint src",
+    "lint": "npm run lint:js && npm run lint:style",
+    "is-build-es5": "npx es-check es5 './build/**/*.!(esm).js'",
     "format": "prettier-eslint \"{src,scripts}/**/*.{js,mjs,json}\""
   },
   "repository": {
@@ -51,6 +54,7 @@
     "@rollup/plugin-url": "^6.1.0",
     "@svgr/rollup": "^6.2.1",
     "autoprefixer": "^10.4.4",
+    "es-check": "^6.2.1",
     "eslint": "^8.16.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.26.0",
