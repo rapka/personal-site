@@ -1,4 +1,3 @@
-.virtualPhotography {
-	background: black;
-	color: #F03E88;
+.galleryPage.galleryItem {
+	flex-basis: 12.5%;
 }
