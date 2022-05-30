@@ -75,11 +75,11 @@ const plugins = [
       },
       {
         name: 'description',
-        content: 'A simple app for finding all your daily Wordle games!',
+        content: 'collegehill.io',
       },
       {
         name: 'og:description',
-        content: 'A simple app for finding all your daily Wordle games!',
+        content: 'collegehill.io',
       },
       {
         name: 'og:title',
@@ -93,10 +93,6 @@ const plugins = [
         name: 'twitter:site',
         content: 'thecollegehill',
       },
-      {
-        name: 'appversion',
-        content: process.env.npm_package_version,
-      }
     ],
   }),
 ];

@@ -41,6 +41,7 @@ const rollupTemplate = async ({
       href="public/favicon.png" type="image/png">
   </head>
   <body>
+    <noscript>You gotta have JavaScript for this site, pal.</noscript>
     ${scripts}
   </body>
 </html>`;
