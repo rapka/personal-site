@@ -17,8 +17,6 @@ class Scope extends React.Component {
     this.state = { visible: false, playing: false };
     this.player = React.createRef();
     this.playEvent = (event) => {
-      console.log('innn', event.keyCode);
-
       // Space bar
       if (event.keyCode === 32) {
 

@@ -37920,8 +37920,7 @@
 	    _this.player = /*#__PURE__*/React.createRef();
 
 	    _this.playEvent = function (event) {
-	      console.log('innn', event.keyCode); // Space bar
-
+	      // Space bar
 	      if (event.keyCode === 32) {
 	        event.preventDefault();
 
