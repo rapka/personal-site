@@ -6,7 +6,13 @@ import './CollegeHill.css';
 function CollegeHill() {
   return (
     <section className="alias-container" id="alias-collegehill">
-      College Hill
+      <h4 className="alias-title">College Hill</h4>
+
+      Original Work
+
+      Remixes
+
+      Mixes
     </section>
   );
 }

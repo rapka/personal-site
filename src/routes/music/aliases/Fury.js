@@ -7,6 +7,8 @@ function Fury() {
   return (
     <section className="alias-container" id="alias-fury">
       <h4 className="alias-title">Fury</h4>
+
+      Mixes
     </section>
   );
 }

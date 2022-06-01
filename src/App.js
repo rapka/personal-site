@@ -11,6 +11,7 @@ import Resume from './routes/resume';
 import Mods from './routes/mods';
 import Music from './routes/music';
 import AMVs from './routes/amvs';
+import Dev from './routes/dev';
 
 import './App.css';
 
@@ -26,6 +27,7 @@ function PersonalSite() {
           <Route path="mods" element={<Mods />} />
           <Route path="music" element={<Music />} />
           <Route path="amvs" element={<AMVs />} />
+          <Route path="dev" element={<Dev />} />
         </Routes>
       </BrowserRouter>
     </div>

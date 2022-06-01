@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../../Header';
+import Scope from '../../viz/Scope';
 
 function Dev() {
   return (
@@ -16,6 +17,10 @@ function Dev() {
       blood frenzy site
 
       esrgan
+
+      scope example
+
+      <Scope />
     </div>
   );
 }

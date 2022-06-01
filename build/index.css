@@ -374,6 +374,17 @@
 #alias-fury {
 	text-align: center;
 }
+#canvas {
+  height: 100%;
+  width: 100%;
+}
+
+.viz-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+}
 :root {
 	--color-tone-1: #000000;
 	--color-tone-2: #787c7e;
@@ -486,5 +497,11 @@ a {
 #root {
 	font-family: 'Cutive', sans-serif;
 	color: var(--text-color);
+}
+
+#noscript {
+	font-size: 1.5rem;
+	text-align: center;
+	padding: 1rem 0;
 }
 
