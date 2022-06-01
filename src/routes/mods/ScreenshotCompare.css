@@ -1,0 +1,31 @@
+.screenshotCompare-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.screenshotCompare {
+	display: block;
+	position: relative;
+	width: 500px;
+	max-width: 500px;
+}
+
+.screenshotCompare.active .screenshotCompare-modded {
+	opacity: 1;
+}
+
+.screenshotCompare-original {
+	width: 100%;
+}
+
+.screenshotCompare-modded {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	opacity: 0;
+}
+
+.screenshotCompare-label {
+	font-size: 1.25rem;
+}

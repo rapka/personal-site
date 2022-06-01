@@ -186,11 +186,6 @@
   display: inline-block;
 }
 
-.galleryItem-location {
-  font-size: 36px;
-  display: inline-block;
-}
-
 .galleryItem-description {
   font-family: 'Cutive', sans-serif;
   font-size: 20px;
@@ -198,7 +193,6 @@
   margin:  0 4px;
 }
 
-.galleryItem-location,
 .galleryItem-year {
   vertical-align: bottom;
 }
@@ -351,6 +345,59 @@
 .galleryPage.galleryItem {
 	flex-basis: 12.5%;
 }
+.screenshotCompare-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.screenshotCompare {
+	display: block;
+	position: relative;
+	width: 500px;
+	max-width: 500px;
+}
+
+.screenshotCompare.active .screenshotCompare-modded {
+	opacity: 1;
+}
+
+.screenshotCompare-original {
+	width: 100%;
+}
+
+.screenshotCompare-modded {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	opacity: 0;
+}
+
+.screenshotCompare-label {
+	font-size: 1.25rem;
+}
+.dolphinMod {
+	display: flex;
+	flex-direction: column;
+	max-width: 700px;
+	justify-content: center;
+    align-items: center;
+}
+
+.dolphinMod-download {
+	font-size: 2rem;
+	border: 1px solid var(--pink);
+	border-radius: 4px;
+}
+
+.dolphinMod-gameCover {
+	width: 160px;
+}
+
+.dolphinMod-screenshots {
+	display: flex;
+	flex-direction: row;
+}
 .aliasOption {
   font-size: 1.5rem;
   margin: 0.5rem 0;
@@ -426,6 +473,19 @@ body {
 	color: var(--pink);
 }
 
+body.noscroll {
+	overflow: hidden;
+}
+
+button {
+	font-family: 'Cutive', sans-serif;
+}
+
+a {
+	font-family: 'Cutive', sans-serif;
+	color: var(--pink);
+}
+
 
 #personal-site {
 	--text-color: var(--color-tone-1);
@@ -472,18 +532,6 @@ body {
 	/*--tile-text-color: var(--color-tone-1);*/
 }
 
-body.noscroll {
-	overflow: hidden;
-}
-
-button {
-	font-family: 'Cutive', sans-serif;
-}
-
-a {
-	font-family: 'Cutive', sans-serif;
-}
-
 .f-row {
 	display: flex;
 	flex-direction: row;
@@ -496,7 +544,7 @@ a {
 
 #root {
 	font-family: 'Cutive', sans-serif;
-	color: var(--text-color);
+	/*color: var(--text-color);*/
 }
 
 #noscript {

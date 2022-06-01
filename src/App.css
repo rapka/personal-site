@@ -39,6 +39,19 @@ body {
 	color: var(--pink);
 }
 
+body.noscroll {
+	overflow: hidden;
+}
+
+button {
+	font-family: 'Cutive', sans-serif;
+}
+
+a {
+	font-family: 'Cutive', sans-serif;
+	color: var(--pink);
+}
+
 
 #personal-site {
 	--text-color: var(--color-tone-1);
@@ -85,18 +98,6 @@ body {
 	/*--tile-text-color: var(--color-tone-1);*/
 }
 
-body.noscroll {
-	overflow: hidden;
-}
-
-button {
-	font-family: 'Cutive', sans-serif;
-}
-
-a {
-	font-family: 'Cutive', sans-serif;
-}
-
 .f-row {
 	display: flex;
 	flex-direction: row;
@@ -109,7 +110,7 @@ a {
 
 #root {
 	font-family: 'Cutive', sans-serif;
-	color: var(--text-color);
+	/*color: var(--text-color);*/
 }
 
 #noscript {

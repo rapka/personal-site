@@ -1,0 +1,22 @@
+.dolphinMod {
+	display: flex;
+	flex-direction: column;
+	max-width: 700px;
+	justify-content: center;
+    align-items: center;
+}
+
+.dolphinMod-download {
+	font-size: 2rem;
+	border: 1px solid var(--pink);
+	border-radius: 4px;
+}
+
+.dolphinMod-gameCover {
+	width: 160px;
+}
+
+.dolphinMod-screenshots {
+	display: flex;
+	flex-direction: row;
+}

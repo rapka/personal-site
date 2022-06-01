@@ -1,12 +1,7 @@
-(function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('hex-rgb')) :
-	typeof define === 'function' && define.amd ? define(['hex-rgb'], factory) :
-	(global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.hexRgb));
-})(this, (function (hexRgb) { 'use strict';
-
-	function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
-
-	var hexRgb__default = /*#__PURE__*/_interopDefaultLegacy(hexRgb);
+(function (factory) {
+	typeof define === 'function' && define.amd ? define(factory) :
+	factory();
+})((function () { 'use strict';
 
 	var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
@@ -35127,7 +35122,6 @@
 	      images = _ref.images,
 	      description = _ref.description,
 	      year = _ref.year,
-	      location = _ref.location,
 	      openModal = _ref.openModal,
 	      activeImage = _ref.activeImage,
 	      _onFocus = _ref.onFocus,
@@ -35153,9 +35147,7 @@
 	    className: "galleryItem-title"
 	  }, title), /*#__PURE__*/React.createElement("div", {
 	    className: "galleryItem-label"
-	  }, location && /*#__PURE__*/React.createElement("div", {
-	    className: "galleryItem-location"
-	  }, location), !!year && /*#__PURE__*/React.createElement("div", {
+	  }, !!year && /*#__PURE__*/React.createElement("div", {
 	    className: "galleryItem-divider"
 	  }, "|"), !!year && /*#__PURE__*/React.createElement("div", {
 	    className: "galleryItem-year"
@@ -35178,7 +35170,6 @@
 	  description: PropTypes.string,
 	  images: PropTypes.array,
 	  year: PropTypes.number,
-	  location: PropTypes.string,
 	  id: PropTypes.string.isRequired
 	};
 	Gallery.defaultProps = {
@@ -35186,7 +35177,6 @@
 	  year: 0,
 	  description: '',
 	  images: '',
-	  location: '',
 	  id: ''
 	};
 
@@ -35196,8 +35186,7 @@
 	      url = _ref.url;
 	      _ref.thumbnail;
 	      var closeModal = _ref.closeModal,
-	      year = _ref.year,
-	      location = _ref.location;
+	      year = _ref.year;
 	  return /*#__PURE__*/React.createElement("div", {
 	    className: "reactPortfolio-modalContents",
 	    onClick: closeModal
@@ -35205,7 +35194,7 @@
 	    onClick: closeModal
 	  }, "close"), /*#__PURE__*/React.createElement("div", {
 	    className: "reactPortfolio-modalImageText"
-	  }, /*#__PURE__*/React.createElement("div", null, title), /*#__PURE__*/React.createElement("div", null, location), /*#__PURE__*/React.createElement("div", null, year), /*#__PURE__*/React.createElement("div", null, description)), /*#__PURE__*/React.createElement("div", {
+	  }, /*#__PURE__*/React.createElement("div", null, title), /*#__PURE__*/React.createElement("div", null, year), /*#__PURE__*/React.createElement("div", null, description)), /*#__PURE__*/React.createElement("div", {
 	    className: "reactPortfolio-modalImageContainer"
 	  }, /*#__PURE__*/React.createElement("img", {
 	    className: "reactPortfolio-modalImageGlow",
@@ -35327,6 +35316,7 @@
 	var galleries = {
 		"elden-ring-npcs": {
 			title: "Elden Ring Photography - NPC Portraits",
+			description: "",
 			images: [
 				{
 					url: "https://live.staticflickr.com/65535/52067722947_45c20300ac_o.png",
@@ -35589,7 +35579,6 @@
 			title: "Landscapes",
 			description: "Various landscapes of Elden Ring",
 			year: 2022,
-			location: "Elden Ring",
 			images: [
 				{
 					url: "https://live.staticflickr.com/65535/52067738197_17670ca0e1_o.png",
@@ -36434,6 +36423,7 @@
 		"re4-noire": {
 			title: "RE4 Noire",
 			year: 2016,
+			description: "Captured at 1080p on PC. The black and white filter was done by modding the tone mapping feature added to the Ultimate HD version. I played thgrough the entire game like this!",
 			images: [
 				{
 					url: "https://live.staticflickr.com/1677/23592508574_241aed6003_o.jpg",
@@ -36727,7 +36717,7 @@
 		},
 		"quake-3": {
 			title: "Quake 3 Arena Photograpy: Defrag",
-			description: "Shots of maps for the Defrag mod. Captured @ 1080p",
+			description: "Shots of maps for the Defrag mod. Captured at 1080p on PC.",
 			images: [
 				{
 					url: "https://live.staticflickr.com/8183/8120374459_9eef13883c_o.png",
@@ -37421,18 +37411,243 @@
 	  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Header, null), "Resume");
 	}
 
+	function ScreenshotCompare(_ref) {
+	  var original = _ref.original,
+	      modded = _ref.modded,
+	      gameId = _ref.gameId;
+
+	  var _useState = react.exports.useState(false),
+	      _useState2 = _slicedToArray(_useState, 2),
+	      active = _useState2[0],
+	      setActive = _useState2[1];
+
+	  return /*#__PURE__*/React.createElement("div", {
+	    className: "screenshotCompare-container"
+	  }, /*#__PURE__*/React.createElement("div", {
+	    className: classNames('screenshotCompare', {
+	      active: active
+	    }),
+	    onMouseEnter: function onMouseEnter() {
+	      return setActive(true);
+	    },
+	    onMouseLeave: function onMouseLeave() {
+	      return setActive(false);
+	    }
+	  }, /*#__PURE__*/React.createElement("img", {
+	    src: "/public/images/screens/".concat(gameId, "/").concat(original),
+	    className: "screenshotCompare-original"
+	  }), /*#__PURE__*/React.createElement("img", {
+	    src: "/public/images/screens/".concat(gameId, "/").concat(modded),
+	    className: "screenshotCompare-modded"
+	  })), /*#__PURE__*/React.createElement("div", {
+	    className: "screenshotCompare-label"
+	  }, active ? 'HD textures' : 'original textures'));
+	}
+
+	ScreenshotCompare.propTypes = {
+	  original: PropTypes.string.isRequired,
+	  modded: PropTypes.string.isRequired
+	};
+
+	function DolphinMod(_ref) {
+	  var title = _ref.title,
+	      downloadLink = _ref.downloadLink,
+	      images = _ref.images,
+	      gameId = _ref.gameId;
+	  var compareComponents = images.map(function (img) {
+	    return /*#__PURE__*/React.createElement(ScreenshotCompare, {
+	      original: img.original,
+	      modded: img.modded,
+	      gameId: gameId
+	    });
+	  });
+	  return /*#__PURE__*/React.createElement("div", {
+	    className: "dolphinMod"
+	  }, /*#__PURE__*/React.createElement("h3", null, title), /*#__PURE__*/React.createElement("img", {
+	    className: "dolphinMod-gameCover",
+	    src: "/public/images/covers/".concat(gameId, ".png")
+	  }), !!images.length && /*#__PURE__*/React.createElement("div", {
+	    className: "dolphinMod-screenshotsSection"
+	  }, /*#__PURE__*/React.createElement("div", {
+	    className: "dolphinMod-screenshotsTitle"
+	  }, "Screenshots"), /*#__PURE__*/React.createElement("div", {
+	    className: "dolphinMod-screenshotsDesc"
+	  }, "Hover or click to compare"), /*#__PURE__*/React.createElement("div", {
+	    className: "dolphinMod-screenshots"
+	  }, compareComponents)), /*#__PURE__*/React.createElement("a", {
+	    className: "dolphinMod-download",
+	    href: downloadLink
+	  }, "Download via Mega"));
+	}
+
+	DolphinMod.propTypes = {
+	  title: PropTypes.string.isRequired,
+	  downloadLink: PropTypes.string.isRequired,
+	  gameId: PropTypes.string.isRequired,
+	  images: PropTypes.arrayOf(PropTypes.shape({
+	    original: PropTypes.string.isRequired,
+	    modded: PropTypes.string.isRequired
+	  }))
+	};
+
+	var modData = [{
+	  title: 'Metroid Prime',
+	  gameId: 'GM8E01',
+	  downloadLink: 'https://mega.nz/#!2JEDHIQT!9UVh6ML_DH8zSjZbukqiNuReDkdKFwsDz8V2xQiQST4',
+	  images: [{
+	    original: 'GM8E01-12.png',
+	    modded: 'GM8E01-13.png'
+	  }, {
+	    original: 'GM8E01-16.png',
+	    modded: 'GM8E01-17.png'
+	  }, {
+	    original: 'GM8E01-5.png',
+	    modded: 'GM8E01-6.png'
+	  }, {
+	    original: 'GM8E01-4.png',
+	    modded: 'GM8E01-3.png'
+	  }]
+	}, {
+	  title: 'Tony Hawk\'s Pro Skater 3',
+	  gameId: 'GT3E52',
+	  downloadLink: 'https://mega.nz/#!Wd8CUSYC!4kXspst7w3DJbcNqvns1XdJQKqZL0Z7u39NfcMoEDmg',
+	  images: [{
+	    original: 'GT3E52-5.png',
+	    modded: 'GT3E52-6.png'
+	  }, {
+	    original: 'GT3E52-7.png',
+	    modded: 'GT3E52-8.png'
+	  }, {
+	    original: 'GT3E52-10.png',
+	    modded: 'GT3E52-11.png'
+	  }, {
+	    original: 'GT3E52-12.png',
+	    modded: 'GT3E52-13.png'
+	  }, {
+	    original: 'GT3E52-19.png',
+	    modded: 'GT3E52-20.png'
+	  }, {
+	    original: 'GT3E52-21.png',
+	    modded: 'GT3E52-22.png'
+	  }]
+	}, {
+	  title: 'Viewtiful Joe',
+	  gameId: 'GVJE08',
+	  downloadLink: 'https://mega.nz/#!LAs0nSYY!sfFojNtdYaSgXC5T73kgiTDBB6UPxWZEqdSA0FlQ-Ks',
+	  images: [{
+	    original: 'GT3E52-2.png',
+	    modded: 'GT3E52-1.png'
+	  }, {
+	    original: 'GT3E52-3.png',
+	    modded: 'GT3E52-4.png'
+	  }, {
+	    original: 'GT3E52-10.png',
+	    modded: 'GT3E52-11.png'
+	  }, {
+	    original: 'GT3E52-12.png',
+	    modded: 'GT3E52-13.png'
+	  }]
+	}, {
+	  title: 'Soulcalibur II',
+	  downloadLink: 'https://mega.nz/#!PNs3FAoA!sa2_hbDf46EvowN6zHKs1XQRAPzX0NF3MKOAm_WA3Do',
+	  images: [{
+	    original: 'GRSEAF-3.png',
+	    modded: 'GRSEAF-4.png'
+	  }, {
+	    original: 'GRSEAF-5.png',
+	    modded: 'GRSEAF-6.png'
+	  }, {
+	    original: 'GRSEAF-9.png',
+	    modded: 'GRSEAF-10.png'
+	  }, {
+	    original: 'GRSEAF-11.png',
+	    modded: 'GRSEAF-12.png'
+	  }, {
+	    original: 'GRSEAF-13.png',
+	    modded: 'GRSEAF-14.png'
+	  }],
+	  gameId: 'GRSEAF'
+	}, {
+	  title: 'Super Smash Bros. Melee',
+	  gameId: 'GALE01',
+	  downloadLink: 'https://mega.nz/#!DE9EFaSa!sZ3UwrdmyLKKh2IM3J6AR4J5OmUfy90rv21hPeWlNOc',
+	  images: [{
+	    original: 'GALE01-8.png',
+	    modded: 'GALE01-9.png'
+	  }, {
+	    original: 'GALE01-10.png',
+	    modded: 'GALE01-11.png'
+	  }, {
+	    original: 'GALE01-14.png',
+	    modded: 'GALE01-15.png'
+	  }, {
+	    original: 'GALE01-22.png',
+	    modded: 'GALE01-23.png'
+	  }, {
+	    original: 'GALE01-24.png',
+	    modded: 'GALE01-25.png'
+	  }, {
+	    original: 'GALE01-34.png',
+	    modded: 'GALE01-35.png'
+	  }]
+	}, {
+	  title: 'Pokemon Snap',
+	  gameId: 'NAKE01',
+	  downloadLink: 'https://mega.nz/#!OZ1RUKAQ!l225vo2KmIg6yCRUNQQqeeVgyK6RT4zxKxIHpwgSipY',
+	  images: [{
+	    original: 'NAKE01-3.png',
+	    modded: 'NAKE01-4.png'
+	  }, {
+	    original: 'NAKE01-5.png',
+	    modded: 'NAKE01-6.png'
+	  }, {
+	    original: 'NAKE01-7.png',
+	    modded: 'NAKE01-8.png'
+	  }]
+	}, {
+	  title: 'Wave Race 64',
+	  gameId: 'NAIE01',
+	  downloadLink: 'https://mega.nz/#!TJ0jjIZA!UQh8r_luF9RekfPbOfNa-Cj9Qgjxj83uOjCPfhXNsgQ',
+	  images: [{
+	    original: 'NAIE01-2.png',
+	    modded: 'NAIE01-3.png'
+	  }, {
+	    original: 'NAIE01-4.png',
+	    modded: 'NAIE01-5.png'
+	  }, {
+	    original: 'NAIE01-6.png',
+	    modded: 'NAIE01-7.png'
+	  }, {
+	    original: 'NAIE01-8.png',
+	    modded: 'NAIE01-9.png'
+	  }, {
+	    original: 'NAIE01-10.png',
+	    modded: 'NAIE01-11.png'
+	  }]
+	}, {
+	  title: 'Mario Kart 64',
+	  gameId: 'NABE01',
+	  downloadLink: 'https://mega.nz/#!uBFV0KRZ!9M6SROjZJ5Z3RlGMJu9UHSp1RYIZk4KfmGnssGwDkWg',
+	  images: [{
+	    original: 'NABE01-1.png',
+	    modded: 'NABE01-2.png'
+	  }, {
+	    original: 'NABE01-3.png',
+	    modded: 'NABE01-4.png'
+	  }, {
+	    original: 'NABE01-8.png',
+	    modded: 'NABE01-9.png'
+	  }, {
+	    original: 'NABE01-18.png',
+	    modded: 'NABE01-19.png'
+	  }]
+	}];
+
 	function App() {
-	  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Header, null), /*#__PURE__*/React.createElement("h3", null, "Dolphin Emulator Texture Packs"), /*#__PURE__*/React.createElement("h5", null, "Installation"), "Installation instructions: https://forums.dolphin-emu.org/Thread-how-to-install-texture-packs-custom-textures-info If you're using these alongside another texture pack (like Hypatia's Viewtiful Joe textures), move all the files inside a folder called 000 so that the handmade textures will be loaded on top of the AI-generated ones.", /*#__PURE__*/React.createElement("h5", null, "Download Links"), "Downloads are served via Mega.", /*#__PURE__*/React.createElement("a", {
-	    href: "https://mega.nz/#!2JEDHIQT!9UVh6ML_DH8zSjZbukqiNuReDkdKFwsDz8V2xQiQST4"
-	  }, "Metroid Prime (GM8E01)"), /*#__PURE__*/React.createElement("a", {
-	    href: "https://mega.nz/#!Wd8CUSYC!4kXspst7w3DJbcNqvns1XdJQKqZL0Z7u39NfcMoEDmg"
-	  }, "Tony Hawk's Pro Skater 3 (GT3E52)"), /*#__PURE__*/React.createElement("a", {
-	    href: "https://mega.nz/#!LAs0nSYY!sfFojNtdYaSgXC5T73kgiTDBB6UPxWZEqdSA0FlQ-Ks"
-	  }, "Viewtiful Joe (GVJE08)"), /*#__PURE__*/React.createElement("a", {
-	    href: "https://mega.nz/#!PNs3FAoA!sa2_hbDf46EvowN6zHKs1XQRAPzX0NF3MKOAm_WA3Do"
-	  }, "Soulcalibur II (GRSEAF)"), /*#__PURE__*/React.createElement("a", {
-	    href: "https://mega.nz/#!DE9EFaSa!sZ3UwrdmyLKKh2IM3J6AR4J5OmUfy90rv21hPeWlNOc"
-	  }, "Super Smash Bros. Melee (GALE01)"), "N64 (Virtual Console)", /*#__PURE__*/React.createElement("a", {
+	  var modComponents = modData.map(function (mod, i) {
+	    return /*#__PURE__*/React.createElement(DolphinMod, mod);
+	  });
+	  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Header, null), /*#__PURE__*/React.createElement("h3", null, "Dolphin Emulator Texture Packs"), /*#__PURE__*/React.createElement("h5", null, "Installation"), "Installation instructions: https://forums.dolphin-emu.org/Thread-how-to-install-texture-packs-custom-textures-info If you're using these alongside another texture pack (like Hypatia's Viewtiful Joe textures), move all the files inside a folder called 000 so that the handmade textures will be loaded on top of the AI-generated ones.", /*#__PURE__*/React.createElement("h5", null, "Download Links"), "Downloads are served via Mega.", modComponents, /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("br", null), "N64 (Virtual Console)", /*#__PURE__*/React.createElement("a", {
 	    href: "https://mega.nz/#!OZ1RUKAQ!l225vo2KmIg6yCRUNQQqeeVgyK6RT4zxKxIHpwgSipY"
 	  }, "] Pokemon Snap (NAKE01)"), /*#__PURE__*/React.createElement("a", {
 	    href: "https://mega.nz/#!TJ0jjIZA!UQh8r_luF9RekfPbOfNa-Cj9Qgjxj83uOjCPfhXNsgQ"
@@ -37530,8 +37745,56 @@
 	  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Header, null), "AMVs");
 	}
 
+	const hexCharacters = 'a-f\\d';
+	const match3or4Hex = `#?[${hexCharacters}]{3}[${hexCharacters}]?`;
+	const match6or8Hex = `#?[${hexCharacters}]{6}([${hexCharacters}]{2})?`;
+	const nonHexChars = new RegExp(`[^#${hexCharacters}]`, 'gi');
+	const validHexSize = new RegExp(`^${match3or4Hex}$|^${match6or8Hex}$`, 'i');
+
+	function hexRgb(hex, options = {}) {
+		if (typeof hex !== 'string' || nonHexChars.test(hex) || !validHexSize.test(hex)) {
+			throw new TypeError('Expected a valid hex string');
+		}
+
+		hex = hex.replace(/^#/, '');
+		let alphaFromHex = 1;
+
+		if (hex.length === 8) {
+			alphaFromHex = Number.parseInt(hex.slice(6, 8), 16) / 255;
+			hex = hex.slice(0, 6);
+		}
+
+		if (hex.length === 4) {
+			alphaFromHex = Number.parseInt(hex.slice(3, 4).repeat(2), 16) / 255;
+			hex = hex.slice(0, 3);
+		}
+
+		if (hex.length === 3) {
+			hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+		}
+
+		const number = Number.parseInt(hex, 16);
+		const red = number >> 16;
+		const green = (number >> 8) & 255;
+		const blue = number & 255;
+		const alpha = typeof options.alpha === 'number' ? options.alpha : alphaFromHex;
+
+		if (options.format === 'array') {
+			return [red, green, blue, alpha];
+		}
+
+		if (options.format === 'css') {
+			const alphaString = alpha === 1 ? '' : ` / ${Number((alpha * 100).toFixed(2))}%`;
+			return `rgb(${red} ${green} ${blue}${alphaString})`;
+		}
+
+		return {red, green, blue, alpha};
+	}
+
 	var hsvToRgb = function hsvToRgb(h, s, v) {
-	  var r, g, b;
+	  var r;
+	  var g;
+	  var b;
 	  var i = Math.floor(h * 6);
 	  var f = h * 6 - i;
 	  var p = v * (1 - s);
@@ -38019,7 +38282,7 @@
 	            rgb = hsvToRgb(rotatedH / 360, 1, 1);
 	            canvasCtx.strokeStyle = "rgba(".concat(rgb[0], ", ").concat(rgb[1], ", ").concat(rgb[2], ", ").concat(0.8 - bassNormalized * 1.33, ")");
 	          } else {
-	            rgb = hexRgb__default["default"](_this3.props.colors[index]);
+	            rgb = hexRgb(_this3.props.colors[index]);
 	            canvasCtx.strokeStyle = "rgba(".concat(rgb.red, ", ").concat(rgb.green, ", ").concat(rgb.blue, ", ").concat(0.8 - bassNormalized * 1.33, ")");
 	          }
 

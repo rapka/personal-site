@@ -2,6 +2,7 @@
   "galleries": {
   "elden-ring-npcs": {
   "title": "Elden Ring Photography - NPC Portraits",
+  "description": "",
   "images": [
     {
       "url": "https://live.staticflickr.com/65535/52067722947_45c20300ac_o.png",
@@ -264,7 +265,6 @@
       "title": "Landscapes",
       "description": "Various landscapes of Elden Ring",
       "year": 2022,
-      "location": "Elden Ring",
      "images": [
     {
       "url": "https://live.staticflickr.com/65535/52067738197_17670ca0e1_o.png",
@@ -1109,6 +1109,7 @@
     "re4-noire": {
   "title": "RE4 Noire",
   "year": 2016,
+  "description": "Captured at 1080p on PC. The black and white filter was done by modding the tone mapping feature added to the Ultimate HD version. I played thgrough the entire game like this!",
   "images": [
     {
       "url": "https://live.staticflickr.com/1677/23592508574_241aed6003_o.jpg",
@@ -1402,7 +1403,7 @@
 },
   "quake-3": {
   "title": "Quake 3 Arena Photograpy: Defrag",
-  "description": "Shots of maps for the Defrag mod. Captured @ 1080p",
+  "description": "Shots of maps for the Defrag mod. Captured at 1080p on PC.",
   "images": [
     {
       "url": "https://live.staticflickr.com/8183/8120374459_9eef13883c_o.png",

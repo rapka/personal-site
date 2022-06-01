@@ -6,7 +6,7 @@ import ClickableImage from './ClickableImage.js';
 import './Gallery.css';
 
 function Gallery({
-  title, images, description, year, location, openModal, activeImage, onFocus, expanded, id,
+  title, images, description, year, openModal, activeImage, onFocus, expanded, id,
 }) {
   const MAX_IMAGES = 8;
 
@@ -26,7 +26,6 @@ function Gallery({
       <div className="galleryItem-row">
         <h2 className="galleryItem-title">{title}</h2>
         <div className="galleryItem-label">
-          {location && <div className="galleryItem-location">{location}</div>}
           {!!year && <div className="galleryItem-divider">|</div>}
           {!!year && <div className="galleryItem-year">{year}</div>}
         </div>
@@ -49,7 +48,6 @@ Gallery.propTypes = {
   description: PropTypes.string,
   images: PropTypes.array,
   year: PropTypes.number,
-  location: PropTypes.string,
   id: PropTypes.string.isRequired,
 };
 
@@ -58,7 +56,6 @@ Gallery.defaultProps = {
   year: 0,
   description: '',
   images: '',
-  location: '',
   id: '',
 };
 

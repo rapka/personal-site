@@ -5,14 +5,13 @@ import Gallery from './Gallery.js';
 import './Modal.css';
 
 function Modal({
-  title, description, url, thumbnail, closeModal, year, location,
+  title, description, url, thumbnail, closeModal, year,
 }) {
   return (
     <div className="reactPortfolio-modalContents" onClick={closeModal}>
       <button onClick={closeModal}>close</button>
       <div className="reactPortfolio-modalImageText">
         <div>{title}</div>
-        <div>{location}</div>
         <div>{year}</div>
         <div>{description}</div>
       </div>

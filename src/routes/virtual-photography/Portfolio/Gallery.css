@@ -33,11 +33,6 @@
   display: inline-block;
 }
 
-.galleryItem-location {
-  font-size: 36px;
-  display: inline-block;
-}
-
 .galleryItem-description {
   font-family: 'Cutive', sans-serif;
   font-size: 20px;
@@ -45,7 +40,6 @@
   margin:  0 4px;
 }
 
-.galleryItem-location,
 .galleryItem-year {
   vertical-align: bottom;
 }

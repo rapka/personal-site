@@ -1,7 +1,11 @@
 import React from 'react';
 import Header from '../../Header';
+import DolphinMod from './DolphinMod';
+import mods from './modData';
 
 function App() {
+  const modComponents = mods.map((mod, i) => <DolphinMod {...mod} />);
+
   return (
     <div>
       <Header />
@@ -19,12 +23,10 @@ function App() {
 
       Downloads are served via Mega.
 
-      <a href="https://mega.nz/#!2JEDHIQT!9UVh6ML_DH8zSjZbukqiNuReDkdKFwsDz8V2xQiQST4">Metroid Prime (GM8E01)</a>
-      <a href="https://mega.nz/#!Wd8CUSYC!4kXspst7w3DJbcNqvns1XdJQKqZL0Z7u39NfcMoEDmg">Tony Hawk's Pro Skater 3 (GT3E52)</a>
-      <a href="https://mega.nz/#!LAs0nSYY!sfFojNtdYaSgXC5T73kgiTDBB6UPxWZEqdSA0FlQ-Ks">Viewtiful Joe (GVJE08)</a>
-      <a href="https://mega.nz/#!PNs3FAoA!sa2_hbDf46EvowN6zHKs1XQRAPzX0NF3MKOAm_WA3Do">Soulcalibur II (GRSEAF)</a>
-      <a href="https://mega.nz/#!DE9EFaSa!sZ3UwrdmyLKKh2IM3J6AR4J5OmUfy90rv21hPeWlNOc">Super Smash Bros. Melee (GALE01)</a>
+      {modComponents}
 
+      <br />
+       <br />
       N64 (Virtual Console)
 
       <a href="https://mega.nz/#!OZ1RUKAQ!l225vo2KmIg6yCRUNQQqeeVgyK6RT4zxKxIHpwgSipY">] Pokemon Snap (NAKE01)</a>

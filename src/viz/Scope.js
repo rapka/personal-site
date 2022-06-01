@@ -115,10 +115,10 @@ class Scope extends React.Component {
       times(this.props.colors.length, index => {
         const rotatedH = ((H + this.props.rotationOffset) * index) % 360;
 
-        let rgb = hsvToRgb((rotatedH / 360),1 , 1);
+        let rgb = hsvToRgb((rotatedH / 360), 1, 1);
 
         if (this.props.rotateColors) {
-          rgb = hsvToRgb((rotatedH / 360),1 , 1);
+          rgb = hsvToRgb((rotatedH / 360), 1, 1);
           canvasCtx.strokeStyle = `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${0.8 - bassNormalized * 1.33})`;
         } else {
           rgb = hexRgb(this.props.colors[index]);
