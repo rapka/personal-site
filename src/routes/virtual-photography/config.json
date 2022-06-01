@@ -1,8 +1,9 @@
 {
   "galleries": {
   "elden-ring-npcs": {
-  "title": "Elden Ring Photography - NPC Portraits",
-  "description": "",
+  "title": "Elden Ring Photography: NPC Portraits",
+  "year": 2022,
+  "description": "Captured at 5K resolution on PC using Otis' photo mode mod, McFly's SSRTGI, and other ReShade effects.",
   "images": [
     {
       "url": "https://live.staticflickr.com/65535/52067722947_45c20300ac_o.png",
@@ -262,8 +263,8 @@
   ]
 },
     "elden-ring-landscapes": {
-      "title": "Landscapes",
-      "description": "Various landscapes of Elden Ring",
+      "title": "Elden Ring Photography: Landscapes",
+      "description": "Captured at 5K resolution on PC using Otis' photo mode mod, McFly's SSRTGI, and other ReShade effects.",
       "year": 2022,
      "images": [
     {
@@ -375,6 +376,7 @@
     },
     "elden-ring-enemies": {
   "title": "Elden Ring Photography - Enemies",
+  "description": "Captured at 5K resolution on PC using Otis' photo mode mod, McFly's SSRTGI, and other ReShade effects.",
   "year": 2022,
   "images": [
     {
@@ -675,7 +677,7 @@
   ]
 },
   "division-2": {
-  "title": "The Division Photo Mode",
+  "title": "Tom Clancy's The Division 2 Photo Mode",
   "description": "Captured @ 1440p using the in-game Photo Mode. Interestingly, the mode does not use standard aspect ratios.",
   "year": 2021,
   "images": [
@@ -1107,7 +1109,7 @@
   ]
 },
     "re4-noire": {
-  "title": "RE4 Noire",
+  "title": "Resident Evil 4 Noire",
   "year": 2016,
   "description": "Captured at 1080p on PC. The black and white filter was done by modding the tone mapping feature added to the Ultimate HD version. I played thgrough the entire game like this!",
   "images": [
@@ -1402,8 +1404,9 @@
   ]
 },
   "quake-3": {
-  "title": "Quake 3 Arena Photograpy: Defrag",
+  "title": "Quake 3 Arena Photography: Defrag",
   "description": "Shots of maps for the Defrag mod. Captured at 1080p on PC.",
+  "year": "2016",
   "images": [
     {
       "url": "https://live.staticflickr.com/8183/8120374459_9eef13883c_o.png",
