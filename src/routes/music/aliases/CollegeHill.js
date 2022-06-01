@@ -9,6 +9,9 @@ function CollegeHill() {
       <h4 className="alias-title">College Hill</h4>
 
       Original Work
+        Albums
+        EPs
+        Singles
 
       Remixes
 
