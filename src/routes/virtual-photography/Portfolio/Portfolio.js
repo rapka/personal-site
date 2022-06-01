@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
 import each from 'lodash/each';
+import shuffle from 'lodash/shuffle';
 import Modal from './Modal.js';
 import Gallery from './Gallery.js';
 
@@ -23,7 +24,6 @@ function Portfolio({ galleries, style }) {
 
   const activeImageData = (activeImage > -1 && activeGallery) ? galleries[activeGallery].images[activeImage] : null;
 
-  console.log('hihi222', activeImage, activeGallery, galleries, activeImageData);
   let subtitle;
   const galleryComponents = [];
   each(galleries, (galleryData, key) => galleryComponents.push((
@@ -31,7 +31,10 @@ function Portfolio({ galleries, style }) {
       expanded={false}
       key={key}
       id={key}
-      {...galleryData}
+      title={galleryData.title}
+      description={galleryData.description}
+      year={galleryData.year}
+      images={shuffle(galleryData.images)}
       openModal={openModal}
       onFocus={openImage.bind(null, key)}
       activeImage={activeGallery === key ? activeImage : -1}
