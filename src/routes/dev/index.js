@@ -2,19 +2,23 @@ import React from 'react';
 import Header from '../../Header';
 import Scope from '../../viz/Scope';
 
+import './Dev.css';
+
 function Dev() {
   return (
-    <div>
+    <div className="devPage">
       <Header />
       TODO Dev
 
-      grimearchive.org
+      <a href="https://grimearchive.org" className="devPage-siteTitle">grimearchive.org</a>
 
-      wordlebookmarks.app
+      <a href="wordlebookmarks.app" className="devPage-siteTitle">wordlebookmarks.app</a>
+
+
+
+      <a href="https://bloodfrenzy.club/" className="devPage-siteTitle">bloodfrenzy.club/</a>
 
       hyperbreeder
-
-      blood frenzy site
 
       esrgan
 
