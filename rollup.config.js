@@ -37,8 +37,10 @@ const plugins = [
       autoprefixer,
     ],
   }),
+
   external(),
-  resolve(),
+
+
   pluginUrl({
   // by default, rollup-plugin-url will not handle font files
     include: ['**/*.woff', '**/*.woff2'],
@@ -46,6 +48,7 @@ const plugins = [
     // are always bundled with the code, not copied to /dist
     limit: Infinity,
   }),
+
   babel({
     babelHelpers: 'bundled',
     exclude: 'node_modules/**',
@@ -55,15 +58,18 @@ const plugins = [
       [
         '@babel/preset-env',
         {
-          modules: false,
+          modules: 'auto',
         },
       ],
       '@babel/preset-react',
     ],
 
   }),
+
+  resolve({ browser: true, preferBuiltins: true }),
   commonjs(),
-  nodePolyfills(),
+  nodePolyfills({ sourceMap: true }),
+
   html({
     publicPath: '/',
     title: 'College Hill',

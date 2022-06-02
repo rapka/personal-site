@@ -414,6 +414,9 @@
   padding: 1rem 0;
   font-size: 1.25rem;
 }
+.youtubeEmbed {
+	border: 1px solid var(--pink);
+}
 .alias-title {
 	font-size: 2rem;
 	text-align: center;
