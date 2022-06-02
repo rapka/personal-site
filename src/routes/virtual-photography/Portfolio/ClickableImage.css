@@ -72,8 +72,8 @@
 }
 
 .clickableImage .clickableImage-img {
-  width: 100%;
-  /*height: 300px;*/
+  /*width: 100%;*/
+  height: 300px;
   display: block;
   background-repeat: no-repeat;
   background-position: 50% 50%;

@@ -1,21 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './AliasSection.css';
 import './CollegeHill.css';
 
 function CollegeHill() {
   return (
     <section className="alias-container" id="alias-collegehill">
-      <h4 className="alias-title">College Hill</h4>
+      <h3 className="alias-title">College Hill</h3>
 
       Original Work
-        Albums
-        EPs
-        Singles
+        <h4 className="alias-releaseType">Albums</h4>
+        <h4 className="alias-releaseType">EPs</h4>
+        <h4 className="alias-releaseType">Singles</h4>
 
-      Remixes
+        <h4 className="alias-releaseType">Remixes</h4>
 
-      Mixes
+        <h4 className="alias-releaseType">Mixes</h4>
     </section>
   );
 }
