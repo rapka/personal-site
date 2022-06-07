@@ -4,18 +4,17 @@ import YouTube from 'react-youtube';
 
 import './YouTube.css';
 
-function YouTubeEmbed({ videoId }) {
+function YouTubeEmbed({ videoId, options }) {
   return (
-    <div className="youubeEmbed">
-      <YouTube
-        videoId={videoId}
-      />
+    <div className="youtubeEmbed">
+      <YouTube videoId={videoId} opts={options} />
     </div>
   );
 }
 
 YouTubeEmbed.propTypes = {
   videoId: PropTypes.string.isRequired,
+  options: PropTypes.object,
 };
 
 YouTubeEmbed.defaultProps = {};

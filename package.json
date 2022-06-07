@@ -16,7 +16,7 @@
     "lint:js": "eslint src",
     "lint": "npm run lint:js && npm run lint:style",
     "is-build-es5": "npx es-check es5 './build/**/*.!(esm).js'",
-    "format": "prettier-eslint -l error \"{src,scripts}/**/*.{js,mjs,json}\""
+    "format": "prettier-eslint --write -l error \"{src,scripts}/**/*.{js,mjs,json}\""
   },
   "repository": {
     "type": "git",

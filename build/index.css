@@ -417,6 +417,9 @@
 .youtubeEmbed {
 	border: 1px solid var(--pink);
 }
+.bandcampEmbed {
+	border: 1px solid var(--pink);
+}
 .alias-title {
 	font-size: 2rem;
 	text-align: center;

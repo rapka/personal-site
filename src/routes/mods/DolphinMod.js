@@ -4,8 +4,10 @@ import ScreenshotCompare from './ScreenshotCompare';
 
 import './DolphinMod.css';
 
-function DolphinMod({ title, downloadLink, images, gameId }) {
-  const compareComponents = images.map(img => (
+function DolphinMod({
+  title, downloadLink, images, gameId,
+}) {
+  const compareComponents = images.map((img) => (
     <ScreenshotCompare original={img.original} modded={img.modded} gameId={gameId} />
   ));
 
@@ -13,14 +15,16 @@ function DolphinMod({ title, downloadLink, images, gameId }) {
     <div className="dolphinMod">
       <h3>{title}</h3>
       <img className="dolphinMod-gameCover" src={`/public/images/covers/${gameId}.png`} />
-      {!!images.length && (<div className="dolphinMod-screenshotsSection">
-        <div className="dolphinMod-screenshotsTitle">Screenshots</div>
-        <div className="dolphinMod-screenshotsDesc">Hover or click to compare</div>
-        <div className="dolphinMod-screenshots">
-          {compareComponents}
+      {!!images.length && (
+        <div className="dolphinMod-screenshotsSection">
+          <div className="dolphinMod-screenshotsTitle">Screenshots</div>
+          <div className="dolphinMod-screenshotsDesc">Hover or click to compare</div>
+          <div className="dolphinMod-screenshots">{compareComponents}</div>
         </div>
-      </div>)}
-      <a className="dolphinMod-download" href={downloadLink}>Download via Mega</a>
+      )}
+      <a className="dolphinMod-download" href={downloadLink}>
+        Download via Mega
+      </a>
     </div>
   );
 }
@@ -33,7 +37,8 @@ DolphinMod.propTypes = {
     PropTypes.shape({
       original: PropTypes.string.isRequired,
       modded: PropTypes.string.isRequired,
-  })),
+    }),
+  ),
 };
 
 export default DolphinMod;

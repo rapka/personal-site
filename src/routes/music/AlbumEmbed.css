@@ -1,0 +1,28 @@
+.albumEmbed {
+  margin: 0.5rem 0;
+}
+
+.albumEmbed-title {
+  font-size: 1.75rem;
+}
+
+.albumEmbed-year {
+  font-size: 1.5rem;
+}
+
+.albumEmbed-genres {
+  font-size: 1.25rem;
+}
+
+.albumEmbed-desc {
+  font-size: 1.15rem;
+}
+
+.aliasOption.selected {
+  font-size: 1.75rem;
+}
+
+.aliasSelector-container {
+  padding: 1rem 0;
+  font-size: 1.25rem;
+}

@@ -8,15 +8,18 @@ import './AliasSelector.css';
 function AliasSelector({ onChange, labels, activeAlias }) {
   const options = [];
 
-  each(labels, (label, i) => options.push((
+  each(labels, (label, i) => options.push(
     <div
       className={classNames('aliasOption', { selected: label === activeAlias })}
       key={label}
-      onClick={() => { console.log('you', label); onChange(label); }}
+      onClick={() => {
+        console.log('you', label);
+        onChange(label);
+      }}
     >
       {label}
-    </div>
-  )));
+    </div>,
+  ));
 
   return (
     <div className="aliasSelector-container" id="alias-collegehill">

@@ -6,7 +6,15 @@ import ClickableImage from './ClickableImage.js';
 import './Gallery.css';
 
 function Gallery({
-  title, images, description, year, openModal, activeImage, onFocus, expanded, id,
+  title,
+  images,
+  description,
+  year,
+  openModal,
+  activeImage,
+  onFocus,
+  expanded,
+  id,
 }) {
   const MAX_IMAGES = 8;
 
@@ -34,7 +42,11 @@ function Gallery({
       <div className="galleryItem-images">
         {expanded ? imageComponents : imageComponents.slice(0, MAX_IMAGES)}
       </div>
-      {!expanded && <Link className="galleryItem-viewMore" to={`/virtual-photography/${id}`}>View More &gt;&gt;</Link>}
+      {!expanded && (
+        <Link className="galleryItem-viewMore" to={`/virtual-photography/${id}`}>
+          View More &gt;&gt;
+        </Link>
+      )}
     </div>
   );
 }

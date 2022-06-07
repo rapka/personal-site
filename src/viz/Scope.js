@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import hexRgb from 'hex-rgb';
-import hsvToRgb from './util/hsvToRgb';
 import times from 'lodash/times';
 import sum from 'lodash/sum';
+import hsvToRgb from './util/hsvToRgb';
 
 import './Scope.css';
 
@@ -19,7 +19,6 @@ class Scope extends React.Component {
     this.playEvent = (event) => {
       // Space bar
       if (event.keyCode === 32) {
-
         event.preventDefault();
         this.setState({ playing: !this.state.playing });
       }
@@ -41,33 +40,32 @@ class Scope extends React.Component {
   }
 
   componentWillUnmount() {
-    document.removeEventListener("keydown", this.playEvent, false);
+    document.removeEventListener('keydown', this.playEvent, false);
   }
 
   componentDidMount() {
     // Add spacebar hotkey
-    document.addEventListener("keydown", this.playEvent, false);
-
+    document.addEventListener('keydown', this.playEvent, false);
 
     HEIGHT = window.innerHeight;
     WIDTH = window.innerWidth;
     const audioElement = this.player.current;
-    let audioCtx = this.audioCtx;
+    const { audioCtx } = this;
 
-    var analyser = audioCtx.createAnalyser();
+    const analyser = audioCtx.createAnalyser();
 
     const canvas = document.getElementById('canvas');
     const canvasCtx = canvas.getContext('2d');
 
-    let source = audioCtx.createMediaElementSource(audioElement);
+    const source = audioCtx.createMediaElementSource(audioElement);
     source.connect(analyser);
     analyser.connect(audioCtx.destination);
 
     analyser.fftSize = 2048;
     analyser.minDecibels = -80;
 
-    var bufferLength = analyser.frequencyBinCount;
-    var dataArray = new Uint8Array(bufferLength);
+    const bufferLength = analyser.frequencyBinCount;
+    const dataArray = new Uint8Array(bufferLength);
     const bassArray = new Uint8Array(bufferLength);
 
     canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
@@ -97,14 +95,14 @@ class Scope extends React.Component {
       bassValue = Math.max(0, 10 * (Math.exp(bassValue * 0.02) - 2));
       const bassNormalized = Math.min(bassValue / 1500, 1) / 2;
 
-      let highValue = sum(bassArray.slice(768)) / 256;
-      let midValue = sum(bassArray.slice(512)) / 512;
+      const highValue = sum(bassArray.slice(768)) / 256;
+      const midValue = sum(bassArray.slice(512)) / 512;
 
       window.bassNormalized = bassNormalized;
       bgElem.style.transform = `scale(${1 + bassValue * 0.00005})`;
       bgElem.style.filter = `blur(${bassValue * 0.004}px)`;
       overlayElem.style.filter = `blur(${bassValue * 0.0015}px)`;
-      overlayElem.style.transform = `translateY(${midValue * .15}px)`;
+      overlayElem.style.transform = `translateY(${midValue * 0.15}px)`;
 
       canvasCtx.fillStyle = 'rgba(200, 200, 200, 0)';
       canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
@@ -112,30 +110,34 @@ class Scope extends React.Component {
 
       const Y_OFFSET = 180;
 
-      times(this.props.colors.length, index => {
+      times(this.props.colors.length, (index) => {
         const rotatedH = ((H + this.props.rotationOffset) * index) % 360;
 
-        let rgb = hsvToRgb((rotatedH / 360), 1, 1);
+        let rgb = hsvToRgb(rotatedH / 360, 1, 1);
 
         if (this.props.rotateColors) {
-          rgb = hsvToRgb((rotatedH / 360), 1, 1);
-          canvasCtx.strokeStyle = `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${0.8 - bassNormalized * 1.33})`;
+          rgb = hsvToRgb(rotatedH / 360, 1, 1);
+          canvasCtx.strokeStyle = `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${
+            0.8 - bassNormalized * 1.33
+          })`;
         } else {
           rgb = hexRgb(this.props.colors[index]);
-          canvasCtx.strokeStyle = `rgba(${rgb.red}, ${rgb.green}, ${rgb.blue}, ${0.8 - bassNormalized * 1.33})`;
+          canvasCtx.strokeStyle = `rgba(${rgb.red}, ${rgb.green}, ${rgb.blue}, ${
+            0.8 - bassNormalized * 1.33
+          })`;
         }
 
         canvasCtx.beginPath();
-        const sliceWidth = WIDTH * 1.0 / bufferLength;
+        const sliceWidth = (WIDTH * 1.0) / bufferLength;
         let x = 0;
         let y = 0;
         let v = 0;
 
-        for(let i = 0; i < bufferLength; i++) {
+        for (let i = 0; i < bufferLength; i++) {
           v = dataArray[i] / 128.0;
-          y = v * HEIGHT / 4;
+          y = (v * HEIGHT) / 4;
 
-          if(i === 0) {
+          if (i === 0) {
             canvasCtx.moveTo(x, y + (Y_OFFSET - index * 5));
           } else {
             canvasCtx.lineTo(x, y + (Y_OFFSET - index * 5));
@@ -154,16 +156,10 @@ class Scope extends React.Component {
   render() {
     return (
       <div className="viz-container">
-        <canvas id="canvas"></canvas>
+        <canvas id="canvas" />
         <img id="scope-icon" src="/public/favicon.png" />
         <div id="scope-blurtext">blurs on beat!</div>
-        <audio
-          ref={this.player}
-          src={this.props.audioSrc}
-          type="audio/mpeg"
-          preload="auto"
-          loop
-        />
+        <audio ref={this.player} src={this.props.audioSrc} type="audio/mpeg" preload="auto" loop />
       </div>
     );
   }
@@ -179,8 +175,8 @@ Scope.propTypes = {
 Scope.defaultProps = {
   rotateColors: true,
   rotationOffset: 180,
-  colors: ["#FFFFFF", "#FFFFFF", "#888888"],
+  colors: ['#FFFFFF', '#FFFFFF', '#888888'],
   audioSrc: '/public/ww.mp3',
-}
+};
 
 export default Scope;

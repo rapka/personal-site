@@ -18,7 +18,9 @@ function ClickableImage({
   const focusedOverlay = (
     <div className="clickableImage-focusedOverlay">
       {title && <div className="clickableImage-title">{title}</div>}
-      <div className="clickableImage-fullSize" onClick={onClick}>Full size</div>
+      <div className="clickableImage-fullSize" onClick={onClick}>
+        Full size
+      </div>
     </div>
   );
 
@@ -26,7 +28,9 @@ function ClickableImage({
     <div className={classNames('clickableImage', { isFocused })}>
       <div className="clickableImage-container">
         <img src={imgUrl} className="clickableImage-img" style={{ backgroundImage: imgUrl }} />
-        {false && <div className="clickableImage-img" style={{ backgroundImage: `url(${imgUrl})` }} />}
+        {false && (
+          <div className="clickableImage-img" style={{ backgroundImage: `url(${imgUrl})` }} />
+        )}
         {true && focusedOverlay}
       </div>
     </div>
@@ -45,7 +49,9 @@ ClickableImage.propTypes = {
 };
 
 ClickableImage.defaultProps = {
-  onClick: (data) => { console.log(`Image clicked: ${data.url}`); },
+  onClick: (data) => {
+    console.log(`Image clicked: ${data.url}`);
+  },
   url: 'https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg',
   thumbnail: 'https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg',
 };

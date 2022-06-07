@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import VirutalPhotography from './routes/virtual-photography';
 import GalleryPage from './routes/virtual-photography/GalleryPage';
 import Landing from './routes/landing';

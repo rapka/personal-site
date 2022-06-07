@@ -8,9 +8,7 @@ import Gallery from './Gallery.js';
 
 import './Portfolio.css';
 
-const customStyles = {
-
-};
+const customStyles = {};
 
 function Portfolio({ galleries, style }) {
   const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -22,11 +20,11 @@ function Portfolio({ galleries, style }) {
     setIsOpen(true);
   };
 
-  const activeImageData = (activeImage > -1 && activeGallery) ? galleries[activeGallery].images[activeImage] : null;
+  const activeImageData = activeImage > -1 && activeGallery ? galleries[activeGallery].images[activeImage] : null;
 
   let subtitle;
   const galleryComponents = [];
-  each(galleries, (galleryData, key) => galleryComponents.push((
+  each(galleries, (galleryData, key) => galleryComponents.push(
     <Gallery
       expanded={false}
       key={key}
@@ -38,8 +36,8 @@ function Portfolio({ galleries, style }) {
       openModal={openModal}
       onFocus={openImage.bind(null, key)}
       activeImage={activeGallery === key ? activeImage : -1}
-    />
-  )));
+    />,
+  ));
 
   function openImage(galleryIndex, imageIndex) {
     setActiveGallery(galleryIndex);
@@ -67,9 +65,7 @@ function Portfolio({ galleries, style }) {
       >
         {activeImageData && <Modal closeModal={closeModal} {...activeImageData} />}
       </ReactModal>
-      <div>
-        {galleryComponents}
-      </div>
+      <div>{galleryComponents}</div>
     </div>
   );
 }

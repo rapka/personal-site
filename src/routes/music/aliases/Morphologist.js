@@ -8,7 +8,6 @@ function Morphologist() {
   return (
     <section className="alias-container" id="alias-morphologist">
       <h4 className="alias-title">Morphologist</h4>
-
       Mixes
     </section>
   );

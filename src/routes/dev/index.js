@@ -9,21 +9,16 @@ function Dev() {
     <div className="devPage">
       <Header />
       TODO Dev
-
-      <a href="https://grimearchive.org" className="devPage-siteTitle">grimearchive.org</a>
-
-      <a href="wordlebookmarks.app" className="devPage-siteTitle">wordlebookmarks.app</a>
-
-
-
-      <a href="https://bloodfrenzy.club/" className="devPage-siteTitle">bloodfrenzy.club/</a>
-
-      hyperbreeder
-
-      esrgan
-
-      scope example
-
+      <a href="https://grimearchive.org" className="devPage-siteTitle">
+        grimearchive.org
+      </a>
+      <a href="wordlebookmarks.app" className="devPage-siteTitle">
+        wordlebookmarks.app
+      </a>
+      <a href="https://bloodfrenzy.club/" className="devPage-siteTitle">
+        bloodfrenzy.club/
+      </a>
+      hyperbreeder esrgan scope example
       <Scope />
     </div>
   );
