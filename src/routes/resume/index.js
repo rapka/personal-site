@@ -6,6 +6,8 @@ function App() {
     <div>
       <Header />
       Resume
+
+      see more at /projects
     </div>
   );
 }

@@ -27,16 +27,26 @@ function AlbumEmbed({
 
 AlbumEmbed.propTypes = {
   youtubeId: PropTypes.string,
-  youtubeOptions: PropTypes.object,
+  youtubeOptions: PropTypes.object, // eslint-disable-line react/forbid-prop-types
   bandcampId: PropTypes.string,
   bandcampOptions: PropTypes.shape({
     size: PropTypes.string,
   }),
   title: PropTypes.string,
+  description: PropTypes.string,
   year: PropTypes.number,
   genres: PropTypes.arrayOf(PropTypes.string),
 };
 
-AlbumEmbed.defaultProps = {};
+AlbumEmbed.defaultProps = {
+  youtubeId: '',
+  youtubeOptions: {},
+  bandcampId: '',
+  bandcampOptions: {},
+  title: '',
+  description: '',
+  year: undefined,
+  genres: [],
+};
 
 export default AlbumEmbed;

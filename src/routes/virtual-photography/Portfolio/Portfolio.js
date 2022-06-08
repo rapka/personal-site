@@ -3,14 +3,12 @@ import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
 import each from 'lodash/each';
 import shuffle from 'lodash/shuffle';
-import Modal from './Modal.js';
-import Gallery from './Gallery.js';
+import Modal from './Modal';
+import Gallery from './Gallery';
 
 import './Portfolio.css';
 
-const customStyles = {};
-
-function Portfolio({ galleries, style }) {
+function Portfolio({ galleries }) {
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [activeImage, setActiveImage] = React.useState(-1);
   const [activeGallery, setActiveGallery] = React.useState('');
@@ -20,9 +18,9 @@ function Portfolio({ galleries, style }) {
     setIsOpen(true);
   };
 
-  const activeImageData = activeImage > -1 && activeGallery ? galleries[activeGallery].images[activeImage] : null;
+  const activeImageData = activeImage > -1 && activeGallery ?
+    galleries[activeGallery].images[activeImage] : null;
 
-  let subtitle;
   const galleryComponents = [];
   each(galleries, (galleryData, key) => galleryComponents.push(
     <Gallery
@@ -46,21 +44,23 @@ function Portfolio({ galleries, style }) {
   }
 
   function afterOpenModal() {
-    // subtitle.style.color = '#f00';
+
   }
 
   const closeModal = () => {
     setIsOpen(false);
   };
 
+  const contentLabel = `${activeImageData ? activeImageData.title : 'Closed'} Modal`;
+
   return (
-    <div className="react-portfolio" id="react-portfolio" style={style}>
+    <div className="react-portfolio" id="react-portfolio">
       <ReactModal
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         className="reactPortfolio-modal"
-        contentLabel={`${activeImageData ? activeImageData.title : 'Closed'} Modal`}
+        contentLabel={contentLabel}
         appElement={document.getElementById('react-portfolio')}
       >
         {activeImageData && <Modal closeModal={closeModal} {...activeImageData} />}
@@ -75,12 +75,10 @@ Portfolio.propTypes = {
     title: PropTypes.string,
     images: PropTypes.array,
   }),
-  style: PropTypes.object,
 };
 
 Portfolio.defaultProps = {
   galleries: {},
-  style: {},
 };
 
 export default Portfolio;

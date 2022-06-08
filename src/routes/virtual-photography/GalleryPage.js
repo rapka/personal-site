@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
 import { useParams } from 'react-router-dom';
-import each from 'lodash/each';
 import Header from '../../Header';
 import Modal from './Portfolio/Modal';
 import Gallery from './Portfolio/Gallery';
@@ -17,9 +16,6 @@ function GalleryPage() {
   const [activeImage, setActiveImage] = React.useState(-1);
 
   const galleryData = config.galleries[galleryKey];
-
-  console.log('fff', galleryData);
-
   const activeImageData = galleryData[activeImage];
 
   const openModal = () => {
@@ -38,6 +34,8 @@ function GalleryPage() {
     setIsOpen(false);
   };
 
+  const contentLabel = `${activeImageData ? activeImageData.title : 'Closed'} Modal`;
+
   return (
     <div className="virtualPhotography" id="galleryPage">
       <Header />
@@ -46,7 +44,7 @@ function GalleryPage() {
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         className="reactPortfolio-modal"
-        contentLabel={`${activeImageData ? activeImageData.title : 'Closed'} Modal`}
+        contentLabel={contentLabel}
         appElement={document.getElementById('react-portfolio')}
       >
         {activeImageData && <Modal closeModal={closeModal} {...activeImageData} />}

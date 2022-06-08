@@ -17,10 +17,12 @@ function ScreenshotCompare({ original, modded, gameId }) {
         <img
           src={`/public/images/screens/${gameId}/${original}`}
           className="screenshotCompare-original"
+          alt="Original game screenshot"
         />
         <img
           src={`/public/images/screens/${gameId}/${modded}`}
           className="screenshotCompare-modded"
+          alt="Modded game screenshot"
         />
       </div>
       <div className="screenshotCompare-label">{active ? 'HD textures' : 'original textures'}</div>
@@ -29,6 +31,7 @@ function ScreenshotCompare({ original, modded, gameId }) {
 }
 
 ScreenshotCompare.propTypes = {
+  gameId: PropTypes.string.isRequired,
   original: PropTypes.string.isRequired,
   modded: PropTypes.string.isRequired,
 };

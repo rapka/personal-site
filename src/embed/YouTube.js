@@ -14,9 +14,11 @@ function YouTubeEmbed({ videoId, options }) {
 
 YouTubeEmbed.propTypes = {
   videoId: PropTypes.string.isRequired,
-  options: PropTypes.object,
+  options: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
 
-YouTubeEmbed.defaultProps = {};
+YouTubeEmbed.defaultProps = {
+  options: {},
+};
 
 export default YouTubeEmbed;

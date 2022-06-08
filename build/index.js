@@ -35421,8 +35421,7 @@
 	};
 
 	function Portfolio(_ref) {
-	  var galleries = _ref.galleries,
-	      style = _ref.style;
+	  var galleries = _ref.galleries;
 
 	  var _React$useState = React.useState(false),
 	      _React$useState2 = _slicedToArray(_React$useState, 2),
@@ -35467,23 +35466,22 @@
 	    setActiveImage(imageIndex);
 	  }
 
-	  function afterOpenModal() {// subtitle.style.color = '#f00';
-	  }
+	  function afterOpenModal() {}
 
 	  var closeModal = function closeModal() {
 	    setIsOpen(false);
 	  };
 
+	  var contentLabel = "".concat(activeImageData ? activeImageData.title : 'Closed', " Modal");
 	  return /*#__PURE__*/React.createElement("div", {
 	    className: "react-portfolio",
-	    id: "react-portfolio",
-	    style: style
+	    id: "react-portfolio"
 	  }, /*#__PURE__*/React.createElement(ReactModal, {
 	    isOpen: modalIsOpen,
 	    onAfterOpen: afterOpenModal,
 	    onRequestClose: closeModal,
 	    className: "reactPortfolio-modal",
-	    contentLabel: "".concat(activeImageData ? activeImageData.title : 'Closed', " Modal"),
+	    contentLabel: contentLabel,
 	    appElement: document.getElementById('react-portfolio')
 	  }, activeImageData && /*#__PURE__*/React.createElement(Modal, _extends$1({
 	    closeModal: closeModal
@@ -35494,12 +35492,10 @@
 	  galleries: PropTypes.shape({
 	    title: PropTypes.string,
 	    images: PropTypes.array
-	  }),
-	  style: PropTypes.object
+	  })
 	};
 	Portfolio.defaultProps = {
-	  galleries: {},
-	  style: {}
+	  galleries: {}
 	};
 
 	function Header() {
@@ -37576,7 +37572,6 @@
 	      setActiveImage = _React$useState4[1];
 
 	  var galleryData = config$1.galleries[galleryKey];
-	  console.log('fff', galleryData);
 	  var activeImageData = galleryData[activeImage];
 
 	  var openModal = function openModal() {
@@ -37594,6 +37589,7 @@
 	    setIsOpen(false);
 	  };
 
+	  var contentLabel = "".concat(activeImageData ? activeImageData.title : 'Closed', " Modal");
 	  return /*#__PURE__*/React.createElement("div", {
 	    className: "virtualPhotography",
 	    id: "galleryPage"
@@ -37602,7 +37598,7 @@
 	    onAfterOpen: afterOpenModal,
 	    onRequestClose: closeModal,
 	    className: "reactPortfolio-modal",
-	    contentLabel: "".concat(activeImageData ? activeImageData.title : 'Closed', " Modal"),
+	    contentLabel: contentLabel,
 	    appElement: document.getElementById('react-portfolio')
 	  }, activeImageData && /*#__PURE__*/React.createElement(Modal, _extends$1({
 	    closeModal: closeModal
@@ -37620,7 +37616,7 @@
 	}
 
 	function App$1() {
-	  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Header, null), "Resume");
+	  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(Header, null), "Resume see more at /projects");
 	}
 
 	function ScreenshotCompare(_ref) {
@@ -37647,16 +37643,19 @@
 	    }
 	  }, /*#__PURE__*/React.createElement("img", {
 	    src: "/public/images/screens/".concat(gameId, "/").concat(original),
-	    className: "screenshotCompare-original"
+	    className: "screenshotCompare-original",
+	    alt: "Original game screenshot"
 	  }), /*#__PURE__*/React.createElement("img", {
 	    src: "/public/images/screens/".concat(gameId, "/").concat(modded),
-	    className: "screenshotCompare-modded"
+	    className: "screenshotCompare-modded",
+	    alt: "Modded game screenshot"
 	  })), /*#__PURE__*/React.createElement("div", {
 	    className: "screenshotCompare-label"
 	  }, active ? 'HD textures' : 'original textures'));
 	}
 
 	ScreenshotCompare.propTypes = {
+	  gameId: PropTypes.string.isRequired,
 	  original: PropTypes.string.isRequired,
 	  modded: PropTypes.string.isRequired
 	};
@@ -37677,7 +37676,8 @@
 	    className: "dolphinMod"
 	  }, /*#__PURE__*/React.createElement("h3", null, title), /*#__PURE__*/React.createElement("img", {
 	    className: "dolphinMod-gameCover",
-	    src: "/public/images/covers/".concat(gameId, ".png")
+	    src: "/public/images/covers/".concat(gameId, ".png"),
+	    alt: "".concat(title, " Game cover")
 	  }), !!images.length && /*#__PURE__*/React.createElement("div", {
 	    className: "dolphinMod-screenshotsSection"
 	  }, /*#__PURE__*/React.createElement("div", {
@@ -37701,6 +37701,9 @@
 	    modded: PropTypes.string.isRequired
 	  }))
 	};
+	DolphinMod.defaultProps = {
+	  images: []
+	};
 
 	var modData = [{
 	  title: 'Metroid Prime',
@@ -37720,7 +37723,7 @@
 	    modded: 'GM8E01-3.png'
 	  }]
 	}, {
-	  title: 'Tony Hawk\'s Pro Skater 3',
+	  title: "Tony Hawk's Pro Skater 3",
 	  gameId: 'GT3E52',
 	  downloadLink: 'https://mega.nz/#!Wd8CUSYC!4kXspst7w3DJbcNqvns1XdJQKqZL0Z7u39NfcMoEDmg',
 	  images: [{
@@ -37874,13 +37877,19 @@
 	      activeAlias = _ref.activeAlias;
 	  var options = [];
 	  each(labels, function (label, i) {
-	    return options.push( /*#__PURE__*/React.createElement("div", {
+	    if (i > 0) {
+	      options.push( /*#__PURE__*/React.createElement("div", {
+	        className: "aliasOption-divider",
+	        key: "divider-".concat(i)
+	      }, "aka"));
+	    }
+
+	    options.push( /*#__PURE__*/React.createElement("button", {
 	      className: classNames('aliasOption', {
 	        selected: label === activeAlias
 	      }),
 	      key: label,
 	      onClick: function onClick() {
-	        console.log('you', label);
 	        onChange(label);
 	      }
 	    }, label));
@@ -37893,11 +37902,12 @@
 
 	AliasSelector.propTypes = {
 	  onChange: PropTypes.func,
-	  labels: PropTypes.arrayOf(PropTypes.string),
+	  labels: PropTypes.arrayOf(PropTypes.string).isRequired,
 	  activeAlias: PropTypes.string
 	};
 	AliasSelector.defaultProps = {
-	  activeAlias: 'College Hill'
+	  activeAlias: 'College Hill',
+	  onChange: function onChange() {}
 	};
 
 	// do not edit .js files directly - edit src/index.jst
@@ -39555,9 +39565,12 @@
 
 	YouTubeEmbed.propTypes = {
 	  videoId: PropTypes.string.isRequired,
-	  options: PropTypes.object
+	  options: PropTypes.object // eslint-disable-line react/forbid-prop-types
+
 	};
-	YouTubeEmbed.defaultProps = {};
+	YouTubeEmbed.defaultProps = {
+	  options: {}
+	};
 
 	/**
 	 * A faster alternative to `Function#apply`, this function invokes `func`
@@ -41368,7 +41381,7 @@
 	  var options = _ref.options,
 	      albumId = _ref.albumId;
 	  var defaultOpts = {
-	    width: "min(100vw, 500px);",
+	    width: 'min(100vw, 500px);',
 	    height: options && options.size === 'large' ? 500 : undefined,
 	    size: 'large',
 	    bgColor: '333333',
@@ -41381,10 +41394,10 @@
 	      linkColor = opts.linkColor,
 	      size = opts.size;
 	  var iframeUrl = "https://bandcamp.com/EmbeddedPlayer/album=".concat(albumId) + "/size=".concat(size, "/bgcol=").concat(bgColor, "/linkcol=").concat(linkColor, "/tracklist=false/transparent=true/");
-	  console.log('rrrr', options, width, height, bgColor, linkColor, size);
 	  return /*#__PURE__*/React.createElement("div", {
 	    className: "bandcampEmbed"
 	  }, /*#__PURE__*/React.createElement("iframe", {
+	    title: "Embedded Bandcamp content",
 	    style: {
 	      border: 0,
 	      width: "".concat(width, "px"),
@@ -41392,7 +41405,7 @@
 	    },
 	    src: iframeUrl,
 	    seamless: true
-	  }, "A weird error occured! ", /*#__PURE__*/React.createElement("a", {
+	  }, "A weird error occured!", ' ', /*#__PURE__*/React.createElement("a", {
 	    href: "https://www.bandcamp.com"
 	  }, "Got to Bandcamp")));
 	}
@@ -41406,6 +41419,9 @@
 	    bgColor: PropTypes.string,
 	    linkColor: PropTypes.string
 	  })
+	};
+	BandcampEmbed.defaultProps = {
+	  options: {}
 	};
 
 	function AlbumEmbed(_ref) {
@@ -41439,15 +41455,26 @@
 	AlbumEmbed.propTypes = {
 	  youtubeId: PropTypes.string,
 	  youtubeOptions: PropTypes.object,
+	  // eslint-disable-line react/forbid-prop-types
 	  bandcampId: PropTypes.string,
 	  bandcampOptions: PropTypes.shape({
 	    size: PropTypes.string
 	  }),
 	  title: PropTypes.string,
+	  description: PropTypes.string,
 	  year: PropTypes.number,
 	  genres: PropTypes.arrayOf(PropTypes.string)
 	};
-	AlbumEmbed.defaultProps = {};
+	AlbumEmbed.defaultProps = {
+	  youtubeId: '',
+	  youtubeOptions: {},
+	  bandcampId: '',
+	  bandcampOptions: {},
+	  title: '',
+	  description: '',
+	  year: undefined,
+	  genres: []
+	};
 
 	function CollegeHill() {
 	  return /*#__PURE__*/React.createElement("section", {
@@ -41455,7 +41482,9 @@
 	    id: "alias-collegehill"
 	  }, /*#__PURE__*/React.createElement("h3", {
 	    className: "alias-title"
-	  }, "College Hill"), "Original Work", /*#__PURE__*/React.createElement("h4", {
+	  }, "College Hill"), /*#__PURE__*/React.createElement("h5", {
+	    className: "alias-description"
+	  }, "Primary alias for releasing. Grime. Dubstep. Bass. Baltimore Club."), "Original Work", /*#__PURE__*/React.createElement("h4", {
 	    className: "alias-releaseType"
 	  }, "Albums"), "Overground Underground", /*#__PURE__*/React.createElement(AlbumEmbed, {
 	    youtubeId: "wVvy1dLo19s"
@@ -41490,7 +41519,9 @@
 	    id: "alias-morphologist"
 	  }, /*#__PURE__*/React.createElement("h4", {
 	    className: "alias-title"
-	  }, "Morphologist"), "Mixes");
+	  }, "Morphologist"), /*#__PURE__*/React.createElement("h5", {
+	    className: "alias-description"
+	  }, "Acid Techno."), "Mixes");
 	}
 
 	Morphologist.propTypes = {};
@@ -41502,7 +41533,11 @@
 	    id: "alias-fury"
 	  }, /*#__PURE__*/React.createElement("h4", {
 	    className: "alias-title"
-	  }, "Fury"), "Mixes");
+	  }, "Fury"), /*#__PURE__*/React.createElement("h5", {
+	    className: "alias-description"
+	  }, "Footwork."), /*#__PURE__*/React.createElement("h4", {
+	    className: "alias-releaseType"
+	  }, "Albums"));
 	}
 
 	Fury.propTypes = {};
@@ -41574,57 +41609,6 @@
 
 		return {red, green, blue, alpha};
 	}
-
-	var hsvToRgb = function hsvToRgb(h, s, v) {
-	  var r;
-	  var g;
-	  var b;
-	  var i = Math.floor(h * 6);
-	  var f = h * 6 - i;
-	  var p = v * (1 - s);
-	  var q = v * (1 - f * s);
-	  var t = v * (1 - (1 - f) * s);
-
-	  switch (i % 6) {
-	    case 0:
-	      r = v;
-	      g = t;
-	      b = p;
-	      break;
-
-	    case 1:
-	      r = q;
-	      g = v;
-	      b = p;
-	      break;
-
-	    case 2:
-	      r = p;
-	      g = v;
-	      b = t;
-	      break;
-
-	    case 3:
-	      r = p;
-	      g = q;
-	      b = v;
-	      break;
-
-	    case 4:
-	      r = t;
-	      g = p;
-	      b = v;
-	      break;
-
-	    case 5:
-	      r = v;
-	      g = p;
-	      b = q;
-	      break;
-	  }
-
-	  return [r * 255, g * 255, b * 255];
-	};
 
 	/** Used to match a single whitespace character. */
 
@@ -41945,6 +41929,57 @@
 
 	var sum_1 = sum;
 
+	var hsvToRgb = function hsvToRgb(h, s, v) {
+	  var r;
+	  var g;
+	  var b;
+	  var i = Math.floor(h * 6);
+	  var f = h * 6 - i;
+	  var p = v * (1 - s);
+	  var q = v * (1 - f * s);
+	  var t = v * (1 - (1 - f) * s); // eslint-disable-next-line default-case
+
+	  switch (i % 6) {
+	    case 0:
+	      r = v;
+	      g = t;
+	      b = p;
+	      break;
+
+	    case 1:
+	      r = q;
+	      g = v;
+	      b = p;
+	      break;
+
+	    case 2:
+	      r = p;
+	      g = v;
+	      b = t;
+	      break;
+
+	    case 3:
+	      r = p;
+	      g = q;
+	      b = v;
+	      break;
+
+	    case 4:
+	      r = t;
+	      g = p;
+	      b = v;
+	      break;
+
+	    case 5:
+	      r = v;
+	      g = p;
+	      b = q;
+	      break;
+	  }
+
+	  return [r * 255, g * 255, b * 255];
+	};
+
 	var WIDTH = 1920 / 2;
 	var HEIGHT = 1080;
 	var H = 0;
@@ -41961,7 +41996,6 @@
 
 	    _this = _super.call(this, props);
 	    _this.state = {
-	      visible: false,
 	      playing: false
 	    };
 	    _this.player = /*#__PURE__*/React.createRef();
@@ -41982,33 +42016,12 @@
 	  }
 
 	  _createClass$1(Scope, [{
-	    key: "componentDidUpdate",
-	    value: function componentDidUpdate(prevProps, prevState) {
-	      var _this2 = this;
-
-	      HEIGHT = window.innerHeight;
-	      WIDTH = window.innerWidth;
-
-	      if (!prevState.playing && this.state.playing) {
-	        this.audioCtx.resume().then(function () {
-	          _this2.player.current.play();
-	        });
-	      } else if (prevState.playing && !this.state.playing) {
-	        this.player.current.pause();
-	      }
-	    }
-	  }, {
-	    key: "componentWillUnmount",
-	    value: function componentWillUnmount() {
-	      document.removeEventListener("keydown", this.playEvent, false);
-	    }
-	  }, {
 	    key: "componentDidMount",
 	    value: function componentDidMount() {
-	      var _this3 = this;
+	      var _this2 = this;
 
 	      // Add spacebar hotkey
-	      document.addEventListener("keydown", this.playEvent, false);
+	      document.addEventListener('keydown', this.playEvent, false);
 	      HEIGHT = window.innerHeight;
 	      WIDTH = window.innerWidth;
 	      var audioElement = this.player.current;
@@ -42024,17 +42037,21 @@
 	      var bufferLength = analyser.frequencyBinCount;
 	      var dataArray = new Uint8Array(bufferLength);
 	      var bassArray = new Uint8Array(bufferLength);
-	      canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
-	      document.getElementById('artist');
-	      document.getElementById('album');
+	      canvasCtx.clearRect(0, 0, WIDTH, HEIGHT); // const artistElem = document.getElementById('artist');
+	      // const albumElem = document.getElementById('album');
+
 	      var bgElem = document.getElementById('scope-icon');
 	      var overlayElem = document.getElementById('scope-blurtext');
 
 	      var draw = function draw() {
+	        var _this2$props = _this2.props,
+	            colors = _this2$props.colors,
+	            rotationOffset = _this2$props.rotationOffset,
+	            rotateColors = _this2$props.rotateColors;
 	        HEIGHT = window.innerHeight;
 	        WIDTH = window.innerWidth;
 
-	        if (_this3.props.playing) {
+	        if (_this2.state.playing) {
 	          H = (H + 0.5) % 360;
 	        }
 
@@ -42053,20 +42070,20 @@
 	        bgElem.style.transform = "scale(".concat(1 + bassValue * 0.00005, ")");
 	        bgElem.style.filter = "blur(".concat(bassValue * 0.004, "px)");
 	        overlayElem.style.filter = "blur(".concat(bassValue * 0.0015, "px)");
-	        overlayElem.style.transform = "translateY(".concat(midValue * .15, "px)");
+	        overlayElem.style.transform = "translateY(".concat(midValue * 0.15, "px)");
 	        canvasCtx.fillStyle = 'rgba(200, 200, 200, 0)';
 	        canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 	        canvasCtx.lineWidth = Math.max(bassValue / 100, 2);
 	        var Y_OFFSET = 180;
-	        times_1(_this3.props.colors.length, function (index) {
-	          var rotatedH = (H + _this3.props.rotationOffset) * index % 360;
+	        times_1(colors.length, function (index) {
+	          var rotatedH = (H + rotationOffset) * index % 360;
 	          var rgb = hsvToRgb(rotatedH / 360, 1, 1);
 
-	          if (_this3.props.rotateColors) {
+	          if (rotateColors) {
 	            rgb = hsvToRgb(rotatedH / 360, 1, 1);
 	            canvasCtx.strokeStyle = "rgba(".concat(rgb[0], ", ").concat(rgb[1], ", ").concat(rgb[2], ", ").concat(0.8 - bassNormalized * 1.33, ")");
 	          } else {
-	            rgb = hexRgb(_this3.props.colors[index]);
+	            rgb = hexRgb(colors[index]);
 	            canvasCtx.strokeStyle = "rgba(".concat(rgb.red, ", ").concat(rgb.green, ", ").concat(rgb.blue, ", ").concat(0.8 - bassNormalized * 1.33, ")");
 	          }
 
@@ -42096,6 +42113,27 @@
 	      draw();
 	    }
 	  }, {
+	    key: "componentDidUpdate",
+	    value: function componentDidUpdate(prevProps, prevState) {
+	      var _this3 = this;
+
+	      HEIGHT = window.innerHeight;
+	      WIDTH = window.innerWidth;
+
+	      if (!prevState.playing && this.state.playing) {
+	        this.audioCtx.resume().then(function () {
+	          _this3.player.current.play();
+	        });
+	      } else if (prevState.playing && !this.state.playing) {
+	        this.player.current.pause();
+	      }
+	    }
+	  }, {
+	    key: "componentWillUnmount",
+	    value: function componentWillUnmount() {
+	      document.removeEventListener('keydown', this.playEvent, false);
+	    }
+	  }, {
 	    key: "render",
 	    value: function render() {
 	      return /*#__PURE__*/React.createElement("div", {
@@ -42122,18 +42160,17 @@
 
 	Scope.propTypes = {
 	  rotateColors: PropTypes.bool,
-	  // flag to automatically cycle through the rainbow
+	  // flag to auto cycle thru the rainbow
 	  rotationOffset: PropTypes.number,
-	  // when rotateColors is true, hue offset between different scopes (in degrees)
+	  // hue offset between scopes (in degrees) with rotateColors
 	  colors: PropTypes.arrayOf(PropTypes.string),
-	  // when rotateColors is false, static color for each scope
+	  // static color for each scope
 	  audioSrc: PropTypes.string.isRequired
 	};
 	Scope.defaultProps = {
 	  rotateColors: true,
 	  rotationOffset: 180,
-	  colors: ["#FFFFFF", "#FFFFFF", "#888888"],
-	  audioSrc: '/public/ww.mp3'
+	  colors: ['#FFFFFF', '#FFFFFF', '#888888']
 	};
 
 	function Dev() {

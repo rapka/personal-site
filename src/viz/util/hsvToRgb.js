@@ -9,6 +9,7 @@ const hsvToRgb = (h, s, v) => {
   const q = v * (1 - f * s);
   const t = v * (1 - (1 - f) * s);
 
+  // eslint-disable-next-line default-case
   switch (i % 6) {
   case 0:
     r = v;

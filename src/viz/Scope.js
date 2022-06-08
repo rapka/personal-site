@@ -14,7 +14,7 @@ let H = 0;
 class Scope extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { visible: false, playing: false };
+    this.state = { playing: false };
     this.player = React.createRef();
     this.playEvent = (event) => {
       // Space bar
@@ -24,23 +24,6 @@ class Scope extends React.Component {
       }
     };
     this.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    HEIGHT = window.innerHeight;
-    WIDTH = window.innerWidth;
-
-    if (!prevState.playing && this.state.playing) {
-      this.audioCtx.resume().then(() => {
-        this.player.current.play();
-      });
-    } else if (prevState.playing && !this.state.playing) {
-      this.player.current.pause();
-    }
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('keydown', this.playEvent, false);
   }
 
   componentDidMount() {
@@ -69,16 +52,17 @@ class Scope extends React.Component {
     const bassArray = new Uint8Array(bufferLength);
 
     canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
-    const artistElem = document.getElementById('artist');
-    const albumElem = document.getElementById('album');
+    // const artistElem = document.getElementById('artist');
+    // const albumElem = document.getElementById('album');
     const bgElem = document.getElementById('scope-icon');
     const overlayElem = document.getElementById('scope-blurtext');
 
     const draw = () => {
+      const { colors, rotationOffset, rotateColors } = this.props;
       HEIGHT = window.innerHeight;
       WIDTH = window.innerWidth;
 
-      if (this.props.playing) {
+      if (this.state.playing) {
         H = (H + 0.5) % 360;
       }
 
@@ -110,18 +94,18 @@ class Scope extends React.Component {
 
       const Y_OFFSET = 180;
 
-      times(this.props.colors.length, (index) => {
-        const rotatedH = ((H + this.props.rotationOffset) * index) % 360;
+      times(colors.length, (index) => {
+        const rotatedH = ((H + rotationOffset) * index) % 360;
 
         let rgb = hsvToRgb(rotatedH / 360, 1, 1);
 
-        if (this.props.rotateColors) {
+        if (rotateColors) {
           rgb = hsvToRgb(rotatedH / 360, 1, 1);
           canvasCtx.strokeStyle = `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${
             0.8 - bassNormalized * 1.33
           })`;
         } else {
-          rgb = hexRgb(this.props.colors[index]);
+          rgb = hexRgb(colors[index]);
           canvasCtx.strokeStyle = `rgba(${rgb.red}, ${rgb.green}, ${rgb.blue}, ${
             0.8 - bassNormalized * 1.33
           })`;
@@ -153,22 +137,45 @@ class Scope extends React.Component {
     draw();
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    HEIGHT = window.innerHeight;
+    WIDTH = window.innerWidth;
+
+    if (!prevState.playing && this.state.playing) {
+      this.audioCtx.resume().then(() => {
+        this.player.current.play();
+      });
+    } else if (prevState.playing && !this.state.playing) {
+      this.player.current.pause();
+    }
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.playEvent, false);
+  }
+
   render() {
     return (
       <div className="viz-container">
         <canvas id="canvas" />
         <img id="scope-icon" src="/public/favicon.png" />
         <div id="scope-blurtext">blurs on beat!</div>
-        <audio ref={this.player} src={this.props.audioSrc} type="audio/mpeg" preload="auto" loop />
+        <audio
+          ref={this.player}
+          src={this.props.audioSrc}
+          type="audio/mpeg"
+          preload="auto"
+          loop
+        />
       </div>
     );
   }
 }
 
 Scope.propTypes = {
-  rotateColors: PropTypes.bool, // flag to automatically cycle through the rainbow
-  rotationOffset: PropTypes.number, // when rotateColors is true, hue offset between different scopes (in degrees)
-  colors: PropTypes.arrayOf(PropTypes.string), // when rotateColors is false, static color for each scope
+  rotateColors: PropTypes.bool, // flag to auto cycle thru the rainbow
+  rotationOffset: PropTypes.number, // hue offset between scopes (in degrees) with rotateColors
+  colors: PropTypes.arrayOf(PropTypes.string), // static color for each scope
   audioSrc: PropTypes.string.isRequired,
 };
 
@@ -176,7 +183,6 @@ Scope.defaultProps = {
   rotateColors: true,
   rotationOffset: 180,
   colors: ['#FFFFFF', '#FFFFFF', '#888888'],
-  audioSrc: '/public/ww.mp3',
 };
 
 export default Scope;

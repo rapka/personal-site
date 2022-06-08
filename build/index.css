@@ -400,19 +400,30 @@
 	display: flex;
 	flex-direction: row;
 }
+.aliasSelector-container {
+  color: var(--pink);
+}
+
 .aliasOption {
   font-size: 1.5rem;
   margin: 0.5rem 0;
   cursor: pointer;
+  background: transparent;
+  border: 0;
 }
 
 .aliasOption.selected {
-  font-size: 1.75rem;
+  font-size: 2rem;
+  text-decoration: underline;
 }
 
 .aliasSelector-container {
   padding: 1rem 0;
   font-size: 1.25rem;
+}
+
+.aliasOption-divider {
+  font-size: 1rem;
 }
 .youtubeEmbed {
 	border: 1px solid var(--pink);
@@ -427,6 +438,11 @@
 
 .alias-releaseType {
 	font-size: 1.75rem;
+	text-align: center;
+}
+
+.alias-description {
+	font-size: 1.5rem;
 	text-align: center;
 }
 #alias-collegehill {

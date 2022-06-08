@@ -14,7 +14,11 @@ function DolphinMod({
   return (
     <div className="dolphinMod">
       <h3>{title}</h3>
-      <img className="dolphinMod-gameCover" src={`/public/images/covers/${gameId}.png`} />
+      <img
+        className="dolphinMod-gameCover"
+        src={`/public/images/covers/${gameId}.png`}
+        alt={`${title} Game cover`}
+      />
       {!!images.length && (
         <div className="dolphinMod-screenshotsSection">
           <div className="dolphinMod-screenshotsTitle">Screenshots</div>
@@ -39,6 +43,10 @@ DolphinMod.propTypes = {
       modded: PropTypes.string.isRequired,
     }),
   ),
+};
+
+DolphinMod.defaultProps = {
+  images: [],
 };
 
 export default DolphinMod;

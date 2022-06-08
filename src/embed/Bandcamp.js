@@ -21,11 +21,10 @@ function BandcampEmbed({ options, albumId }) {
   const iframeUrl = `https://bandcamp.com/EmbeddedPlayer/album=${albumId}`
     + `/size=${size}/bgcol=${bgColor}/linkcol=${linkColor}/tracklist=false/transparent=true/`;
 
-  console.log('rrrr', options, width, height, bgColor, linkColor, size);
-
   return (
     <div className="bandcampEmbed">
       <iframe
+        title="Embedded Bandcamp content"
         style={{ border: 0, width: `${width}px`, height: `${height}px` }}
         src={iframeUrl}
         seamless
@@ -47,6 +46,10 @@ BandcampEmbed.propTypes = {
     bgColor: PropTypes.string,
     linkColor: PropTypes.string,
   }),
+};
+
+BandcampEmbed.defaultProps = {
+  options: {},
 };
 
 export default BandcampEmbed;

@@ -8,18 +8,30 @@ import './AliasSelector.css';
 function AliasSelector({ onChange, labels, activeAlias }) {
   const options = [];
 
-  each(labels, (label, i) => options.push(
-    <div
-      className={classNames('aliasOption', { selected: label === activeAlias })}
-      key={label}
-      onClick={() => {
-        console.log('you', label);
-        onChange(label);
-      }}
-    >
-      {label}
-    </div>,
-  ));
+  each(labels, (label, i) => {
+    if (i > 0) {
+      options.push(
+        <div
+          className="aliasOption-divider"
+          key={`divider-${i}`}
+        >
+          aka
+        </div>,
+      );
+    }
+
+    options.push(
+      <button
+        className={classNames('aliasOption', { selected: label === activeAlias })}
+        key={label}
+        onClick={() => {
+          onChange(label);
+        }}
+      >
+        {label}
+      </button>,
+    );
+  });
 
   return (
     <div className="aliasSelector-container" id="alias-collegehill">
@@ -30,12 +42,13 @@ function AliasSelector({ onChange, labels, activeAlias }) {
 
 AliasSelector.propTypes = {
   onChange: PropTypes.func,
-  labels: PropTypes.arrayOf(PropTypes.string),
+  labels: PropTypes.arrayOf(PropTypes.string).isRequired,
   activeAlias: PropTypes.string,
 };
 
 AliasSelector.defaultProps = {
   activeAlias: 'College Hill',
+  onChange: () => {},
 };
 
 export default AliasSelector;

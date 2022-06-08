@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import AlbumEmbed from '../AlbumEmbed';
 
 import './AliasSection.css';
@@ -9,6 +8,9 @@ function CollegeHill() {
   return (
     <section className="alias-container" id="alias-collegehill">
       <h3 className="alias-title">College Hill</h3>
+      <h5 className="alias-description">
+        Primary alias for releasing. Grime. Dubstep. Bass. Baltimore Club.
+      </h5>
       Original Work
       <h4 className="alias-releaseType">Albums</h4>
       Overground Underground
