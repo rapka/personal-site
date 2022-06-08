@@ -218,6 +218,15 @@
   /*max-width: 100vw;*/
   /*overflow-x: scroll;*/
 }
+
+.galleryItem-viewMore {
+  text-align: center;
+  margin: 1rem 0;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  font-size: 2.25rem;
+}
 .reactPortfolio-modalContents {
   display: flex;
   flex-direction: column;
