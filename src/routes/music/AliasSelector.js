@@ -11,10 +11,7 @@ function AliasSelector({ onChange, labels, activeAlias }) {
   each(labels, (label, i) => {
     if (i > 0) {
       options.push(
-        <div
-          className="aliasOption-divider"
-          key={`divider-${i}`}
-        >
+        <div className="aliasOption-divider" key={`divider-${i}`}>
           aka
         </div>,
       );

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import ClickableImage from './ClickableImage.js';
+import shuffle from 'lodash/shuffle';
+import ClickableImage from './ClickableImage';
 
 import './Gallery.css';
 
@@ -29,19 +30,21 @@ function Gallery({
     </div>
   ));
 
+  const [shuffled, setShuffled] = useState([]);
+
+  if (!expanded && !shuffled.length) {
+    setShuffled(shuffle(imageComponents).slice(0, MAX_IMAGES));
+  }
+
   return (
     <div className="galleryItem-container">
-      <div className="galleryItem-row f-row">
+      <div className="galleryItem-row">
         <h2 className="galleryItem-title">{title}</h2>
-        <div className="galleryItem-label">
-          {!!year && <div className="galleryItem-divider">|</div>}
-          {!!year && <div className="galleryItem-year">{year}</div>}
-        </div>
+        {!!year && <div className="galleryItem-divider">|</div>}
+        {!!year && <div className="galleryItem-year">{year}</div>}
       </div>
       <div className="galleryItem-description">{description}</div>
-      <div className="galleryItem-images">
-        {expanded ? imageComponents : imageComponents.slice(0, MAX_IMAGES)}
-      </div>
+      <div className="galleryItem-images">{expanded ? imageComponents : shuffled}</div>
       {!expanded && (
         <Link className="galleryItem-viewMore" to={`/virtual-photography/${id}`}>
           View More &gt;&gt;

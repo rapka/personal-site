@@ -160,13 +160,7 @@ class Scope extends React.Component {
         <canvas id="canvas" />
         <img id="scope-icon" src="/public/favicon.png" />
         <div id="scope-blurtext">blurs on beat!</div>
-        <audio
-          ref={this.player}
-          src={this.props.audioSrc}
-          type="audio/mpeg"
-          preload="auto"
-          loop
-        />
+        <audio ref={this.player} src={this.props.audioSrc} type="audio/mpeg" preload="auto" loop />
       </div>
     );
   }

@@ -5,9 +5,7 @@ function App() {
   return (
     <div>
       <Header />
-      Resume
-
-      see more at /projects
+      Resume see more at /projects
     </div>
   );
 }
