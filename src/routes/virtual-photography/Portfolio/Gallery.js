@@ -31,7 +31,7 @@ function Gallery({
 
   return (
     <div className="galleryItem-container">
-      <div className="galleryItem-row">
+      <div className="galleryItem-row f-row">
         <h2 className="galleryItem-title">{title}</h2>
         <div className="galleryItem-label">
           {!!year && <div className="galleryItem-divider">|</div>}

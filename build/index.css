@@ -173,6 +173,7 @@
 .galleryItem-row {
   display: inline-block;
   margin-top: 1rem;
+  align-items: baseline;
 }
 
 .galleryItem-title {
