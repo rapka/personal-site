@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import YouTubeEmbed from '../../embed/YouTube';
 import BandcampEmbed from '../../embed/Bandcamp';
 
+import './AlbumEmbed.css';
+
 function AlbumEmbed({
   title,
   year,
@@ -15,9 +17,9 @@ function AlbumEmbed({
 }) {
   return (
     <div className="albumEmbed">
-      {title && <h4 className="albumEmbed-title">{title}</h4>}
-      {year && <h4 className="albumEmbed-year">{title}</h4>}
-      {genres && genres.length && <div className="albumEmbed-genres">{genres}</div>}
+      {!!title && <h4 className="albumEmbed-title">{title}</h4>}
+      {!!year && <h4 className="albumEmbed-year">{year}</h4>}
+      {genres && genres.length > 0 && <div className="albumEmbed-genres">({genres.join('/')})</div>}
       {description && <div className="albumEmbed-desc">{description}</div>}
       {youtubeId && <YouTubeEmbed videoId={youtubeId} options={youtubeOptions} />}
       {bandcampId && <BandcampEmbed albumId={bandcampId} options={bandcampOptions} />}

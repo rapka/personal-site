@@ -40,8 +40,7 @@ function Gallery({
     <div className="galleryItem-container">
       <div className="galleryItem-row">
         <h2 className="galleryItem-title">{title}</h2>
-        {!!year && <div className="galleryItem-divider">|</div>}
-        {!!year && <div className="galleryItem-year">{year}</div>}
+        {!!year && <div className="galleryItem-year">({year})</div>}
       </div>
       <div className="galleryItem-description">{description}</div>
       <div className="galleryItem-images">{expanded ? imageComponents : shuffled}</div>

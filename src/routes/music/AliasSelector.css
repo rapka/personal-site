@@ -10,6 +10,18 @@
   border: 0;
 }
 
+.aliasOption-College-Hill {
+  color: var(--pink);
+}
+
+.aliasOption-Morphologist {
+  color: var(--green);
+}
+
+.aliasOption-Fury {
+  color: var(--purple);
+}
+
 .aliasOption.selected {
   font-size: 2rem;
   text-decoration: underline;
@@ -21,5 +33,6 @@
 }
 
 .aliasOption-divider {
+  color: var(--gray);
   font-size: 1rem;
 }

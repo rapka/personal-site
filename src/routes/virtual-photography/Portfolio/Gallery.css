@@ -49,11 +49,6 @@
   vertical-align: bottom;
 }
 
-.galleryItem-divider {
-  font-size: 36px;
-  display: inline-block;
-}
-
 .galleryItem-label {
   display: flex;
   flex-direction: row;

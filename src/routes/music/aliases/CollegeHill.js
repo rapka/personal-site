@@ -9,19 +9,29 @@ function CollegeHill() {
     <section className="alias-container" id="alias-collegehill">
       <h3 className="alias-title">College Hill</h3>
       <h5 className="alias-description">
-        Primary alias for releasing. Grime. Dubstep. Bass. Baltimore Club.
+        Primary alias for releasing music.
+        Grime / Dubstep / Bass / Baltimore Club / Trap / etc
       </h5>
       Original Work
       <h4 className="alias-releaseType">Albums</h4>
-      Overground Underground
-      <AlbumEmbed youtubeId="wVvy1dLo19s" />
-      <AlbumEmbed
-        youtubeId="wVvy1dLo19s"
-        bandcampId="948407697"
-        bandcampOptions={{ size: 'medium' }}
-      />
-      <AlbumEmbed bandcampId="948407697" bandcampOptions={{ size: 'large' }} />
-      A Stranger in Gotham
+      <div className="alias-albumContainer">
+        <AlbumEmbed
+          bandcampId="3658324833"
+          bandcampOptions={{ size: 'large' }}
+          title="Rico Suavve Phaze 1: A Stranger In Gotham"
+          genres={['Trap', 'Hip-Hop', 'Instrumental']}
+          year={2017}
+        />
+        <AlbumEmbed
+          youtubeId="wVvy1dLo19s"
+          bandcampId="948407697"
+          bandcampOptions={{ size: 'medium' }}
+          title="Overground Underground"
+          genres={['Mashup']}
+          year={2019}
+        />
+      </div>
+
       <h4 className="alias-releaseType">EPs</h4>
       <h4 className="alias-releaseType">Singles</h4>
       <h4 className="alias-releaseType">Remixes</h4>

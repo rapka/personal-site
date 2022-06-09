@@ -9,7 +9,7 @@ function Modal({
 }) {
   return (
     <div className="reactPortfolio-modalContents" onClick={closeModal}>
-      <button onClick={closeModal}>close</button>
+      <button className="reactPortfolio-modalCloseButton" onClick={closeModal}>(close)</button>
       <div className="reactPortfolio-modalImageText">
         <div>{title}</div>
         <div>{year}</div>
@@ -21,11 +21,8 @@ function Modal({
       </div>
 
       <form>
-        <input />
-        <button>tab navigation</button>
-        <button>stays</button>
-        <button>inside</button>
-        <button>the modal</button>
+        <button>prev</button>
+        <button>next</button>
       </form>
     </div>
   );

@@ -5,12 +5,14 @@ import CollegeHillSection from './aliases/CollegeHill';
 import MorphologistSection from './aliases/Morphologist';
 import FurySection from './aliases/Fury';
 
+import './Music.css';
+
 function Music() {
   const labels = ['College Hill', 'Morphologist', 'Fury'];
   const [activeAlias, setActiveAlias] = React.useState('College Hill');
 
   return (
-    <div>
+    <div className={`musicSection musicSection-${activeAlias.replace(' ', '-')}`}>
       <Header />
       <AliasSelector
         labels={labels}

@@ -17,9 +17,12 @@ function AliasSelector({ onChange, labels, activeAlias }) {
       );
     }
 
+    const className = classNames('aliasOption',
+      `aliasOption-${label.replace(' ', '-')}`, { selected: label === activeAlias });
+
     options.push(
       <button
-        className={classNames('aliasOption', { selected: label === activeAlias })}
+        className={className}
         key={label}
         onClick={() => {
           onChange(label);

@@ -202,11 +202,6 @@
   vertical-align: bottom;
 }
 
-.galleryItem-divider {
-  font-size: 36px;
-  display: inline-block;
-}
-
 .galleryItem-label {
   display: flex;
   flex-direction: row;
@@ -243,6 +238,13 @@
   position: relative;
 }
 
+.reactPortfolio-modalCloseButton {
+  background-color: transparent;
+  border: 1px var(--pink) solid;
+  color:  var(--pink);
+  font-size: 1.25rem;
+  border-radius: 2px;
+}
 
 .reactPortfolio-modalImage,
 .reactPortfolio-modalImageGlow {
@@ -262,6 +264,7 @@
 }
 
 .reactPortfolio-modalImageText {
+  text-size: 2rem;
   z-index: 2;
   margin-bottom: 1rem;
 }
@@ -364,13 +367,15 @@
 .screenshotCompare-container {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .screenshotCompare {
 	display: block;
 	position: relative;
-	width: 500px;
-	max-width: 500px;
+	width: 100%;
+	max-width: 600px;
 }
 
 .screenshotCompare.active .screenshotCompare-modded {
@@ -392,18 +397,54 @@
 .screenshotCompare-label {
 	font-size: 1.25rem;
 }
+
+.screenshotCompare-thumbContainer {
+	max-width: 100vw;
+	overflow-x: scroll;
+	display: flex;
+	flex-direction: row;
+}
+
+.screenshotCompare-thumb {
+	width: 200px;
+	padding: 4px;
+	margin: 4px;
+	cursor: pointer;
+}
+
+.screenshotCompare-thumb:hover {
+	border: 1px dotted var(--pink);
+	margin: 3px;
+}
+
+.screenshotCompare-thumb.active {
+	border: 1px solid var(--pink);
+	margin: 3px;
+}
 .dolphinMod {
 	display: flex;
 	flex-direction: column;
-	max-width: 700px;
+	/*max-width: 700px;*/
 	justify-content: center;
     align-items: center;
 }
 
+.dolphinMod-title {
+	font-size: 2.25rem;
+}
+
 .dolphinMod-download {
-	font-size: 2rem;
-	border: 1px solid var(--pink);
+	font-size: 1.75rem;
+	border: 2px solid var(--pink);
+	padding: 6px;
+	margin: 8px 0;
 	border-radius: 4px;
+	transition: background-color 100ms linear;
+}
+
+.dolphinMod-download:hover {
+	color: black;
+	background-color: var(--pink);
 }
 
 .dolphinMod-gameCover {
@@ -426,6 +467,18 @@
   border: 0;
 }
 
+.aliasOption-College-Hill {
+  color: var(--pink);
+}
+
+.aliasOption-Morphologist {
+  color: var(--green);
+}
+
+.aliasOption-Fury {
+  color: var(--purple);
+}
+
 .aliasOption.selected {
   font-size: 2rem;
   text-decoration: underline;
@@ -437,13 +490,35 @@
 }
 
 .aliasOption-divider {
+  color: var(--gray);
   font-size: 1rem;
 }
-.youtubeEmbed {
+.youtubeEmbed iframe {
+	/*border: 1px solid var(--pink);*/
+}
+.bandcampEmbed iframe {
 	border: 1px solid var(--pink);
 }
-.bandcampEmbed {
-	border: 1px solid var(--pink);
+.albumEmbed {
+  margin: 0.5rem 0;
+  max-width: 600px;
+}
+
+.albumEmbed-title {
+  font-size: 2rem;
+  /*text-decoration: underline;*/
+}
+
+.albumEmbed-year {
+  font-size: 1.5rem;
+}
+
+.albumEmbed-genres {
+  font-size: 1.25rem;
+}
+
+.albumEmbed-desc {
+  font-size: 1.15rem;
 }
 .alias-title {
 	font-size: 2rem;
@@ -459,6 +534,13 @@
 	font-size: 1.5rem;
 	text-align: center;
 }
+
+.alias-albumContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+}
 #alias-collegehill {
 	text-align: center;
 }
@@ -468,6 +550,22 @@
 #alias-fury {
 	text-align: center;
 }
+.musicSection {
+
+}
+
+.musicSection-College-Hill {
+  color: var(--pink);
+}
+
+.musicSection-Morphologist {
+  color: var(--green);
+}
+
+.musicSection-Fury {
+  color: var(--purple);
+}
+
 #canvas {
   height: 100%;
   width: 100%;
@@ -497,6 +595,8 @@
 	--black: #212121;
 
 	--pink: #F03E88;
+	--green: #3EF088;
+	--purple: #F023F0;
 }
 
 @font-face {

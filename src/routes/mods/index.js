@@ -17,9 +17,9 @@ function App() {
       move all the files inside a folder called 000 so that the handmade textures will be loaded on
       top of the AI-generated ones.
       <h5>Download Links</h5>
-      Downloads are served via Mega.
-      {modComponents}
       <br />
+      {modComponents}
+
       <br />
       N64 (Virtual Console)
       <a href="https://mega.nz/#!OZ1RUKAQ!l225vo2KmIg6yCRUNQQqeeVgyK6RT4zxKxIHpwgSipY">

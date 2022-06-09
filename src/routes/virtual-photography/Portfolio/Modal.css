@@ -9,6 +9,13 @@
   position: relative;
 }
 
+.reactPortfolio-modalCloseButton {
+  background-color: transparent;
+  border: 1px var(--pink) solid;
+  color:  var(--pink);
+  font-size: 1.25rem;
+  border-radius: 2px;
+}
 
 .reactPortfolio-modalImage,
 .reactPortfolio-modalImageGlow {
@@ -28,6 +35,7 @@
 }
 
 .reactPortfolio-modalImageText {
+  text-size: 2rem;
   z-index: 2;
   margin-bottom: 1rem;
 }

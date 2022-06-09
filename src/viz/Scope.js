@@ -170,13 +170,14 @@ Scope.propTypes = {
   rotateColors: PropTypes.bool, // flag to auto cycle thru the rainbow
   rotationOffset: PropTypes.number, // hue offset between scopes (in degrees) with rotateColors
   colors: PropTypes.arrayOf(PropTypes.string), // static color for each scope
-  audioSrc: PropTypes.string.isRequired,
+  audioSrc: PropTypes.string,
 };
 
 Scope.defaultProps = {
   rotateColors: true,
   rotationOffset: 180,
   colors: ['#FFFFFF', '#FFFFFF', '#888888'],
+  audioSrc: '/public/ww.mp3',
 };
 
 export default Scope;
