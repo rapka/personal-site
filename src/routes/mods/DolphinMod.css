@@ -1,15 +1,27 @@
 .dolphinMod {
 	display: flex;
 	flex-direction: column;
-	max-width: 700px;
+	/*max-width: 700px;*/
 	justify-content: center;
     align-items: center;
 }
 
+.dolphinMod-title {
+	font-size: 2.25rem;
+}
+
 .dolphinMod-download {
-	font-size: 2rem;
-	border: 1px solid var(--pink);
+	font-size: 1.75rem;
+	border: 2px solid var(--pink);
+	padding: 6px;
+	margin: 8px 0;
 	border-radius: 4px;
+	transition: background-color 100ms linear;
+}
+
+.dolphinMod-download:hover {
+	color: black;
+	background-color: var(--pink);
 }
 
 .dolphinMod-gameCover {

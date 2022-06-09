@@ -7,28 +7,25 @@ import './DolphinMod.css';
 function DolphinMod({
   title, downloadLink, images, gameId,
 }) {
-  const compareComponents = images.map((img) => (
-    <ScreenshotCompare original={img.original} modded={img.modded} gameId={gameId} />
-  ));
-
   return (
     <div className="dolphinMod">
-      <h3>{title}</h3>
-      <img
-        className="dolphinMod-gameCover"
-        src={`/public/images/covers/${gameId}.png`}
-        alt={`${title} Game cover`}
-      />
-      {!!images.length && (
-        <div className="dolphinMod-screenshotsSection">
-          <div className="dolphinMod-screenshotsTitle">Screenshots</div>
-          <div className="dolphinMod-screenshotsDesc">Hover or click to compare</div>
-          <div className="dolphinMod-screenshots">{compareComponents}</div>
-        </div>
-      )}
-      <a className="dolphinMod-download" href={downloadLink}>
+      <h3 className="dolphinMod-title">{title}</h3>
+      <a href={downloadLink}>
+        <img
+          className="dolphinMod-gameCover"
+          target="_blank"
+          src={`/public/images/covers/${gameId}.png`}
+          alt={`${title} Game cover`}
+        />
+      </a>
+      <a className="dolphinMod-download" href={downloadLink} target="_blank">
         Download via Mega
       </a>
+      {!!images.length && (
+        <div className="dolphinMod-screenshotsSection">
+          <ScreenshotCompare images={images} gameId={gameId} />
+        </div>
+      )}
     </div>
   );
 }
