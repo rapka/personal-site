@@ -47,7 +47,7 @@ function Dev() {
               ,
               {' '}
               <code>Pug</code>
-              , and {' '}
+              , and
               <code>JQuery</code>
             </li>
           </ul>

@@ -62,9 +62,9 @@ function Gallery({
 Gallery.propTypes = {
   expanded: PropTypes.bool,
   activeImage: PropTypes.number.isRequired,
-  onFocus: PropTypes.func,
-  openModal: PropTypes.func,
-  title: PropTypes.string,
+  onFocus: PropTypes.func.isRequired,
+  openModal: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
   description: PropTypes.string,
   images: PropTypes.array,
   year: PropTypes.number,

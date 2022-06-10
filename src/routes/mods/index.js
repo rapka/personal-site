@@ -20,7 +20,6 @@ function App() {
           <code>Dolphin Emulator\Load\Textures\GAME_ID</code>
           {' '}
           where
-          {' '}
           <code>GAME_ID</code>
           {' '}
           is the id of the game (
@@ -29,7 +28,8 @@ function App() {
           for example).
         </p>
         <p className="modSection-p">
-          If you're using these textures alongside other texture packs(such as {' '}
+          If you're using these textures alongside other texture packs(such as
+          {' '}
           <a href="https://onthegreatsea.tumblr.com/post/133505457500/hypatias-viewtiful-joe-mod-download-link">
             Hypatia's Viewtiful Joe textures
           </a>
@@ -67,15 +67,15 @@ function App() {
         </a>
         TODO: screenshot comparisons (export comparison tool?)
         <div className="modSection-turok">
-        <h3>Turok 2: Seeds of Evil (Steam)</h3>
-        <a
-         href="https://www.nexusmods.com/turok2/mods/4"
-         className="modSection-download"
-         target="_blank"
-         rel="noreferrer"
-        >
-          Download via Nexusmods
-        </a>
+          <h3>Turok 2: Seeds of Evil (Steam)</h3>
+          <a
+            href="https://www.nexusmods.com/turok2/mods/4"
+            className="modSection-download"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Download via Nexusmods
+          </a>
         </div>
       </section>
     </div>

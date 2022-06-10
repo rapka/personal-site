@@ -19,6 +19,19 @@ function Portfolio({ galleries }) {
 
   const activeImageData = activeImage > -1 && activeGallery ? galleries[activeGallery].images[activeImage] : null;
 
+  function openImage(galleryIndex, imageIndex) {
+    setActiveGallery(galleryIndex);
+    setActiveImage(imageIndex);
+  }
+
+  const afterOpenModal = () => {};
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
+  const contentLabel = `${activeImageData ? activeImageData.title : 'Closed'} Modal`;
+
   const galleryComponents = [];
   each(galleries, (galleryData, key) => galleryComponents.push(
     <Gallery
@@ -34,20 +47,6 @@ function Portfolio({ galleries }) {
       activeImage={activeGallery === key ? activeImage : -1}
     />,
   ));
-
-  function openImage(galleryIndex, imageIndex) {
-    setActiveGallery(galleryIndex);
-    console.log('imageData', galleryIndex, imageIndex);
-    setActiveImage(imageIndex);
-  }
-
-  function afterOpenModal() {}
-
-  const closeModal = () => {
-    setIsOpen(false);
-  };
-
-  const contentLabel = `${activeImageData ? activeImageData.title : 'Closed'} Modal`;
 
   return (
     <div className="react-portfolio" id="react-portfolio">

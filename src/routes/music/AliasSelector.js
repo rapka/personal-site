@@ -24,6 +24,7 @@ function AliasSelector({ onChange, labels, activeAlias }) {
     options.push(
       <button
         className={className}
+        type="button"
         key={label}
         onClick={() => {
           onChange(label);

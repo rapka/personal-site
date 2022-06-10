@@ -1,6 +1,5 @@
 import React from 'react';
-import Header from '../../Header';
-import Scope from '../../viz/Scope';
+import PropTypes from 'prop-types';
 
 import './ProjectTitle.css';
 
@@ -9,8 +8,8 @@ function ProjectTitle({
 }) {
   return (
     <div className="projTitle-container">
-      {title ? (
-        <a href="https://grimearchive.org" className="projTitle">
+      {url ? (
+        <a href={url} className="projTitle">
           {title}
         </a>
       ) : (
@@ -31,5 +30,17 @@ function ProjectTitle({
     </div>
   );
 }
+
+ProjectTitle.propTypes = {
+  title: PropTypes.string.isRequired,
+  year: PropTypes.string,
+  githubUrl: PropTypes.string.isRequired,
+  url: PropTypes.string,
+};
+
+ProjectTitle.defaultProps = {
+  year: '',
+  url: '',
+};
 
 export default ProjectTitle;
