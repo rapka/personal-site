@@ -42041,6 +42041,8 @@
 	  return [r * 255, g * 255, b * 255];
 	};
 
+	var PADDING = 50 * 2; // 50px on each side
+
 	var WIDTH = 1920 / 2;
 	var HEIGHT = 1080;
 	var H = 0;
@@ -42084,7 +42086,7 @@
 	      // Add spacebar hotkey
 	      document.addEventListener('keydown', this.playEvent, false);
 	      HEIGHT = window.innerHeight;
-	      WIDTH = window.innerWidth;
+	      WIDTH = window.innerWidth - PADDING;
 	      var audioElement = this.player.current;
 	      var audioCtx = this.audioCtx;
 	      var analyser = audioCtx.createAnalyser();
@@ -42110,7 +42112,7 @@
 	            rotationOffset = _this2$props.rotationOffset,
 	            rotateColors = _this2$props.rotateColors;
 	        HEIGHT = window.innerHeight;
-	        WIDTH = window.innerWidth;
+	        WIDTH = window.innerWidth - PADDING;
 
 	        if (_this2.state.playing) {
 	          H = (H + 0.5) % 360;
@@ -42179,7 +42181,7 @@
 	      var _this3 = this;
 
 	      HEIGHT = window.innerHeight;
-	      WIDTH = window.innerWidth;
+	      WIDTH = window.innerWidth - PADDING;
 
 	      if (!prevState.playing && this.state.playing) {
 	        this.audioCtx.resume().then(function () {
@@ -42281,7 +42283,7 @@
 	    href: "https://github.com/rapka/id3_reader"
 	  }, "custom fork"), ' ', "of the", ' ', /*#__PURE__*/React.createElement("code", null, "id3_reader"), ' ', "npm module that adds support for writing album art"), /*#__PURE__*/React.createElement("li", {
 	    className: "devPage-detail"
-	  }, "built with", ' ', /*#__PURE__*/React.createElement("code", null, "Node"), ",", ' ', /*#__PURE__*/React.createElement("code", null, "MongoDB"), ",", ' ', /*#__PURE__*/React.createElement("code", null, "Express"), ",", ' ', /*#__PURE__*/React.createElement("code", null, "Pug"), ", &", /*#__PURE__*/React.createElement("code", null, "JQuery")))), /*#__PURE__*/React.createElement("li", {
+	  }, "built with", ' ', /*#__PURE__*/React.createElement("code", null, "Node"), ",", ' ', /*#__PURE__*/React.createElement("code", null, "MongoDB"), ",", ' ', /*#__PURE__*/React.createElement("code", null, "Express"), ",", ' ', /*#__PURE__*/React.createElement("code", null, "Pug"), ", and ", ' ', /*#__PURE__*/React.createElement("code", null, "JQuery")))), /*#__PURE__*/React.createElement("li", {
 	    className: "devPage-item"
 	  }, /*#__PURE__*/React.createElement(ProjectTitle, {
 	    title: "wordlebookmarks.app",
@@ -42360,7 +42362,9 @@
 	    className: "devPage-detail"
 	  }, "built with", ' ', /*#__PURE__*/React.createElement("code", null, "react"), ' ', "and", ' ', /*#__PURE__*/React.createElement("code", null, "webgl")), /*#__PURE__*/React.createElement("li", {
 	    className: "devPage-detail"
-	  }, /*#__PURE__*/React.createElement(Scope, null)))), /*#__PURE__*/React.createElement("li", null)));
+	  }, "live demo!"), /*#__PURE__*/React.createElement("li", {
+	    className: "devPage-scope"
+	  }, /*#__PURE__*/React.createElement(Scope, null))))));
 	}
 
 	function PersonalSite() {

@@ -644,17 +644,19 @@
 }
 
 .viz-container {
-  height: 100%;
+  height: 400px;
   width: 100%;
   position: absolute;
   z-index: 2;
+  left: 0;
+  bottom: -280px;
 }
 .projTitle-container {
 	/*font-size: 1.25rem;*/
 }
 
 .projTitle {
-	font-size: 1.75rem;
+	font-size: 2rem;
 }
 
 .projTitle-year {
@@ -675,6 +677,7 @@
 
 .devPage {
 	font-size: 1.25rem;
+	position: relative;
 }
 
 .devPage a:hover {
@@ -682,7 +685,6 @@
 }
 
 .devPage code {
-	background-color: var(--codeGrey);
 	text-transform: lowercase;
 }
 
@@ -694,12 +696,17 @@
 }
 
 .devPage-itemList {
-	margin: 1rem 3rem;
+	margin: 1rem 50px;
 }
 
 .devPage-item {
-	margin: 6px 0;
+	margin: 12px 0;
 	list-style-type: '~$ ';
+}
+
+.devPage-scope {
+	list-style-type: none;
+	/*position: relative;*/
 }
 
 .devPage-detail {

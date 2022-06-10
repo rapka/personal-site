@@ -7,6 +7,7 @@ import hsvToRgb from './util/hsvToRgb';
 
 import './Scope.css';
 
+const PADDING = 50 * 2; // 50px on each side
 let WIDTH = 1920 / 2;
 let HEIGHT = 1080;
 let H = 0;
@@ -31,7 +32,7 @@ class Scope extends React.Component {
     document.addEventListener('keydown', this.playEvent, false);
 
     HEIGHT = window.innerHeight;
-    WIDTH = window.innerWidth;
+    WIDTH = window.innerWidth - PADDING;
     const audioElement = this.player.current;
     const { audioCtx } = this;
 
@@ -60,7 +61,7 @@ class Scope extends React.Component {
     const draw = () => {
       const { colors, rotationOffset, rotateColors } = this.props;
       HEIGHT = window.innerHeight;
-      WIDTH = window.innerWidth;
+      WIDTH = window.innerWidth - PADDING;
 
       if (this.state.playing) {
         H = (H + 0.5) % 360;
@@ -139,7 +140,7 @@ class Scope extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     HEIGHT = window.innerHeight;
-    WIDTH = window.innerWidth;
+    WIDTH = window.innerWidth - PADDING;
 
     if (!prevState.playing && this.state.playing) {
       this.audioCtx.resume().then(() => {

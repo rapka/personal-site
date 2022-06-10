@@ -47,7 +47,7 @@ function Dev() {
               ,
               {' '}
               <code>Pug</code>
-              , &
+              , and {' '}
               <code>JQuery</code>
             </li>
           </ul>
@@ -173,12 +173,12 @@ function Dev() {
               {' '}
               <code>webgl</code>
             </li>
-            <li className="devPage-detail">
+            <li className="devPage-detail">live demo!</li>
+            <li className="devPage-scope">
               <Scope />
             </li>
           </ul>
         </li>
-        <li />
       </ul>
     </div>
   );
