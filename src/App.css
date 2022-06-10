@@ -59,6 +59,10 @@ a {
 	color: var(--pink);
 }
 
+code {
+	background-color: var(--codeGrey);
+}
+
 
 #personal-site {
 	--text-color: var(--color-tone-1);

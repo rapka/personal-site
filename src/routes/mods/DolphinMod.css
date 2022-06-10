@@ -20,7 +20,7 @@
 }
 
 .dolphinMod-download:hover {
-	color: black;
+	color: black !important;
 	background-color: var(--pink);
 }
 

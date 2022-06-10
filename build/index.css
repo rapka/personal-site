@@ -458,7 +458,7 @@
 }
 
 .dolphinMod-download:hover {
-	color: black;
+	color: black !important;
 	background-color: var(--pink);
 }
 
@@ -470,6 +470,63 @@
 	display: flex;
 	flex-direction: row;
 }
+.modSection {
+	padding: 30px 40px;
+}
+
+.modSection a:hover {
+	color: var(--darkGreen);
+}
+
+.modSection h2 {
+	display: block;
+	margin: auto;
+	font-size: 2.5rem;
+	text-align: center;
+	letter-spacing: 10px;
+	text-transform: lowercase;
+}
+
+.modSection h3 {
+	display: block;
+	margin: auto;
+	text-align: center;
+	font-size: 1.5rem;
+	margin-top: 8px;
+}
+
+.modSection-p {
+	text-align: center;
+}
+
+.modSection-installInfo {
+	text-align: center;
+	font-size: 1.25rem;
+	display: block;
+	margin: auto;
+}
+
+.modSection-download {
+	font-size: 1.75rem;
+	border: 2px solid var(--pink);
+	padding: 6px;
+	margin: 8px 0;
+	border-radius: 4px;
+	transition: background-color 100ms linear;
+}
+
+.dolphinMod-download:hover {
+	color: black !important;
+	background-color: var(--pink);
+}
+
+.modSection-turok {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
 .aliasSelector-container {
   color: var(--pink);
 }
@@ -731,6 +788,10 @@ button {
 a {
 	font-family: 'Cutive', sans-serif;
 	color: var(--pink);
+}
+
+code {
+	background-color: var(--codeGrey);
 }
 
 
