@@ -19,7 +19,6 @@ function App() {
       <h5>Download Links</h5>
       <br />
       {modComponents}
-
       <br />
       N64 (Virtual Console)
       <a href="https://mega.nz/#!OZ1RUKAQ!l225vo2KmIg6yCRUNQQqeeVgyK6RT4zxKxIHpwgSipY">

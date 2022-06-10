@@ -9,7 +9,9 @@ function Modal({
 }) {
   return (
     <div className="reactPortfolio-modalContents" onClick={closeModal}>
-      <button className="reactPortfolio-modalCloseButton" onClick={closeModal}>(close)</button>
+      <button className="reactPortfolio-modalCloseButton" onClick={closeModal}>
+        (close)
+      </button>
       <div className="reactPortfolio-modalImageText">
         <div>{title}</div>
         <div>{year}</div>

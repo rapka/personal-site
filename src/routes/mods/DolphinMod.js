@@ -18,7 +18,7 @@ function DolphinMod({
           alt={`${title} Game cover`}
         />
       </a>
-      <a className="dolphinMod-download" href={downloadLink} target="_blank">
+      <a className="dolphinMod-download" href={downloadLink} target="_blank" rel="noreferrer">
         Download via Mega
       </a>
       {!!images.length && (

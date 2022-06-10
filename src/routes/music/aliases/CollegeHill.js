@@ -9,8 +9,7 @@ function CollegeHill() {
     <section className="alias-container" id="alias-collegehill">
       <h3 className="alias-title">College Hill</h3>
       <h5 className="alias-description">
-        Primary alias for releasing music.
-        Grime / Dubstep / Bass / Baltimore Club / Trap / etc
+        Primary alias for releasing music. Grime / Dubstep / Bass / Baltimore Club / Trap / etc
       </h5>
       Original Work
       <h4 className="alias-releaseType">Albums</h4>
@@ -31,7 +30,6 @@ function CollegeHill() {
           year={2019}
         />
       </div>
-
       <h4 className="alias-releaseType">EPs</h4>
       <h4 className="alias-releaseType">Singles</h4>
       <h4 className="alias-releaseType">Remixes</h4>

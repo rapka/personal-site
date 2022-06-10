@@ -19,7 +19,13 @@ function AlbumEmbed({
     <div className="albumEmbed">
       {!!title && <h4 className="albumEmbed-title">{title}</h4>}
       {!!year && <h4 className="albumEmbed-year">{year}</h4>}
-      {genres && genres.length > 0 && <div className="albumEmbed-genres">({genres.join('/')})</div>}
+      {genres && genres.length > 0 && (
+        <div className="albumEmbed-genres">
+          (
+          {genres.join('/')}
+          )
+        </div>
+      )}
       {description && <div className="albumEmbed-desc">{description}</div>}
       {youtubeId && <YouTubeEmbed videoId={youtubeId} options={youtubeOptions} />}
       {bandcampId && <BandcampEmbed albumId={bandcampId} options={bandcampOptions} />}

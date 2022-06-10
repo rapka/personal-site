@@ -11,7 +11,6 @@ function ScreenshotCompare({ gameId, images }) {
     <img
       src={`/public/images/screens/${gameId}/${image.modded}`}
       key={i}
-
       className={classNames('screenshotCompare-thumb', { active: i === activeImage })}
       onClick={() => setActiveImage(i)}
     />
