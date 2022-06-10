@@ -5,11 +5,3 @@
   z-index: 0;
 }
 
-.reactPortfolio-modal {
-  padding: 50px;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  /*pointer-events: none;*/
-  z-index: 10;
-}

@@ -120,7 +120,6 @@
 }
 
 .clickableImage-title::before {
-  font-size: ;
   content: '\201C';
   letter-spacing: 3px;
 }
@@ -227,18 +226,31 @@
   justify-content: center;
   font-size: 2.25rem;
 }
-.reactPortfolio-modalContents {
+.reactPortfolio-modal {
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-contents {
   display: flex;
+  padding: 40px 50px;
+  height: calc(100vh - 8px);
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.reactPortfolio-modalImageContainer {
+.modal-imageContainer {
   position: relative;
+  flex: 0 1 auto;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 
-.reactPortfolio-modalCloseButton {
+.modal-closeButton {
   background-color: transparent;
   border: 1px var(--pink) solid;
   color:  var(--pink);
@@ -246,27 +258,66 @@
   border-radius: 2px;
 }
 
-.reactPortfolio-modalImage,
-.reactPortfolio-modalImageGlow {
-  max-width: 100%;
-}
-.reactPortfolio-modalImage {
-  z-index: 2;
+.modal-modalCloseButton:hover {
+  color: black;
+  background-color: var(--pink);
+  cursor: pointer;
 }
 
-.reactPortfolio-modalImageGlow {
-  filter: blur(4px);
+.modal-image,
+.modal-imageGlow {
+  max-height: 100%;
+}
+
+.modal-image {
+  z-index: 2;
+
+  position: absolute;
+}
+
+.modal-imageTitle {
+  font-size: 2.25rem;
+  position: relative;
+}
+
+.modal-imageTitle::before {
+  content: '\201C';
+  left: -26px;
+}
+
+.modal-imageTitle::after {
+  content: '\201D';
+  letter-spacing: -4px;
+  right: -26px;
+}
+
+.modal-imageTitle::before,
+.modal-imageTitle::after {
+  font-family: Times, 'Times New Roman', Georgia, serif;
+  font-size: 72px;
+  opacity: 0.75;
+  position: absolute;
+  top: -17px;
+  border-radius: 8px;
+}
+
+
+.modal-imageYear, .modal-imageDesc {
+  font-size: 1.25rem;
+}
+
+.modal-imageGlow {
+  filter: blur(10px);
   transform: scale(1.02);
   opacity: 0.5;
   position: absolute;
   z-index: -1;
-  left: 0;
 }
 
-.reactPortfolio-modalImageText {
-  text-size: 2rem;
+.modal-imageText {
+  font-size: 2rem;
   z-index: 2;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 .ReactModal__Overlay {
@@ -280,22 +331,6 @@
   z-index: 0;
 }
 
-.reactPortfolio-modal {
-  padding: 50px;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  /*pointer-events: none;*/
-  z-index: 10;
-}
-
-.wordleHeader-titleRow {
-	display: flex;
-	flex-direction: row;
-	position: relative;
-	width: 100%;
-	text-align: center;
-}
 
 .wordleHeader-titleRow svg {
 	display: block;
@@ -320,22 +355,6 @@
 	text-decoration: underline;
 }
 
-.wordleHeader-title {
-	font-size: 2.5rem;
-	flex-grow: 1;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	width: 100%;
-}
-
-.wordleHeader-desc {
-	font-size: 1.25rem;
-	text-align: center;
-	width: 100%;
-	padding: 0.5rem 0 1rem 0;
-}
-
 .questionIcon {
 	position: absolute;
 	left: 0;
@@ -349,10 +368,6 @@
 }
 
 @media (max-width: 450px) {
-	.wordleHeader-title {
-		font-size: 2.25rem;
-	}
-
   .questionIcon {
   	left: -12px;
   }

@@ -88,7 +88,6 @@
 }
 
 .clickableImage-title::before {
-  font-size: ;
   content: '\201C';
   letter-spacing: 3px;
 }

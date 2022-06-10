@@ -8,18 +8,18 @@ function Modal({
   title, description, url, thumbnail, closeModal, year,
 }) {
   return (
-    <div className="reactPortfolio-modalContents" onClick={closeModal}>
-      <button className="reactPortfolio-modalCloseButton" onClick={closeModal}>
+    <div className="modal-contents" onClick={closeModal}>
+      <button className="modal-closeButton" onClick={closeModal}>
         (close)
       </button>
-      <div className="reactPortfolio-modalImageText">
-        <div>{title}</div>
-        <div>{year}</div>
-        <div>{description}</div>
+      <div className="modal-imageText">
+        <div className="modal-imageTitle">{title}</div>
+        <div className="modal-imageYear">{year}</div>
+        <div className="modal-imageDesc">{description}</div>
       </div>
-      <div className="reactPortfolio-modalImageContainer">
-        <img className="reactPortfolio-modalImageGlow" src={url} />
-        <img className="reactPortfolio-modalImage" src={url} />
+      <div className="modal-imageContainer">
+        <img className="modal-imageGlow" src={url} />
+        <img className="modal-image" src={url} />
       </div>
 
       <form>

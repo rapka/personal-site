@@ -1,11 +1,3 @@
-.wordleHeader-titleRow {
-	display: flex;
-	flex-direction: row;
-	position: relative;
-	width: 100%;
-	text-align: center;
-}
-
 .wordleHeader-titleRow svg {
 	display: block;
 	width: 36px;
@@ -29,22 +21,6 @@
 	text-decoration: underline;
 }
 
-.wordleHeader-title {
-	font-size: 2.5rem;
-	flex-grow: 1;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	width: 100%;
-}
-
-.wordleHeader-desc {
-	font-size: 1.25rem;
-	text-align: center;
-	width: 100%;
-	padding: 0.5rem 0 1rem 0;
-}
-
 .questionIcon {
 	position: absolute;
 	left: 0;
@@ -58,10 +34,6 @@
 }
 
 @media (max-width: 450px) {
-	.wordleHeader-title {
-		font-size: 2.25rem;
-	}
-
   .questionIcon {
   	left: -12px;
   }
