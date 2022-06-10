@@ -13,7 +13,7 @@ function ProjectTitle({ title, url, year, githubUrl }) {
             </a>) : {title}}
             <div className="projTitle-year">({year})</div>
             <div className="projTitle-github">
-            (<a href={githubUrl} className="projTitle-githubLink">
+            (<a href={`https://github.com/rapka/${githubUrl}`} className="projTitle-githubLink">
               github repo
             </a>)
             </div>

@@ -12,7 +12,7 @@ function Dev() {
       <h2 className="devPage-pageTitle">development work</h2>
       <ul className="devPage-itemList">
         <li className="devPage-item">
-          <ProjectTitle title="grimearchive.org" url="https://grimearchive.org" githubUrl="" year="2015-present" />
+          <ProjectTitle title="grimearchive.org" url="https://grimearchive.org" githubUrl="grimearchive" year="2015-present" />
           <ul className="devPage-details">
             <li className="devPage-detail">
               a website for hosting and cataloging recording of live grime performances and radio
@@ -27,7 +27,7 @@ function Dev() {
           </ul>
         </li>
         <li className="devPage-item">
-          <ProjectTitle title="wordlebookmarks.app" url="https://wordlebookmarks.app" githubUrl="" year="2022-present" />
+          <ProjectTitle title="wordlebookmarks.app" url="https://wordlebookmarks.app" githubUrl="wordle-list" year="2022-present" />
           <ul className="devPage-details">
             <li className="devPage-detail">
               a single page app for keeping track of daily Wordle games
@@ -38,7 +38,7 @@ function Dev() {
           </ul>
         </li>
         <li className="devPage-item">
-          <ProjectTitle title="bloodfrenzy.club" url="https://bloodfrenzy.club" githubUrl="" year="2015" />
+          <ProjectTitle title="bloodfrenzy.club" url="https://bloodfrenzy.club" githubUrl="frenzy" year="2015" />
           <ul className="devPage-details">
             <li className="devPage-detail">
               website for the Blood Frenzy record label
@@ -55,7 +55,7 @@ function Dev() {
           </ul>
         </li>
         <li className="devPage-item">
-        <ProjectTitle title="hyperbreeder" url="https://rapka.github.io/hyperbreeder/" githubUrl="" year="2021-present" />
+        <ProjectTitle title="hyperbreeder" url="https://rapka.github.io/hyperbreeder/" githubUrl="hyperbreeder" year="2021-present" />
           <ul className="devPage-details">
             <li className="devPage-detail">
               an idle game. wip. pre-alpha
@@ -66,7 +66,7 @@ function Dev() {
           </ul>
           </li>
           <li className="devPage-item">
-          <ProjectTitle title="ESRGAN scripting tools for batch texture upscaling" url="" githubUrl="" year="201?" />
+          <ProjectTitle title="ESRGAN scripting tools for batch texture upscaling" url="" githubUrl="dolphin-textures" year="201?" />
           <ul className="devPage-details">
             <li className="devPage-detail">
               <code>node</code>-based scripts used for mass upscaling game textures with ESRGAN
@@ -80,7 +80,7 @@ function Dev() {
           </ul>
           </li>
           <li className="devPage-item">
-          <ProjectTitle title="webgl audio visualizer" url="" githubUrl="" year="2021-present" />
+          <ProjectTitle title="webgl audio visualizer" url="" githubUrl="spin-viz" year="2021-present" />
           <ul className="devPage-details">
             <li className="devPage-detail">
               used for creating YouTube videos
