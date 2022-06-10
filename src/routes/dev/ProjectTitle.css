@@ -1,0 +1,23 @@
+.projTitle-container {
+	/*font-size: 1.25rem;*/
+}
+
+.projTitle {
+	font-size: 1.75rem;
+}
+
+.projTitle-year {
+	display: inline;
+	font-size: 1.25rem;
+	color: var(--dullGrey);
+}
+
+.projTitle-github {
+	display: inline;
+	font-size: 1.25rem;
+	color: var(--dullGrey);
+}
+
+.projTitle-githubLink {
+	display: inline;
+}

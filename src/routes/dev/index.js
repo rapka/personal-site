@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../../Header';
 import Scope from '../../viz/Scope';
+import ProjectTitle from './ProjectTitle';
 
 import './Dev.css';
 
@@ -8,35 +9,91 @@ function Dev() {
   return (
     <div className="devPage">
       <Header />
-      TODO Dev
-      <ul>
+      <h2 className="devPage-pageTitle">development work</h2>
+      <ul className="devPage-itemList">
         <li className="devPage-item">
-          <a href="https://grimearchive.org" className="devPage-siteTitle">
-            grimearchive.org
-          </a>
-          <ul className="devPage-siteDetails">
-            <li>2015-present</li>
-            <li>
-              Website for hosting and cataloging recording of live grime performances and radio
-              shows.
+          <ProjectTitle title="grimearchive.org" url="https://grimearchive.org" githubUrl="" year="2015-present" />
+          <ul className="devPage-details">
+            <li className="devPage-detail">
+              a website for hosting and cataloging recording of live grime performances and radio
+              shows
+            </li>
+            <li className="devPage-detail">
+              uses a <a href="https://github.com/rapka/id3_reader">custom fork</a> of the <code>id3_reader</code> npm module that adds support for writing album art
+            </li>
+            <li className="devPage-detail">
+              built with <code>Node</code>, <code>MongoDB</code>, <code>Express</code>, <code>Pug</code>, & <code>JQuery</code>
             </li>
           </ul>
         </li>
         <li className="devPage-item">
-          <a href="wordlebookmarks.app" className="devPage-siteTitle">
-            wordlebookmarks.app
-          </a>
+          <ProjectTitle title="wordlebookmarks.app" url="https://wordlebookmarks.app" githubUrl="" year="2022-present" />
+          <ul className="devPage-details">
+            <li className="devPage-detail">
+              a single page app for keeping track of daily Wordle games
+            </li>
+            <li className="devPage-detail">
+              built with <code>React</code> and <code>Rollup</code>
+            </li>
+          </ul>
         </li>
         <li className="devPage-item">
-          <a href="https://bloodfrenzy.club/" className="devPage-siteTitle">
-            bloodfrenzy.club/
-          </a>
+          <ProjectTitle title="bloodfrenzy.club" url="https://bloodfrenzy.club" githubUrl="" year="2015" />
+          <ul className="devPage-details">
+            <li className="devPage-detail">
+              website for the Blood Frenzy record label
+            </li>
+            <li className="devPage-detail">
+              includes a <span className="devPage-bloody">bloody</span> real time fluid-based music visualizer
+            </li>
+            <li className="devPage-detail">
+              built with <code>Node</code>, <code>Express</code>, <code>Pug</code>, and <code>WebGL</code>
+            </li>
+            <li className="devPage-detail">
+              Fluid simulation logic originally written by <a href="https://29a.ch/" target="_blank">Jonas Wagner</a>
+            </li>
+          </ul>
         </li>
-        <li className="devPage-item">hyperbreeder</li>
-        <li>esrgan</li>
+        <li className="devPage-item">
+        <ProjectTitle title="hyperbreeder" url="https://rapka.github.io/hyperbreeder/" githubUrl="" year="2021-present" />
+          <ul className="devPage-details">
+            <li className="devPage-detail">
+              an idle game. wip. pre-alpha
+            </li>
+            <li className="devPage-detail">
+              built with <code>Svelte</code>, <code>Rollup</code>, <code>Sass</code>, and <code>Electron</code>
+            </li>
+          </ul>
+          </li>
+          <li className="devPage-item">
+          <ProjectTitle title="ESRGAN scripting tools for batch texture upscaling" url="" githubUrl="" year="201?" />
+          <ul className="devPage-details">
+            <li className="devPage-detail">
+              <code>node</code>-based scripts used for mass upscaling game textures with ESRGAN
+            </li>
+            <li className="devPage-detail">
+              developed logic to upscale alpha layers in textures
+            </li>
+            <li className="devPage-detail">
+              See mods page for more info
+            </li>
+          </ul>
+          </li>
+          <li className="devPage-item">
+          <ProjectTitle title="webgl audio visualizer" url="" githubUrl="" year="2021-present" />
+          <ul className="devPage-details">
+            <li className="devPage-detail">
+              used for creating YouTube videos
+            </li>
+            <li className="devPage-detail">
+              built with <code>react</code> and <code>webgl</code>
+            </li>
+            <li className="devPage-detail">
+              <Scope />
+            </li>
+          </ul>
+          </li>
         <li>
-          scope example
-          <Scope />
         </li>
       </ul>
     </div>

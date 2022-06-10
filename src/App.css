@@ -6,6 +6,8 @@
 	--color-tone-5: #edeff1;
 	--color-tone-6: #f6f7f8;
 	--color-tone-7: #ffffff;
+
+
 	--lightGray: #d8d8d8;
 	--gray: #86888a;
 	--darkGray: #939598;
@@ -14,7 +16,10 @@
 
 	--pink: #F03E88;
 	--green: #3EF088;
+	--darkGreen: #3ED088;
 	--purple: #F023F0;
+	--codeGrey: hsl(210, 8%, 30%);
+	--dullGrey: #8b949e;
 }
 
 @font-face {

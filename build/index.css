@@ -577,20 +577,85 @@
   position: absolute;
   z-index: 2;
 }
+.projTitle-container {
+	/*font-size: 1.25rem;*/
+}
+
+.projTitle {
+	font-size: 1.75rem;
+}
+
+.projTitle-year {
+	display: inline;
+	font-size: 1.25rem;
+	color: var(--dullGrey);
+}
+
+.projTitle-github {
+	display: inline;
+	font-size: 1.25rem;
+	color: var(--dullGrey);
+}
+
+.projTitle-githubLink {
+	display: inline;
+}
+
 .devPage {
 	font-size: 1.25rem;
 }
 
+.devPage a:hover {
+	color: var(--darkGreen);
+}
+
+.devPage code {
+	background-color: var(--codeGrey);
+	text-transform: lowercase;
+}
+
+.devPage-pageTitle {
+	font-size: 2.5rem;
+	text-align: center;
+	letter-spacing: 10px;
+	text-transform: lowercase;
+}
+
+.devPage-itemList {
+	margin: 1rem 3rem;
+}
+
 .devPage-item {
-	padding: 6px 0;
+	margin: 6px 0;
+	list-style-type: '~$ ';
+}
+
+.devPage-detail {
+	list-style-type: '~# ';
+	padding-top: 4px;
 }
 
 .devPage-siteTitle {
-	font-size: 1.5rem;
+	font-size: 1.75rem;
 }
 
-.devPage-siteDetails {
+.devPage-details {
 	font-size: 1.25rem;
+}
+
+.devPage-bloody {
+	color: #ED3838;
+	display: inline;
+	letter-spacing: 5px;
+	text-shadow:
+	0px 4px 1px #300000,
+	0px 6px 1px #400000,
+	0px 8px 1px #500000,
+	0px 10px 1px #600000,
+	0px 12px 1px #700000,
+	0px 14px 1px #800000,
+	0px 16px 1px #900000,
+	0px 18px 1px #A00000;
 }
 :root {
 	--color-tone-1: #000000;
@@ -600,6 +665,8 @@
 	--color-tone-5: #edeff1;
 	--color-tone-6: #f6f7f8;
 	--color-tone-7: #ffffff;
+
+
 	--lightGray: #d8d8d8;
 	--gray: #86888a;
 	--darkGray: #939598;
@@ -608,7 +675,10 @@
 
 	--pink: #F03E88;
 	--green: #3EF088;
+	--darkGreen: #3ED088;
 	--purple: #F023F0;
+	--codeGrey: hsl(210, 8%, 30%);
+	--dullGrey: #8b949e;
 }
 
 @font-face {
