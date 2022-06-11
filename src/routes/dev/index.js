@@ -79,7 +79,7 @@ function Dev() {
             title="bloodfrenzy.club"
             url="https://bloodfrenzy.club"
             githubUrl="frenzy"
-            year="2015"
+            year="2016-2018"
           />
           <ul className="devPage-details">
             <li className="devPage-detail">website for the Blood Frenzy record label</li>
@@ -92,7 +92,7 @@ function Dev() {
               visualizer
             </li>
             <li className="devPage-detail">
-              built with
+              Originally built with
               {' '}
               <code>Node</code>
               ,
@@ -104,6 +104,12 @@ function Dev() {
               , and
               {' '}
               <code>WebGL</code>
+            </li>
+            <li className="devPage-detail">
+              Converted to a static
+              {' '}
+              <code>html5</code>
+              , site in 2022
             </li>
             <li className="devPage-detail">
               Fluid simulation logic originally written by
