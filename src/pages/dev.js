@@ -108,6 +108,30 @@ function Dev() {
         </li>
         <li className="devPage-item">
           <ProjectTitle
+            title="webgl audio visualizer"
+            url=""
+            githubUrl="spin-viz"
+            year="2021-present"
+          />
+          <ul className="devPage-details">
+            <li className="devPage-detail">used for creating YouTube videos</li>
+            <li className="devPage-detail">
+              built with
+              {' '}
+              <code>react</code>
+              {' '}
+              and
+              {' '}
+              <code>webgl</code>
+            </li>
+            <li className="devPage-detail">live demo!</li>
+            <li className="devPage-scope">
+              <Scope />
+            </li>
+          </ul>
+        </li>
+        <li className="devPage-item">
+          <ProjectTitle
             title="bloodfrenzy.club"
             url="https://bloodfrenzy.club"
             githubUrl="frenzy"
@@ -191,30 +215,6 @@ function Dev() {
             </li>
             <li className="devPage-detail">developed logic to upscale alpha layers in textures</li>
             <li className="devPage-detail">See mods page for more info</li>
-          </ul>
-        </li>
-        <li className="devPage-item">
-          <ProjectTitle
-            title="webgl audio visualizer"
-            url=""
-            githubUrl="spin-viz"
-            year="2021-present"
-          />
-          <ul className="devPage-details">
-            <li className="devPage-detail">used for creating YouTube videos</li>
-            <li className="devPage-detail">
-              built with
-              {' '}
-              <code>react</code>
-              {' '}
-              and
-              {' '}
-              <code>webgl</code>
-            </li>
-            <li className="devPage-detail">live demo!</li>
-            <li className="devPage-scope">
-              <Scope />
-            </li>
           </ul>
         </li>
       </ul>
