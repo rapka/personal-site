@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
 import each from 'lodash/each';
+import isEmpty from 'lodash/isEmpty';
 import Modal from './Modal';
 import Gallery from './Gallery';
 
 import './Portfolio.css';
 
 function Portfolio({ galleries }) {
+  let appElement;
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [activeImage, setActiveImage] = React.useState(-1);
   const [activeGallery, setActiveGallery] = React.useState('');
@@ -17,7 +19,7 @@ function Portfolio({ galleries }) {
     setIsOpen(true);
   };
 
-  const activeImageData = activeImage > -1 && activeGallery ? galleries[activeGallery].images[activeImage] : null;
+  const activeImageData = activeImage > -1 && activeGallery ? galleries[activeGallery].images[activeImage] : {};
 
   function openImage(galleryIndex, imageIndex) {
     setActiveGallery(galleryIndex);
@@ -31,6 +33,9 @@ function Portfolio({ galleries }) {
   };
 
   const contentLabel = `${activeImageData ? activeImageData.title : 'Closed'} Modal`;
+  useEffect(() => {
+    appElement = document.getElementById('react-portfolio');
+  });
 
   const galleryComponents = [];
   each(galleries, (galleryData, key) => galleryComponents.push(
@@ -56,11 +61,11 @@ function Portfolio({ galleries }) {
         onRequestClose={closeModal}
         className="reactPortfolio-modal"
         contentLabel={contentLabel}
-        appElement={document.getElementById('react-portfolio')}
+        appElement={appElement}
       >
-        {activeImageData && <Modal closeModal={closeModal} {...activeImageData} />}
+        {!isEmpty(activeImageData) && <Modal closeModal={closeModal} {...activeImageData} />}
       </ReactModal>
-      <div>{galleryComponents}</div>
+      {!!galleryComponents.length && <div>{galleryComponents}</div>}
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from '../../Header';
-import Scope from '../../viz/Scope';
-import ProjectTitle from './ProjectTitle';
+import Header from '../components/Header';
+import Scope from '../components/viz/Scope';
+import ProjectTitle from '../components/dev/ProjectTitle';
 
-import './Dev.css';
+import './Dev.scss';
 
 function Dev() {
   return (

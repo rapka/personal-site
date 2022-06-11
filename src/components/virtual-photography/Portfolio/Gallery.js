@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Router, Link, Location } from '@reach/router';
 import shuffle from 'lodash/shuffle';
 import ClickableImage from './ClickableImage';
 
@@ -75,7 +75,7 @@ Gallery.defaultProps = {
   expanded: false,
   year: 0,
   description: '',
-  images: '',
+  images: [],
   id: '',
 };
 

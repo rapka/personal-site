@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from '../../Header';
-import AliasSelector from './AliasSelector';
-import CollegeHillSection from './aliases/CollegeHill';
-import MorphologistSection from './aliases/Morphologist';
-import FurySection from './aliases/Fury';
+import Header from '../components/Header';
+import AliasSelector from '../components/music/AliasSelector';
+import CollegeHillSection from '../components/music/aliases/CollegeHill';
+import MorphologistSection from '../components/music/aliases/Morphologist';
+import FurySection from '../components/music/aliases/Fury';
 
-import './Music.css';
+import './Music.scss';
 
 function Music() {
   const labels = ['College Hill', 'Morphologist', 'Fury'];

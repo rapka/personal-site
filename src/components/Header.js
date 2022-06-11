@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Router, Link, Location } from '@reach/router';
 
 import './Header.css';
 

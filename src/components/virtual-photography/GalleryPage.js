@@ -1,22 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
-import { useParams } from 'react-router-dom';
-import Header from '../../Header';
+import isEmpty from 'lodash/isEmpty';
+import Header from '../Header';
 import Modal from './Portfolio/Modal';
 import Gallery from './Portfolio/Gallery';
 
-import './VirtualPhotography.css';
+import '../../pages/VirtualPhotography.scss';
 
-import config from './config.json';
+import config from '../../photos.json';
 
-function GalleryPage() {
-  const { galleryKey } = useParams();
+function GalleryPage({ path }) {
+  console.log('gp', path);
+  let appElement;
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [activeImage, setActiveImage] = React.useState(-1);
 
-  const galleryData = config.galleries[galleryKey];
-  const activeImageData = galleryData[activeImage];
+  const galleryData = path == '/*' ? config.galleries['elden-ring-npcs'] : config.galleries[path];
+  const activeImageData = activeImage === -1 ? {} : galleryData[activeImage];
 
   const openModal = () => {
     setIsOpen(true);
@@ -36,6 +37,10 @@ function GalleryPage() {
 
   const contentLabel = `${activeImageData ? activeImageData.title : 'Closed'} Modal`;
 
+  useEffect(() => {
+    appElement = document.getElementById('react-portfolio');
+  });
+
   return (
     <div className="virtualPhotography" id="galleryPage">
       <Header />
@@ -45,9 +50,9 @@ function GalleryPage() {
         onRequestClose={closeModal}
         className="reactPortfolio-modal"
         contentLabel={contentLabel}
-        appElement={document.getElementById('react-portfolio')}
+        appElement={appElement}
       >
-        {activeImageData && <Modal closeModal={closeModal} {...activeImageData} />}
+        {!isEmpty(activeImageData) && <Modal closeModal={closeModal} {...activeImageData} />}
       </ReactModal>
       <div>
         <Gallery

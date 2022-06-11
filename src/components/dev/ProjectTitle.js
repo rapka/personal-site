@@ -6,15 +6,15 @@ import './ProjectTitle.css';
 function ProjectTitle({
   title, url, year, githubUrl,
 }) {
+  const titleElem = url ? (
+    <a href={url} className="projTitle">
+      {title}
+    </a>
+  ) : title;
+
   return (
     <div className="projTitle-container">
-      {url ? (
-        <a href={url} className="projTitle">
-          {title}
-        </a>
-      ) : (
-        { title }
-      )}
+      {titleElem}
       <div className="projTitle-year">
         (
         {year}

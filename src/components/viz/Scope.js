@@ -7,6 +7,8 @@ import hsvToRgb from './util/hsvToRgb';
 
 import './Scope.css';
 
+const isBrowser = typeof window !== 'undefined';
+
 const PADDING = 50 * 2; // 50px on each side
 let WIDTH = 1920 / 2;
 let HEIGHT = 1080;
@@ -24,10 +26,17 @@ class Scope extends React.Component {
         this.setState({ playing: !this.state.playing });
       }
     };
-    this.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    this.audioCtx = null;
+
+    if (isBrowser) {
+      this.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
   }
 
   componentDidMount() {
+    if (!isBrowser) {
+      return;
+    }
     // Add spacebar hotkey
     document.addEventListener('keydown', this.playEvent, false);
 
@@ -139,6 +148,10 @@ class Scope extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
+    if (!isBrowser) {
+      return;
+    }
+
     HEIGHT = window.innerHeight;
     WIDTH = window.innerWidth - PADDING;
 
@@ -152,6 +165,10 @@ class Scope extends React.Component {
   }
 
   componentWillUnmount() {
+    if (!isBrowser) {
+      return;
+    }
+
     document.removeEventListener('keydown', this.playEvent, false);
   }
 

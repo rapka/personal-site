@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from '../../Header';
-import DolphinMod from './DolphinMod';
-import mods from './modData';
+import Header from '../components/Header';
+import DolphinMod from '../components/mods/DolphinMod';
+import mods from '../modData';
 
-import './Mods.css';
+import './Mods.scss';
 
 function App() {
   const modComponents = mods.map((mod, i) => <DolphinMod {...mod} />);
