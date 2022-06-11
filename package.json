@@ -2,8 +2,6 @@
   "name": "personal-site",
   "description": "collegehill.io",
   "scripts": {
-    "clean": "rm -rf build/",
-    "start": "npm run dev",
     "createCname": "touch build/CNAME && echo 'collegehill.io' > build/CNAME",
     "push": "git subtree split --prefix build -b gh-pages && git push -f origin gh-pages:gh-pages && git branch -D gh-pages",
     "deploy:old": "npm run clean && npm run build && npm run createCname && npm run push",
@@ -17,11 +15,10 @@
     "format": "prettier-eslint --write -l error \"{src,scripts}/**/*.{js,mjs,json}\"",
 
     "develop": "gatsby develop",
-    "dev": "npm run develop",
-    "start-g": "gatsby develop",
+    "start": "gatsby develop",
     "build": "gatsby build",
     "serve-g": "gatsby serve",
-    "clean-g": "gatsby clean",
+    "clean": "gatsby clean",
 
     "deploy": "gatsby build && gh-pages -f -d public"
   },

@@ -10,7 +10,9 @@ function ProjectTitle({
     <a href={url} className="projTitle">
       {title}
     </a>
-  ) : title;
+  ) : (
+    title
+  );
 
   return (
     <div className="projTitle-container">

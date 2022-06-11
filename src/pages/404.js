@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from 'react';
+import { Link } from 'gatsby';
 
-const NotFoundPage = () => {
+function NotFoundPage() {
   return (
     <main>
       <title>Not found</title>
@@ -11,7 +11,7 @@ const NotFoundPage = () => {
         <Link to="/">Back to the homepage</Link>
       </p>
     </main>
-  )
+  );
 }
 
-export default NotFoundPage
+export default NotFoundPage;
