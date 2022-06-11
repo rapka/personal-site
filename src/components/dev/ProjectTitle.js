@@ -11,7 +11,7 @@ function ProjectTitle({
       {title}
     </a>
   ) : (
-    <div className="projTitle">title</div>
+    <div className="projTitle">{title}</div>
   );
 
   return (
