@@ -176,7 +176,7 @@ class Scope extends React.Component {
     return (
       <div className="viz-container">
         <canvas id="canvas" />
-        <img id="scope-icon" src="/public/favicon.png" />
+        <img id="scope-icon" src="/favicon.png" />
         <div id="scope-blurtext">blurs on beat!</div>
         <audio ref={this.player} src={this.props.audioSrc} type="audio/mpeg" preload="auto" loop />
       </div>
@@ -195,7 +195,7 @@ Scope.defaultProps = {
   rotateColors: true,
   rotationOffset: 180,
   colors: ['#FFFFFF', '#FFFFFF', '#888888'],
-  audioSrc: '/public/ww.mp3',
+  audioSrc: '/ww.mp3',
 };
 
 export default Scope;

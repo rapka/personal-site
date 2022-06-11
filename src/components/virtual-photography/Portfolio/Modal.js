@@ -8,7 +8,7 @@ function Modal({
   title, description, url, thumbnail, closeModal, year,
 }) {
   return (
-    <div className="modal-contents" onClick={closeModal}>
+    <div className="modal-contents">
       <button className="modal-closeButton" onClick={closeModal}>
         (close)
       </button>

@@ -7,7 +7,7 @@
 .modal-contents {
   display: flex;
   padding: 40px 50px;
-  height: calc(100vh - 8px);
+  height: calc(100vh - 80px);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -30,7 +30,7 @@
   border-radius: 2px;
 }
 
-.modal-modalCloseButton:hover {
+.modal-closeButton:hover {
   color: black;
   background-color: var(--pink);
   cursor: pointer;

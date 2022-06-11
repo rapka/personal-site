@@ -14,7 +14,7 @@ function DolphinMod({
         <img
           className="dolphinMod-gameCover"
           target="_blank"
-          src={`/public/images/covers/${gameId}.png`}
+          src={`/images/covers/${gameId}.png`}
           alt={`${title} Game cover`}
         />
       </a>

@@ -9,7 +9,7 @@ function ScreenshotCompare({ gameId, images }) {
   const [activeImage, setActiveImage] = useState(0);
   const thumbs = images.map((image, i) => (
     <img
-      src={`/public/images/screens/${gameId}/${image.modded}`}
+      src={`/images/screens/${gameId}/${image.modded}`}
       key={i}
       className={classNames('screenshotCompare-thumb', { active: i === activeImage })}
       onClick={() => setActiveImage(i)}
@@ -25,12 +25,12 @@ function ScreenshotCompare({ gameId, images }) {
         onMouseLeave={() => setActive(false)}
       >
         <img
-          src={`/public/images/screens/${gameId}/${images[activeImage].original}`}
+          src={`/images/screens/${gameId}/${images[activeImage].original}`}
           className="screenshotCompare-original"
           alt="Original game screenshot"
         />
         <img
-          src={`/public/images/screens/${gameId}/${images[activeImage].modded}`}
+          src={`/images/screens/${gameId}/${images[activeImage].modded}`}
           className="screenshotCompare-modded"
           alt="Modded game screenshot"
         />

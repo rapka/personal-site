@@ -35,10 +35,10 @@ const rollupTemplate = async ({
     ${metas}
     <title>${title}</title>
     ${links}
-    <link rel="manifest" href="public/manifest.json">
-    <link rel="icon" href="public/favicon.png" type="image/x-icon">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
     <link rel="apple-touch-icon-precomposed" sizes="128x128"
-      href="public/favicon.png" type="image/png">
+      href="favicon.png" type="image/png">
   </head>
   <body>
     <noscript><div class="noscript">You need JavaScript enabled for this site, friend.</div></noscript>
