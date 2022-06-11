@@ -5,8 +5,8 @@ const NotFoundPage = () => {
   return (
     <main>
       <title>Not found</title>
-      <h1 style={headingStyles}>404!</h1>
-      <p style={paragraphStyles}>
+      <h1>404!</h1>
+      <p>
         Sorry, page not found :(
         <Link to="/">Back to the homepage</Link>
       </p>
