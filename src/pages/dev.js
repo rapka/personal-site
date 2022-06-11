@@ -13,6 +13,38 @@ function Dev() {
       <ul className="devPage-itemList">
         <li className="devPage-item">
           <ProjectTitle
+            title="collegehill.io"
+            url="https://collegehill.io"
+            githubUrl="personal-site"
+            year="2022-present"
+          />
+          <ul className="devPage-details">
+            <li className="devPage-detail">My personal website. You're on it right now!</li>
+            <li className="devPage-detail">
+              Hosted on
+              {' '}
+              <a href="https://pages.github.com/">GitHub Pages</a>
+              {' '}
+              with dynamically
+              generated pages for photo albums and music releases
+            </li>
+            <li className="devPage-detail">
+              built with
+              {' '}
+              <code>Node</code>
+              ,
+              {' '}
+              <code>React</code>
+              ,
+              {' '}
+              <code>Sass</code>
+              , and
+              <code>Gatsby</code>
+            </li>
+          </ul>
+        </li>
+        <li className="devPage-item">
+          <ProjectTitle
             title="grimearchive.org"
             url="https://grimearchive.org"
             githubUrl="grimearchive"

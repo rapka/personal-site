@@ -21,6 +21,6 @@ function ReleasePage({ path, releaseData }) {
 
 ReleasePage.propTypes = {
   releaseData: PropTypes.object.isRequired,
-}
+};
 
 export default ReleasePage;

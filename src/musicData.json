@@ -1,45 +1,41 @@
 {
-	"college-hill": {
-	"albums": [
-		{
-			"title": "Rico Suavve Phaze 1: A Stranger In Gotham",
-			"slug": "a-stranger-in-gotham",
-			"year": 2017,
-			"genres": ["Trap", "Hip-Hop", "Instrumental"],
-			"bandcampId": "3658324833",
-			"bandcampOptions": {
-				"size": "large"
-			}
-		},
-		{
-			"title": "Overground Underground",
-			"slug": "overground-underground",
-			"year": 2019,
-			"genres": ["Mashup", "Pop", "Hip-Hop"],
-			"bandcampId": "948407697",
-			"bandcampOptions": {
-				"size": "medium"
-			},
-			"youtubeId": "wVvy1dLo19s"
-		}
-	],
-	"eps": [
-
-	],
-	"singles": [
-
-	],
-	"remixes": [
-
-	],
-	"mixes": [
-
-	]
-	},
-	"morphologist": {
-
-	},
-	"fury": {
-
-	}
+  "college-hill": {
+    "albums": [
+      {
+        "title": "Rico Suavve Phaze 1: A Stranger In Gotham",
+        "slug": "a-stranger-in-gotham",
+        "year": 2017,
+        "genres": ["Trap", "Hip-Hop", "Instrumental"],
+        "bandcampId": "3658324833",
+        "bandcampOptions": {
+          "size": "large"
+        }
+      },
+      {
+        "title": "Overground Underground",
+        "slug": "overground-underground",
+        "year": 2019,
+        "genres": ["Mashup", "Pop", "Hip-Hop"],
+        "bandcampId": "948407697",
+        "bandcampOptions": {
+          "size": "medium"
+        },
+        "youtubeId": "wVvy1dLo19s"
+      }
+    ],
+    "eps": [],
+    "singles": [
+      {
+        "title": " I Don't Know You, I Don't Belong ",
+        "slug": "i-dont-know-you-i-dont-belong",
+        "year": 2022,
+        "genres": ["Grime", "Bass", "Instrumental"],
+        "bandcampId": "1914797540"
+      }
+    ],
+    "remixes": [],
+    "mixes": []
+  },
+  "morphologist": {},
+  "fury": {}
 }
