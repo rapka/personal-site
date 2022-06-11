@@ -3,21 +3,23 @@ const fs = require('fs');
 const each = require('lodash/each')
 
 const photos = JSON.parse(fs.readFileSync(path.join(__dirname, 'src/photos.json')));
+const musicData = JSON.parse(fs.readFileSync(path.join(__dirname, 'src/musicData.json')));
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
-  const blogPostTemplate = path.resolve(`src/components/virtual-photography/GalleryPage.js`);
+  const galleryPage = path.resolve(`src/components/virtual-photography/GalleryPage.js`);
+  const releasePage = path.resolve(`src/components/music/ReleasePage.js`);
   // Query for markdown nodes to use in creating pages.
 
   console.log('lala', JSON.stringify(photos.galleries.length, null, 2));
 
-    // Create blog post pages.
+    // Create photogallery pages
     each(photos.galleries, (gallery, key) => {
       console.log('lalala', key);
       createPage({
         // Path for this page — required
         path: `/virtual-photography/${key}`,
-        component: blogPostTemplate,
+        component: galleryPage,
         context: {
           // path: key,
           // Add optional context data to be inserted
@@ -30,6 +32,23 @@ exports.createPages = ({ graphql, actions }) => {
           // argument.
         },
       })
+    });
+
+    each(musicData, (aliasData, alias) => {
+      each(aliasData, (releasesData, releaseType) => {
+        each(releasesData, (release, i) => {
+          createPage({
+            // Path for this page — required
+            path: `/music/${alias}/{releaseType}/${release.slug}`,
+            component: releasePage,
+            context: {
+              releaseData: release,
+            },
+          });
+        });
+      });
+      console.log('lalala', alias);
+
     });
 
 };
