@@ -1,17 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
-import isEmpty from 'lodash/isEmpty';
 import Header from '../Header';
 import YouTubeEmbed from '../../embed/YouTube';
 import BandcampEmbed from '../../embed/Bandcamp';
 
 import './ReleasePage.scss';
 
-import config from '../../photos.json';
-
 function ReleasePage({ path, pageContext }) {
-  console.log('gp', path, pageContext);
   const {
     title,
     year,
@@ -60,6 +56,7 @@ function ReleasePage({ path, pageContext }) {
 }
 
 ReleasePage.propTypes = {
+  path: PropTypes.string.isRequired,
   pageContext: PropTypes.shape({
     releaseData: PropTypes.object.isRequired,
   }),

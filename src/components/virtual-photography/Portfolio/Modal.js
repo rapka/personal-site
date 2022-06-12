@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Gallery from './Gallery.js';
 
 import './Modal.css';
 
@@ -31,11 +30,20 @@ function Modal({
 }
 
 Modal.propTypes = {
-  closeModal: PropTypes.func,
+  closeModal: PropTypes.func.isRequired,
   title: PropTypes.string,
   description: PropTypes.string,
   url: PropTypes.string,
   thumbnail: PropTypes.string,
+  year: PropTypes.string,
+};
+
+Modal.defaultProps = {
+  title: '',
+  description: '',
+  url: '',
+  thumbnail: '',
+  year: '',
 };
 
 export default Modal;
