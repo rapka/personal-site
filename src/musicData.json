@@ -262,7 +262,7 @@
         "title": "Dredwerkz / Aerowalk",
         "slug": "dredwerkz-aerowalk",
         "year": 2015,
-        "label": "Car Crash Set",
+        "recordLabel": "Car Crash Set",
         "genres": ["Grime", "150BPM", "Instrumental"],
         "bandcampId": "4005832528",
         "description": ""
@@ -271,7 +271,7 @@
         "title": "Statement of Intent",
         "slug": "statement-of-intent",
         "year": 2014,
-        "label": "UK Trends",
+        "recordLabel": "UK Trends",
         "genres": ["Grime", "150BPM", "Bass", "Instrumental"],
         "bandcampId": "4126265269",
         "description": "This is my first release on a record label, Threnody's UK Trends."

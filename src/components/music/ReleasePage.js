@@ -13,7 +13,7 @@ function ReleasePage({ path, pageContext }) {
     year,
     genres,
     description,
-    label,
+    recordLabel,
     youtubeId,
     youtubeOptions,
     bandcampId,
@@ -31,10 +31,10 @@ function ReleasePage({ path, pageContext }) {
             {year}
           </h3>
         )}
-        {!!label && (
+        {!!recordLabel && (
           <h3 className="releasePage-label">
             <span className="releasePage-labelLabel">label = </span>
-            {label}
+            {recordLabel}
           </h3>
         )}
         {genres && genres.length > 0 && (

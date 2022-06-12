@@ -9,7 +9,7 @@ function AlbumEmbed({
   title,
   year,
   genres,
-  label,
+  recordLabel,
   youtubeId,
   youtubeOptions,
   bandcampId,
@@ -22,7 +22,7 @@ function AlbumEmbed({
       <img className="albumEmbed-art" alt={title} src={`/images/music/${alias}/${slug}.jpg`} />
       {!!title && <h4 className="albumEmbed-title">{title}</h4>}
       {!!year && <h4 className="albumEmbed-year">{year}</h4>}
-      {!!label && <h4 className="albumEmbed-label">{label}</h4>}
+      {!!recordLabel && <h4 className="albumEmbed-label">{recordLabel}</h4>}
       {genres && genres.length > 0 && (
         <div className="albumEmbed-genres">
           (
@@ -43,7 +43,7 @@ AlbumEmbed.propTypes = {
   bandcampOptions: PropTypes.shape({
     size: PropTypes.string,
   }),
-  label: PropTypes.string,
+  recordLabel: PropTypes.string,
   title: PropTypes.string,
   year: PropTypes.number,
   genres: PropTypes.arrayOf(PropTypes.string),
@@ -57,7 +57,7 @@ AlbumEmbed.defaultProps = {
   bandcampId: '',
   bandcampOptions: {},
   title: '',
-  label: '',
+  recordLabel: '',
   year: undefined,
   genres: [],
 };

@@ -20,7 +20,7 @@
     "serve-g": "gatsby serve",
     "clean": "gatsby clean",
 
-    "deploy": "gatsby build && gh-pages -f -d public"
+    "deploy": "gatsby clean && gatsby build && gh-pages -f -d public"
   },
   "repository": {
     "type": "git",
