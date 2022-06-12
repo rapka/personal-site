@@ -2,7 +2,7 @@ import React from 'react';
 import AlbumEmbed from '../AlbumEmbed';
 import musicData from '../../../musicData.json';
 
-import './AliasSection.css';
+import './AliasSection.scss';
 import './CollegeHill.css';
 
 function CollegeHill() {
@@ -18,15 +18,15 @@ function CollegeHill() {
       </h5>
       Original Work
       <h4 className="alias-releaseType">Albums</h4>
-      <div className="alias-albumContainer">
+      <div className="alias-releases alias-albums">
         {albumComponents}
       </div>
       <h4 className="alias-releaseType">EPs</h4>
-      <div className="alias-albumContainer">
+      <div className="alias-releases alias-eps">
         {epComponents}
       </div>
       <h4 className="alias-releaseType">Singles</h4>
-      <div className="alias-albumContainer">
+      <div className="alias-releases alias-singles">
         {singleComponents}
       </div>
       <h4 className="alias-releaseType">Remixes</h4>

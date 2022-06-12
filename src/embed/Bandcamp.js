@@ -1,31 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import defaultsDeep from 'lodash/defaultsDeep';
 
 import './Bandcamp.css';
 
-function BandcampEmbed({ options, albumId }) {
-  const defaultOpts = {
-    width: 'min(100vw, 500px);',
-    height: options && options.size === 'large' ? 500 : undefined,
-    size: 'large',
-    bgColor: '333333',
-    linkColor: 'fe7eaf',
-  };
+function BandcampEmbed({ size, options, albumId }) {
+  let width = 'min(100vw, 500px);';
+  let height = '120px';
+  let bgColor = '333333';
+  let linkColor = 'fe7eaf';
+  let showTracklist = false;
 
-  const opts = defaultsDeep({}, options, defaultOpts);
-  const {
-    width, height, bgColor, linkColor, size,
-  } = opts;
+  if (size === 'large') {
+    width = '700px';
+    height = '872px';
+    showTracklist = true;
+  }
 
   const iframeUrl = `https://bandcamp.com/EmbeddedPlayer/album=${albumId}`
-    + `/size=${size}/bgcol=${bgColor}/linkcol=${linkColor}/tracklist=false/transparent=true/`;
+    + `/size=${size}/bgcol=${bgColor}/linkcol=${linkColor}/tracklist=${showTracklist}/transparent=true/`;
 
   return (
     <div className="bandcampEmbed">
       <iframe
         title="Embedded Bandcamp content"
-        style={{ border: 0, width: `${width}px`, height: `${height}px` }}
+        style={{ border: 0, width, height }}
         src={iframeUrl}
         seamless
       >
@@ -38,17 +36,20 @@ function BandcampEmbed({ options, albumId }) {
 }
 
 BandcampEmbed.propTypes = {
+  size: PropTypes.string,
   albumId: PropTypes.string.isRequired,
   options: PropTypes.shape({
     size: PropTypes.string,
-    width: PropTypes.number,
-    height: PropTypes.number,
+    width: PropTypes.string,
+    height: PropTypes.string,
     bgColor: PropTypes.string,
     linkColor: PropTypes.string,
   }),
 };
 
 BandcampEmbed.defaultProps = {
+  size: 'medium',
+  showTracklist: false,
   options: {},
 };
 

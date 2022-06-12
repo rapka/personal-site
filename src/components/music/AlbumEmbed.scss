@@ -1,11 +1,16 @@
 .albumEmbed {
   margin: 0.5rem 0;
-  max-width: 600px;
+  max-width: 300px;
+  padding: 10px;
 }
 
 .albumEmbed-title {
   font-size: 2rem;
   /*text-decoration: underline;*/
+}
+
+.albumEmbed-label {
+  font-size: 1.5rem;
 }
 
 .albumEmbed-year {

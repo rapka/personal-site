@@ -20,6 +20,7 @@ function App() {
           <code>Dolphin Emulator\Load\Textures\GAME_ID</code>
           {' '}
           where
+          {' '}
           <code>GAME_ID</code>
           {' '}
           is the id of the game (

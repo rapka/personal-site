@@ -3,12 +3,13 @@ import PropTypes from 'prop-types';
 import YouTubeEmbed from '../../embed/YouTube';
 import BandcampEmbed from '../../embed/Bandcamp';
 
-import './AlbumEmbed.css';
+import './AlbumEmbed.scss';
 
 function AlbumEmbed({
   title,
   year,
   genres,
+  label,
   description,
   youtubeId,
   youtubeOptions,
@@ -19,6 +20,7 @@ function AlbumEmbed({
     <div className="albumEmbed">
       {!!title && <h4 className="albumEmbed-title">{title}</h4>}
       {!!year && <h4 className="albumEmbed-year">{year}</h4>}
+      {!!label && <h4 className="albumEmbed-label">{label}</h4>}
       {genres && genres.length > 0 && (
         <div className="albumEmbed-genres">
           (
@@ -40,6 +42,7 @@ AlbumEmbed.propTypes = {
   bandcampOptions: PropTypes.shape({
     size: PropTypes.string,
   }),
+  label: PropTypes.string,
   title: PropTypes.string,
   description: PropTypes.string,
   year: PropTypes.number,
@@ -52,6 +55,7 @@ AlbumEmbed.defaultProps = {
   bandcampId: '',
   bandcampOptions: {},
   title: '',
+  label: '',
   description: '',
   year: undefined,
   genres: [],

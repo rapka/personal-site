@@ -13,9 +13,28 @@
 	text-align: center;
 }
 
-.alias-albumContainer {
+.alias-releases {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: center;
+	flex-wrap: wrap;
+}
+
+.alias-albums {
+		.albumEmbed {
+		max-width: 700px;
+	};
+}
+
+.alias-eps {
+		.albumEmbed {
+		max-width: 700px;
+	};
+}
+
+.alias-singles {
+		.albumEmbed {
+		max-width: 300px;
+	};
 }
