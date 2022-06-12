@@ -6,9 +6,9 @@ import './AliasSection.scss';
 import './CollegeHill.css';
 
 function CollegeHill() {
-  const albumComponents = musicData['college-hill'].albums.map(releaseData => <AlbumEmbed {...releaseData} />);
-  const epComponents = musicData['college-hill'].eps.map(releaseData => <AlbumEmbed {...releaseData} />);
-  const singleComponents = musicData['college-hill'].singles.map(releaseData => <AlbumEmbed {...releaseData} />);
+  const albumComponents = musicData['college-hill'].albums.map(releaseData => <AlbumEmbed {...releaseData} alias="college-hill" />);
+  const epComponents = musicData['college-hill'].eps.map(releaseData => <AlbumEmbed {...releaseData} alias="college-hill" />);
+  const singleComponents = musicData['college-hill'].singles.map(releaseData => <AlbumEmbed {...releaseData} alias="college-hill" />);
 
   return (
     <section className="alias-container" id="alias-collegehill">

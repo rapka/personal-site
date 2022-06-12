@@ -16,14 +16,18 @@ function BandcampEmbed({ size, options, albumId }) {
     showTracklist = true;
   }
 
-  const iframeUrl = `https://bandcamp.com/EmbeddedPlayer/album=${albumId}`
-    + `/size=${size}/bgcol=${bgColor}/linkcol=${linkColor}/tracklist=${showTracklist}/transparent=true/`;
+  let iframeUrl = `https://bandcamp.com/EmbeddedPlayer/album=${albumId}`
+    + `/size=large/bgcol=${bgColor}/linkcol=${linkColor}/tracklist=${showTracklist}/transparent=true/`;
+
+  if (size == 'small') {
+    iframeUrl += '/artwork=none';
+  }
 
   return (
     <div className="bandcampEmbed">
       <iframe
         title="Embedded Bandcamp content"
-        style={{ border: 0, width, height }}
+        style={{ border: 0, width: '100%', maxWidth: width, height }}
         src={iframeUrl}
         seamless
       >
@@ -48,7 +52,7 @@ BandcampEmbed.propTypes = {
 };
 
 BandcampEmbed.defaultProps = {
-  size: 'medium',
+  size: 'small',
   showTracklist: false,
   options: {},
 };
