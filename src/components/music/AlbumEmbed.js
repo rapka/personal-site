@@ -31,7 +31,6 @@ function AlbumEmbed({
           )
         </div>
       )}
-      {description && <div className="albumEmbed-desc">{description}</div>}
       {youtubeId && <YouTubeEmbed videoId={youtubeId} options={youtubeOptions} />}
       {bandcampId && <BandcampEmbed albumId={bandcampId} options={bandcampOptions} />}
     </div>
