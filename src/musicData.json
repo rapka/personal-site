@@ -23,14 +23,282 @@
         "youtubeId": "wVvy1dLo19s"
       }
     ],
-    "eps": [],
+    "eps": [
+      {
+        "title": "Begging U Plz Don't Go",
+        "slug": "begging-u-plz-dont-go",
+        "year": 2021,
+        "genres": ["House", "Baltimore Club"],
+        "bandcampId": "3062325382",
+        "description": ""
+      },
+      {
+        "title": "Ultraviolence EP",
+        "slug": "ultraviolence-ep",
+        "year": 2021,
+        "genres": ["Grime", "150BPM", "Bass", "Experimental"],
+        "bandcampId": "1199523159",
+        "description": ""
+      },
+      {
+        "title": "Evil EP",
+        "slug": "evil-ep",
+        "year": 2020,
+        "genres": ["Dubstep", "Odd Time Signatures"],
+        "bandcampId": "4248274130",
+        "description": "Odd Time Signatures"
+      },
+      {
+        "title": "808 Intifadah",
+        "slug": "808-intifadah",
+        "year": 2012,
+        "genres": ["Trap", "Grime", "Dubstep", "Instrumental"],
+        "bandcampId": "794956618",
+        "description": ""
+      },
+      {
+        "title": "Molting EP",
+        "slug": "molting-ep",
+        "year": 2011,
+        "genres": ["Grime", "Instrumental"],
+        "bandcampId": "2147240858",
+        "description": ""
+      }
+    ],
     "singles": [
       {
-        "title": " I Don't Know You, I Don't Belong ",
+        "title": "I Don't Know You, I Don't Belong",
         "slug": "i-dont-know-you-i-dont-belong",
         "year": 2022,
         "genres": ["Grime", "Bass", "Instrumental"],
-        "bandcampId": "1914797540"
+        "bandcampId": "1914797540",
+        "description": ""
+      },
+      {
+        "title": "Bamma / Cise",
+        "slug": "bamma-cise",
+        "year": 2022,
+        "genres": ["Dubstep", "Bass"],
+        "bandcampId": "3956189",
+        "description": ""
+      },
+      {
+        "title": "Blinded Love",
+        "slug": "blinded-love",
+        "year": 2021,
+        "genres": ["Grime", "Bass", "Instrumental"],
+        "bandcampId": "490115041",
+        "description": ""
+      },
+      {
+        "title": "Time To Move Versions",
+        "slug": "time-to-move-versions",
+        "year": 2021,
+        "genres": ["Dubstep", "Footwork", "Weightless", "150BPM"],
+        "bandcampId": "4236204223",
+        "description": ""
+      },
+      {
+        "title": "Prisoner Rights",
+        "slug": "prisoner-rights",
+        "year": 2021,
+        "genres": ["Grime", "Bass", "Instrumental", "150BPM"],
+        "bandcampId": "3814935256",
+        "description": ""
+      },
+      {
+        "title": "Skamma",
+        "slug": "skamma",
+        "year": 2021,
+        "genres": ["Grime", "Bass", "Footwork", "Experimental"],
+        "bandcampId": "1914797540",
+        "description": ""
+      },
+      {
+        "title": "Lies",
+        "slug": "lies",
+        "year": 2021,
+        "genres": ["Grime", "150BPM", "Bass", "Trap"],
+        "bandcampId": "1914797540",
+        "description": ""
+      },
+      {
+        "title": "Eye Gouge",
+        "slug": "eye-gouge",
+        "year": 2021,
+        "genres": ["Grime", "Intrumental", "Experimental"],
+        "bandcampId": "2177572642",
+        "description": ""
+      },
+      {
+        "title": "Evil Versions",
+        "slug": "evil-versions",
+        "year": 2021,
+        "genres": ["Dubstep", "Grime", "Bass", "Experimental", "150BPM"],
+        "bandcampId": "2861489711",
+        "description": ""
+      },
+      {
+        "title": "Mobius Loop / Apocalypso Dub",
+        "slug": "mobius-loop-apocalypso-dub",
+        "year": 2021,
+        "genres": ["Dubstep", "150BPM", "Bass"],
+        "bandcampId": "1216290925",
+        "description": ""
+      },
+      {
+        "title": "Keyboards Connect Us / Thinking of You",
+        "slug": "keyboards-connect-us-thinking-of-you",
+        "year": 2021,
+        "genres": ["150BPM", "Bass", "Dubstep"],
+        "bandcampId": "4169413735",
+        "description": ""
+      },
+      {
+        "title": "Chopper / Scratch",
+        "slug": "chopper-scratch",
+        "year": 2021,
+        "genres": ["Dubstep"],
+        "bandcampId": "2036447661",
+        "description": ""
+      },
+      {
+        "title": "Campgrounds / Forgotten Place",
+        "slug": "campgrounds-forgotten-place",
+        "year": 2020,
+        "genres": ["Grime", "150BPM", "Bass"],
+        "bandcampId": "3992029046",
+        "description": ""
+      },
+      {
+        "title": "Titanium Feather",
+        "slug": "titanium-feather",
+        "year": 2020,
+        "genres": ["150BPM", "Bass", "Grime"],
+        "bandcampId": "3712789804",
+        "description": ""
+      },
+      {
+        "title": "Candy Paint",
+        "slug": "candy-paint",
+        "year": 2020,
+        "genres": ["Dubstep", "Grime", "Hip-Hop"],
+        "bandcampId": "1814704841",
+        "description": ""
+      },
+      {
+        "title": "No Movement / YG0",
+        "slug": "no-movement-yg0",
+        "year": 2020,
+        "genres": ["Grime", "Instrumental"],
+        "bandcampId": "1304114146",
+        "description": ""
+      },
+      {
+        "title": "Leliel / Gaghiel (Versions)",
+        "slug": "leliel-gaghiel-versions",
+        "year": 2020,
+        "genres": ["Dubstep", "Bass", "150BPM"],
+        "bandcampId": "1304114146",
+        "description": ""
+      },
+      {
+        "title": "Leliel / Gaghiel",
+        "slug": "leliel-gaghiel",
+        "year": 2020,
+        "genres": ["Dubstep"],
+        "bandcampId": "1304114146",
+        "description": ""
+      },
+      {
+        "title": "Lilith (Versions)",
+        "slug": "lilith-versions",
+        "year": 2020,
+        "genres": ["Dubstep"],
+        "bandcampId": "1454922020",
+        "description": ""
+      },
+      {
+        "title": "Lilith / Lilin",
+        "slug": "lilith-lilin",
+        "year": 2020,
+        "genres": ["Dubstep"],
+        "bandcampId": "1675425943",
+        "description": ""
+      },
+      {
+        "title": "OMG / Never True",
+        "slug": "omg-never-true",
+        "year": 2020,
+        "genres": ["Baltimore Club", "House"],
+        "bandcampId": "3316001499",
+        "description": "Portrait by J Drago"
+      },
+      {
+        "title": "Something Different",
+        "slug": "something-different",
+        "year": 2020,
+        "genres": ["Baltimore Club", "Dubstep"],
+        "bandcampId": "1304114146",
+        "description": "Art By J Drago"
+      },
+      {
+        "title": "Red Graf",
+        "slug": "red-graf",
+        "year": 2020,
+        "genres": ["Dubstep"],
+        "bandcampId": "2306580993",
+        "description": ""
+      },
+      {
+        "title": "Dredwerkz / Aerowalk",
+        "slug": "dredwerkz-aerowalk",
+        "year": 2015,
+        "label": "Car Crash Set",
+        "genres": ["Grime", "150BPM", "Instrumental"],
+        "bandcampId": "4005832528",
+        "description": ""
+      },
+      {
+        "title": "Statement of Intent",
+        "slug": "statement-of-intent",
+        "year": 2014,
+        "label": "UK Trends",
+        "genres": ["Grime", "150BPM", "Bass", "Instrumental"],
+        "bandcampId": "4126265269",
+        "description": "This is my first release on a record label, Threnody's UK Trends."
+      },
+      {
+        "title": "Hate Crime Riddim / Leng Myself Down",
+        "slug": "hate-crime-riddim-leng-myself-down",
+        "year": 2013,
+        "genres": ["Grime", "150BPM", "Experimental"],
+        "bandcampId": "626002756",
+        "description": ""
+      },
+      {
+        "title": "Killa Bees On The Swarm / 5 AM Coked Up",
+        "slug": "killa-bees-on-the-swarm-5-am-coked-up",
+        "year": 2013,
+        "genres": ["Grime", "150BPM", "Bass", "Instrumental"],
+        "bandcampId": "1894084244",
+        "description": ""
+      },
+      {
+        "title": "Mixtape Mastermind",
+        "slug": "mixtape-mastermind",
+        "year": 2013,
+        "genres": ["Grime", "150BPM"],
+        "bandcampId": "3692091829",
+        "description": ""
+      },
+      {
+        "title": "ReMolt",
+        "slug": "remolt",
+        "year": 2012,
+        "genres": ["Grime", "150BPM", "Instrumental"],
+        "bandcampId": "3692091829",
+        "description": ""
       }
     ],
     "remixes": [],

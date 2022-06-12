@@ -25,7 +25,7 @@ exports.createPages = ({ graphql, actions }) => {
       each(releasesData, (release, i) => {
         createPage({
           // Path for this page — required
-          path: `/music/${alias}/{releaseType}/${release.slug}`,
+          path: `/music/${alias}/${releaseType}/${release.slug}`,
           component: releasePage,
           context: {
             releaseData: release,
