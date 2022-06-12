@@ -6,9 +6,15 @@ import './AliasSection.scss';
 import './CollegeHill.css';
 
 function CollegeHill() {
-  const albumComponents = musicData['college-hill'].albums.map(releaseData => <AlbumEmbed {...releaseData} alias="college-hill" />);
-  const epComponents = musicData['college-hill'].eps.map(releaseData => <AlbumEmbed {...releaseData} alias="college-hill" />);
-  const singleComponents = musicData['college-hill'].singles.map(releaseData => <AlbumEmbed {...releaseData} alias="college-hill" />);
+  const albumComponents = musicData['college-hill'].albums.map((releaseData) => (
+    <AlbumEmbed {...releaseData} alias="college-hill" />
+  ));
+  const epComponents = musicData['college-hill'].eps.map((releaseData) => (
+    <AlbumEmbed {...releaseData} alias="college-hill" />
+  ));
+  const singleComponents = musicData['college-hill'].singles.map((releaseData) => (
+    <AlbumEmbed {...releaseData} alias="college-hill" />
+  ));
 
   return (
     <section className="alias-container" id="alias-collegehill">
@@ -18,17 +24,11 @@ function CollegeHill() {
       </h5>
       Original Work
       <h4 className="alias-releaseType">Albums</h4>
-      <div className="alias-releases alias-albums">
-        {albumComponents}
-      </div>
+      <div className="alias-releases alias-albums">{albumComponents}</div>
       <h4 className="alias-releaseType">EPs</h4>
-      <div className="alias-releases alias-eps">
-        {epComponents}
-      </div>
+      <div className="alias-releases alias-eps">{epComponents}</div>
       <h4 className="alias-releaseType">Singles</h4>
-      <div className="alias-releases alias-singles">
-        {singleComponents}
-      </div>
+      <div className="alias-releases alias-singles">{singleComponents}</div>
       <h4 className="alias-releaseType">Remixes</h4>
       <h4 className="alias-releaseType">Mixes</h4>
     </section>

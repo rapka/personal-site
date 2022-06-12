@@ -6,8 +6,8 @@ import './Bandcamp.css';
 function BandcampEmbed({ size, options, albumId }) {
   let width = 'min(100vw, 500px);';
   let height = '120px';
-  let bgColor = '333333';
-  let linkColor = 'fe7eaf';
+  const bgColor = '333333';
+  const linkColor = 'fe7eaf';
   let showTracklist = false;
 
   if (size === 'large') {
@@ -27,7 +27,9 @@ function BandcampEmbed({ size, options, albumId }) {
     <div className="bandcampEmbed">
       <iframe
         title="Embedded Bandcamp content"
-        style={{ border: 0, width: '100%', maxWidth: width, height }}
+        style={{
+          border: 0, width: '100%', maxWidth: width, height,
+        }}
         src={iframeUrl}
         seamless
       >
