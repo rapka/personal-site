@@ -5,7 +5,7 @@ function AMVs() {
   return (
     <div>
       <Header />
-      AMVs
+      <p>TODO</p>
     </div>
   );
 }

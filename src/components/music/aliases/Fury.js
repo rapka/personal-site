@@ -9,6 +9,7 @@ function Fury() {
       <h4 className="alias-title">Fury</h4>
       <h5 className="alias-description">Footwork.</h5>
       <h4 className="alias-releaseType">Albums</h4>
+      <p>TODO</p>
     </section>
   );
 }

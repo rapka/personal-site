@@ -6,9 +6,13 @@ function App() {
   return (
     <div>
       <Header />
-      Resume see more at
-      {' '}
-      <Link to="/projects">/projects</Link>
+      <p>
+        TODO
+        <br />
+        See more at
+        {' '}
+        <Link to="/projects">/projects</Link>
+      </p>
     </div>
   );
 }

@@ -29,7 +29,9 @@ function CollegeHill() {
       <h4 className="alias-releaseType">Singles</h4>
       <div className="alias-releases alias-singles">{singleComponents}</div>
       <h4 className="alias-releaseType">Remixes</h4>
+      <p>TODO</p>
       <h4 className="alias-releaseType">Mixes</h4>
+      <p>TODO</p>
     </section>
   );
 }
