@@ -1,7 +1,24 @@
 .albumEmbed {
   margin: 0.5rem 0;
-  max-width: 300px;
+  // max-width: 300px;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  &.large {
+    max-width: 700px;
+  }
+
+  &.medium {
+    max-width: 400px;
+  }
+
+  &.small {
+    max-width: 250px;
+  }
 }
 
 .albumEmbed-art {
@@ -10,6 +27,7 @@
 
 .albumEmbed-title {
   font-size: 2rem;
+  margin: 0;
   /*text-decoration: underline;*/
 }
 
@@ -19,10 +37,12 @@
 
 .albumEmbed-year {
   font-size: 1.5rem;
+  margin: 10px;
 }
 
 .albumEmbed-genres {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
+  margin-bottom: 4px
 }
 
 .albumEmbed-desc {

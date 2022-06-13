@@ -16,21 +16,21 @@ function AlbumEmbed({
   bandcampOptions,
   slug,
   alias,
+  size,
 }) {
   return (
-    <div className="albumEmbed">
-      <img className="albumEmbed-art" alt={title} src={`/images/music/${alias}/${slug}.jpg`} />
+    <div className={`albumEmbed ${size}`}>
       {!!title && <h4 className="albumEmbed-title">{title}</h4>}
       {!!year && <h4 className="albumEmbed-year">{year}</h4>}
       {!!recordLabel && <h4 className="albumEmbed-label">{recordLabel}</h4>}
       {genres && genres.length > 0 && (
         <div className="albumEmbed-genres">
-          (
-          {genres.join('/')}
-          )
+
+          {genres.join(' | ')}
+
         </div>
       )}
-      {youtubeId && <YouTubeEmbed videoId={youtubeId} options={youtubeOptions} />}
+      <img className="albumEmbed-art" alt={title} src={`/images/music/${alias}/${slug}.jpg`} />
       {bandcampId && <BandcampEmbed albumId={bandcampId} options={bandcampOptions} />}
     </div>
   );
@@ -49,6 +49,7 @@ AlbumEmbed.propTypes = {
   genres: PropTypes.arrayOf(PropTypes.string),
   slug: PropTypes.string.isRequired,
   alias: PropTypes.string.isRequired,
+  size: PropTypes.string,
 };
 
 AlbumEmbed.defaultProps = {
@@ -60,6 +61,7 @@ AlbumEmbed.defaultProps = {
   recordLabel: '',
   year: undefined,
   genres: [],
+  size: 'medium',
 };
 
 export default AlbumEmbed;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import each from 'lodash/each';
 import classNames from 'classnames';
 
-import './AliasSelector.css';
+import './AliasSelector.scss';
 
 function AliasSelector({ onChange, labels, activeAlias }) {
   const options = [];

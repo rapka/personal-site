@@ -7,21 +7,20 @@ import './CollegeHill.css';
 
 function CollegeHill() {
   const albumComponents = musicData['college-hill'].albums.map((releaseData) => (
-    <AlbumEmbed {...releaseData} alias="college-hill" />
+    <AlbumEmbed {...releaseData} alias="college-hill" size="large" />
   ));
   const epComponents = musicData['college-hill'].eps.map((releaseData) => (
-    <AlbumEmbed {...releaseData} alias="college-hill" />
+    <AlbumEmbed {...releaseData} alias="college-hill" size="medium" />
   ));
   const singleComponents = musicData['college-hill'].singles.map((releaseData) => (
-    <AlbumEmbed {...releaseData} alias="college-hill" />
+    <AlbumEmbed {...releaseData} alias="college-hill" size="small" />
   ));
 
   return (
     <section className="alias-container" id="alias-collegehill">
-      <h3 className="alias-title">College Hill</h3>
-      <h5 className="alias-description">
+      <h3 className="alias-description">
         Primary alias for releasing music. Grime / Dubstep / Bass / Baltimore Club / Trap / etc
-      </h5>
+      </h3>
       Original Work
       <h4 className="alias-releaseType">Albums</h4>
       <div className="alias-releases alias-albums">{albumComponents}</div>

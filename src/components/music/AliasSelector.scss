@@ -4,10 +4,17 @@
 
 .aliasOption {
   font-size: 1.5rem;
-  margin: 0.5rem 0;
+  margin: 2px 0;
   cursor: pointer;
   background: transparent;
   border: 0;
+  transition: font-size 100ms ease-in-out;
+
+  &.selected {
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    text-decoration: underline;
+  }
 }
 
 .aliasOption-College-Hill {
@@ -20,11 +27,6 @@
 
 .aliasOption-Fury {
   color: var(--purple);
-}
-
-.aliasOption.selected {
-  font-size: 2rem;
-  text-decoration: underline;
 }
 
 .aliasSelector-container {

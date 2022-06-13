@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './Bandcamp.css';
 
 function BandcampEmbed({ size, options, albumId }) {
-  let width = 'min(100vw, 500px);';
+  let width = 'min(100vw, 500px)';
   let height = '120px';
   const bgColor = '333333';
   const linkColor = 'fe7eaf';
