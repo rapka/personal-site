@@ -39,6 +39,7 @@ function Dev() {
               {' '}
               <code>Sass</code>
               , and
+              {' '}
               <code>Gatsby</code>
             </li>
           </ul>
@@ -80,6 +81,7 @@ function Dev() {
               {' '}
               <code>Pug</code>
               , and
+              {' '}
               <code>JQuery</code>
             </li>
           </ul>

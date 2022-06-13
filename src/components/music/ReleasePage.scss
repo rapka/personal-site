@@ -12,6 +12,7 @@
   align-items: center;
   background-size: cover;
   padding-bottom: 40px;
+  background-color: rgba(0,0,0,0.2)
 }
 
 .releasePage-title {
@@ -49,6 +50,7 @@
 }
 
 .releasePage-bandcamp {
+  padding-top: 10px;
   width: 100%;
   max-width: 700px;
 }
