@@ -1,5 +1,5 @@
 module.exports = {
-  trailingSlash: 'never',
+  trailingSlash: 'always',
   siteMetadata: {
     title: 'College Hill',
     siteUrl: 'https://www.collegehill.io',

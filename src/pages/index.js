@@ -14,13 +14,13 @@ function IndexPage() {
         <h4>
           I love
           {' '}
-          <Link to="/music">making music</Link>
+          <Link to="/music/">making music</Link>
           ,
           {' '}
-          <Link to="/dev">writing code</Link>
+          <Link to="/dev/">writing code</Link>
           , and
           {' '}
-          <Link to="/mods">video games</Link>
+          <Link to="/mods/">video games</Link>
         </h4>
       </main>
     </>

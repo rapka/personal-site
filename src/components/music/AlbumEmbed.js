@@ -32,7 +32,7 @@ function AlbumEmbed({
 
         </div>
       )}
-      <Link to={`/music/${alias}/${type}/${slug}`} className="albumEmbed-artLink"><img className="albumEmbed-art" alt={title} src={`/images/music/${alias}/${slug}.jpg`} /></Link>
+      <Link to={`/music/${alias}/${type}/${slug}/`} className="albumEmbed-artLink"><img className="albumEmbed-art" alt={title} src={`/images/music/${alias}/${slug}.jpg`} /></Link>
       {bandcampId && <BandcampEmbed albumId={bandcampId} options={bandcampOptions} />}
     </div>
   );
