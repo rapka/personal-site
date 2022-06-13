@@ -56,17 +56,7 @@ function App() {
         <br />
         {modComponents}
         <br />
-        N64 (Virtual Console)
-        <a href="https://mega.nz/#!OZ1RUKAQ!l225vo2KmIg6yCRUNQQqeeVgyK6RT4zxKxIHpwgSipY">
-          ] Pokemon Snap (NAKE01)
-        </a>
-        <a href="https://mega.nz/#!TJ0jjIZA!UQh8r_luF9RekfPbOfNa-Cj9Qgjxj83uOjCPfhXNsgQ">
-          Wave Race 64 (NAIE01)
-        </a>
-        <a href="https://mega.nz/#!uBFV0KRZ!9M6SROjZJ5Z3RlGMJu9UHSp1RYIZk4KfmGnssGwDkWg">
-          [] Mario Kart 64 (NAME01)
-        </a>
-        TODO: screenshot comparisons (export comparison tool?)
+        <h2 className="modSection-title">Other Texture Packs</h2>
         <div className="modSection-turok">
           <h3>Turok 2: Seeds of Evil (Steam)</h3>
           <a

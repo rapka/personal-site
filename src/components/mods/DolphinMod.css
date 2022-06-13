@@ -1,4 +1,5 @@
 .dolphinMod {
+	padding: 20px 8px;
 	display: flex;
 	flex-direction: column;
 	/*max-width: 700px;*/
@@ -7,11 +8,26 @@
 }
 
 .dolphinMod-title {
-	font-size: 2.25rem;
+	font-size: 3rem !important;
+	margin: 0;
+}
+
+.dolphinMod-data {
+	display: flex;
+	flex-direction: row;
+}
+
+.dolphinMod-dataText {
+	padding-left: 20px;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
 }
 
 .dolphinMod-download {
-	font-size: 1.75rem;
+	font-size: 2rem;
 	border: 2px solid var(--pink);
 	padding: 6px;
 	margin: 8px 0;
@@ -31,4 +47,9 @@
 .dolphinMod-screenshots {
 	display: flex;
 	flex-direction: row;
+}
+
+.dolphinMod-gameId {
+	color: var(--dullGrey);
+	margin: 0 0 20px 0;
 }

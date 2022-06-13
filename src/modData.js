@@ -3,7 +3,6 @@ const modData = [
     title: 'Metroid Prime',
     gameId: 'GM8E01',
     downloadLink: 'https://mega.nz/#!2JEDHIQT!9UVh6ML_DH8zSjZbukqiNuReDkdKFwsDz8V2xQiQST4',
-
     images: [
       {
         original: 'GM8E01-12.png',
@@ -61,20 +60,20 @@ const modData = [
     downloadLink: 'https://mega.nz/#!LAs0nSYY!sfFojNtdYaSgXC5T73kgiTDBB6UPxWZEqdSA0FlQ-Ks',
     images: [
       {
-        original: 'GT3E52-2.png',
-        modded: 'GT3E52-1.png',
+        original: 'GVJE08-1.png',
+        modded: 'GVJE08-2.png',
       },
       {
-        original: 'GT3E52-3.png',
-        modded: 'GT3E52-4.png',
+        original: 'GVJE08-3.png',
+        modded: 'GVJE08-4.png',
       },
       {
-        original: 'GT3E52-10.png',
-        modded: 'GT3E52-11.png',
+        original: 'GVJE08-10.png',
+        modded: 'GVJE08-11.png',
       },
       {
-        original: 'GT3E52-12.png',
-        modded: 'GT3E52-13.png',
+        original: 'GVJE08-12.png',
+        modded: 'GVJE08-13.png',
       },
     ],
   },

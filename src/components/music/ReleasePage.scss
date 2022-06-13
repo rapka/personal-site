@@ -5,16 +5,18 @@
 }
 
 .releasePage-content {
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 0 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   background-size: cover;
+  padding-bottom: 40px;
 }
 
 .releasePage-title {
   font-size: 2.5rem;
+  margin-bottom: 0;
   letter-spacing: 10px;
   /*text-decoration: underline;*/
 }
@@ -26,7 +28,7 @@
 
 .releasePage-label {
   font-size: 1.5rem;
-  margin: 10px 0;
+  margin: 12px 0;
 }
 
 .releasePage-labelLabel,
@@ -38,7 +40,7 @@
 
 .releasePage-genres {
   font-size: 1.25rem;
-  margin: 8px 0;
+  margin: 10px 0;
 }
 
 .releasePage-desc {

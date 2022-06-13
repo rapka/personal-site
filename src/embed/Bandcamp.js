@@ -12,7 +12,7 @@ function BandcampEmbed({ size, options, albumId }) {
 
   if (size === 'large') {
     width = '700px';
-    height = '872px';
+    height = '672px';
     bgColor = 'transparent';
     showTracklist = true;
   }
