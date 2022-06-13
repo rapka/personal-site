@@ -61,8 +61,9 @@ a {
 
 code {
 	background-color: var(--codeGrey);
+	padding: 0 1px;
+	text-transform: lowercase;
 }
-
 
 #personal-site {
 	--text-color: var(--color-tone-1);

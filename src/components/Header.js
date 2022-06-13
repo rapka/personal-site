@@ -1,7 +1,7 @@
 import React from 'react';
 import { Router, Link, Location } from '@reach/router';
 
-import './Header.css';
+import './Header.scss';
 
 function Header() {
   return (
