@@ -25,14 +25,10 @@ function AlbumEmbed({
       {!!title && <h4 className="albumEmbed-title">{title}</h4>}
       {!!year && <h4 className="albumEmbed-year">{year}</h4>}
       {!!recordLabel && <h4 className="albumEmbed-label">{recordLabel}</h4>}
-      {genres && genres.length > 0 && (
-        <div className="albumEmbed-genres">
-
-          {genres.join(' | ')}
-
-        </div>
-      )}
-      <Link to={`/music/${alias}/${type}/${slug}/`} className="albumEmbed-artLink"><img className="albumEmbed-art" alt={title} src={`/images/music/${alias}/${slug}.jpg`} /></Link>
+      {genres && genres.length > 0 && <div className="albumEmbed-genres">{genres.join(' | ')}</div>}
+      <Link to={`/music/${alias}/${type}/${slug}/`} className="albumEmbed-artLink">
+        <img className="albumEmbed-art" alt={title} src={`/images/music/${alias}/${slug}.jpg`} />
+      </Link>
       {bandcampId && <BandcampEmbed albumId={bandcampId} options={bandcampOptions} />}
     </div>
   );

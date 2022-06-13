@@ -19,7 +19,8 @@ function CollegeHill() {
   return (
     <section className="alias-container" id="alias-collegehill">
       <h3 className="alias-description">
-        Primary alias for releasing music. Genres: Grime / Dubstep / Bass / Baltimore Club / Trap / etc
+        Primary alias for releasing music. Genres: Grime / Dubstep / Bass / Baltimore Club / Trap /
+        etc
       </h3>
       <h4 className="alias-releaseType">Albums</h4>
       <div className="alias-releases alias-albums">{albumComponents}</div>

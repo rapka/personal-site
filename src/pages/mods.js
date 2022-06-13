@@ -22,8 +22,7 @@ function App() {
           where
           <code>GAME_ID</code>
           {' '}
-          is the id
-          of the game (
+          is the id of the game (
           <code>GM8E01</code>
           {' '}
           for example).

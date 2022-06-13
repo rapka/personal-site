@@ -10,21 +10,24 @@ function DolphinMod({
   return (
     <div className="dolphinMod">
       <div className="dolphinMod-data">
-      <a href={downloadLink}>
-        <img
-          className="dolphinMod-gameCover"
-          target="_blank"
-          src={`/images/covers/${gameId}.png`}
-          alt={`${title} Game cover`}
-        />
-      </a>
-      <div className="dolphinMod-dataText">
-      <h3 className="dolphinMod-title">{title}</h3>
-      <p className="dolphinMod-gameId">Game ID: {gameId}</p>
-      <a className="dolphinMod-download" href={downloadLink} target="_blank" rel="noreferrer">
-        Download via Mega
-      </a>
-      </div>
+        <a href={downloadLink}>
+          <img
+            className="dolphinMod-gameCover"
+            target="_blank"
+            src={`/images/covers/${gameId}.png`}
+            alt={`${title} Game cover`}
+          />
+        </a>
+        <div className="dolphinMod-dataText">
+          <h3 className="dolphinMod-title">{title}</h3>
+          <p className="dolphinMod-gameId">
+            Game ID:
+            {gameId}
+          </p>
+          <a className="dolphinMod-download" href={downloadLink} target="_blank" rel="noreferrer">
+            Download via Mega
+          </a>
+        </div>
       </div>
 
       {!!images.length && (
