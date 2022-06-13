@@ -24,8 +24,8 @@
     "type": "git",
     "url": "git+https://github.com/rapka/personal-site.git"
   },
-  "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "author": "Richard Adjogah <richard.adjogah@gmail.com> (https://collegehill.io/)",
   "bugs": {
     "url": "https://github.com/rapka/personal-site/issues"
   },
