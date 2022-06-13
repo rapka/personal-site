@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 import YouTubeEmbed from '../../embed/YouTube';
 import BandcampEmbed from '../../embed/Bandcamp';
 
@@ -17,6 +18,7 @@ function AlbumEmbed({
   slug,
   alias,
   size,
+  type,
 }) {
   return (
     <div className={`albumEmbed ${size}`}>
@@ -30,7 +32,7 @@ function AlbumEmbed({
 
         </div>
       )}
-      <img className="albumEmbed-art" alt={title} src={`/images/music/${alias}/${slug}.jpg`} />
+      <Link to={`/music/${alias}/${type}/${slug}`} className="albumEmbed-artLink"><img className="albumEmbed-art" alt={title} src={`/images/music/${alias}/${slug}.jpg`} /></Link>
       {bandcampId && <BandcampEmbed albumId={bandcampId} options={bandcampOptions} />}
     </div>
   );
@@ -50,6 +52,7 @@ AlbumEmbed.propTypes = {
   slug: PropTypes.string.isRequired,
   alias: PropTypes.string.isRequired,
   size: PropTypes.string,
+  type: PropTypes.string,
 };
 
 AlbumEmbed.defaultProps = {
@@ -62,6 +65,7 @@ AlbumEmbed.defaultProps = {
   year: undefined,
   genres: [],
   size: 'medium',
+  type: 'album',
 };
 
 export default AlbumEmbed;

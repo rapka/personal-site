@@ -1,11 +1,16 @@
 @use 'global';
 
 .releasePage {
+
+}
+
+.releasePage-content {
   margin: 0.5rem 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background-size: cover;
 }
 
 .releasePage-title {
@@ -39,4 +44,15 @@
 .releasePage-desc {
   font-size: 1.15rem;
   margin-bottom: 8px;
+}
+
+.releasePage-bandcamp {
+  width: 100%;
+  max-width: 700px;
+}
+.releasePage-header {
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  /*border-radius: ;*/
 }

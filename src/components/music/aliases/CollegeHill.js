@@ -3,25 +3,24 @@ import AlbumEmbed from '../AlbumEmbed';
 import musicData from '../../../musicData.json';
 
 import './AliasSection.scss';
-import './CollegeHill.css';
+import './CollegeHill.scss';
 
 function CollegeHill() {
-  const albumComponents = musicData['college-hill'].albums.map((releaseData) => (
-    <AlbumEmbed {...releaseData} alias="college-hill" size="large" />
+  const albumComponents = musicData['college-hill'].album.map((releaseData) => (
+    <AlbumEmbed {...releaseData} type="album" alias="college-hill" size="large" />
   ));
-  const epComponents = musicData['college-hill'].eps.map((releaseData) => (
-    <AlbumEmbed {...releaseData} alias="college-hill" size="medium" />
+  const epComponents = musicData['college-hill'].ep.map((releaseData) => (
+    <AlbumEmbed {...releaseData} type="ep" alias="college-hill" size="medium" />
   ));
-  const singleComponents = musicData['college-hill'].singles.map((releaseData) => (
-    <AlbumEmbed {...releaseData} alias="college-hill" size="small" />
+  const singleComponents = musicData['college-hill'].single.map((releaseData) => (
+    <AlbumEmbed {...releaseData} type="single" alias="college-hill" size="small" />
   ));
 
   return (
     <section className="alias-container" id="alias-collegehill">
       <h3 className="alias-description">
-        Primary alias for releasing music. Grime / Dubstep / Bass / Baltimore Club / Trap / etc
+        Primary alias for releasing music. Genres: Grime / Dubstep / Bass / Baltimore Club / Trap / etc
       </h3>
-      Original Work
       <h4 className="alias-releaseType">Albums</h4>
       <div className="alias-releases alias-albums">{albumComponents}</div>
       <h4 className="alias-releaseType">EPs</h4>

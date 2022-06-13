@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './AliasSection.scss';
-import './Fury.css';
+import './Fury.scss';
 
 function Fury() {
   return (

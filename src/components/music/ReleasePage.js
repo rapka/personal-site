@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
+import { titleCase } from 'title-case';
 import Header from '../Header';
 import YouTubeEmbed from '../../embed/YouTube';
 import BandcampEmbed from '../../embed/Bandcamp';
@@ -18,12 +19,18 @@ function ReleasePage({ path, pageContext }) {
     youtubeOptions,
     bandcampId,
     bandcampOptions,
+    slug,
   } = pageContext.releaseData;
 
+  const artUrl = `/images/music/${pageContext.alias}/${slug}.jpg`;
+  const aliasName = titleCase(pageContext.alias.replace('-', ' '));
+
   return (
-    <div className="virtualPhotography" id="galleryPage">
+    <div className="releasePage">
       <Header />
-      <div className="releasePage">
+      <div className="releasePage-content" style={{ backgroundImage: `url(${artUrl})` }}>
+        <div className="releasePage-header">
+        <h2 className="releasePage-alias">{aliasName}</h2>
         {!!title && <h2 className="releasePage-title">{title}</h2>}
         {!!year && (
           <h3 className="releasePage-year">
@@ -46,9 +53,10 @@ function ReleasePage({ path, pageContext }) {
           </div>
         )}
         {description && <div className="releasePage-desc">{description}</div>}
+        </div>
         {youtubeId && <YouTubeEmbed videoId={youtubeId} options={youtubeOptions} />}
         {bandcampId && (
-          <BandcampEmbed albumId={bandcampId} size="large" options={{ width: '700px' }} />
+          <div className="releasePage-bandcamp"><BandcampEmbed albumId={bandcampId} size="large" options={{ width: '700px' }} /></div>
         )}
       </div>
     </div>
@@ -59,6 +67,7 @@ ReleasePage.propTypes = {
   path: PropTypes.string.isRequired,
   pageContext: PropTypes.shape({
     releaseData: PropTypes.object.isRequired,
+    alias: PropTypes.string.isRequired,
   }),
 };
 

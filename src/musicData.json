@@ -1,6 +1,6 @@
 {
   "college-hill": {
-    "albums": [
+    "album": [
       {
         "title": "Rico Suavve Phaze 1: A Stranger In Gotham",
         "slug": "a-stranger-in-gotham",
@@ -23,7 +23,7 @@
         "youtubeId": "wVvy1dLo19s"
       }
     ],
-    "eps": [
+    "ep": [
       {
         "title": "Begging U Plz Don't Go",
         "slug": "begging-u-plz-dont-go",
@@ -73,7 +73,7 @@
         "description": ""
       }
     ],
-    "singles": [
+    "single": [
       {
         "title": "I Don't Know You, I Don't Belong",
         "slug": "i-dont-know-you-i-dont-belong",

@@ -36,15 +36,19 @@
 }
 
 .albumEmbed-year {
-  font-size: 1.5rem;
-  margin: 10px;
+  font-size: 1.125rem;
+  margin: 8px 0;
 }
 
 .albumEmbed-genres {
   font-size: 1.125rem;
-  margin-bottom: 4px
+  margin-bottom: 6px;
 }
 
 .albumEmbed-desc {
   font-size: 1.15rem;
+}
+
+.albumEmbed-artLink {
+  font-size: 0;
 }

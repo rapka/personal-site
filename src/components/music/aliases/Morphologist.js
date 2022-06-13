@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './AliasSection.scss';
-import './Morphologist.css';
+import './Morphologist.scss';
 
 function Morphologist() {
   return (

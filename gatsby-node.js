@@ -29,6 +29,7 @@ exports.createPages = ({ graphql, actions }) => {
           component: releasePage,
           context: {
             releaseData: release,
+            alias,
           },
         });
       });
