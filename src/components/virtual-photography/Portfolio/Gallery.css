@@ -35,6 +35,7 @@
 .galleryItem-year {
   font-size: 36px;
   display: inline-block;
+  vertical-align: bottom;
 }
 
 .galleryItem-description {
@@ -43,10 +44,6 @@
   display: inline-block;
   margin: 16px 4px;
   text-align: center;
-}
-
-.galleryItem-year {
-  vertical-align: bottom;
 }
 
 .galleryItem-label {

@@ -12,10 +12,6 @@
 	max-width: 600px;
 }
 
-.screenshotCompare.active .screenshotCompare-modded {
-	opacity: 1;
-}
-
 .screenshotCompare-original {
 	width: 100%;
 }
@@ -26,6 +22,10 @@
 	top: 0;
 	width: 100%;
 	opacity: 0;
+}
+
+.screenshotCompare.active .screenshotCompare-modded {
+	opacity: 1;
 }
 
 .screenshotCompare-label {

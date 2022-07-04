@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
-import { useLocation } from '@reach/router';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery } from 'gatsby';
 
 function SEO({
-  title, description, image, article,
+  title, description, image, article, path,
 }) {
-  const { pathname } = useLocation();
+  const query = {};
   const { site } = useStaticQuery(query);
   const {
     defaultTitle,
@@ -21,8 +20,9 @@ function SEO({
     title: title || defaultTitle,
     description: description || defaultDescription,
     image: `${siteUrl}${image || defaultImage}`,
-    url: `${siteUrl}${pathname}`,
+    url: `${siteUrl}${path}`,
   };
+
   return (
     <Helmet title={seo.title} titleTemplate={titleTemplate}>
       <meta name="description" content={seo.description} />
@@ -40,4 +40,30 @@ function SEO({
     </Helmet>
   );
 }
+
+SEO.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  image: PropTypes.string,
+  article: PropTypes.string,
+  path: PropTypes.string.isRequired,
+  site: PropTypes.shape({
+    siteMetadata: PropTypes.shape({
+      defaultTitle: PropTypes.string,
+      titleTemplate: PropTypes.string,
+      defaultDescription: PropTypes.string,
+      siteUrl: PropTypes.string,
+      defaultImage: PropTypes.string,
+      twitterUsername: PropTypes.string,
+    }).isRequired,
+  }).isRequired,
+};
+
+SEO.defaultProps = {
+  title: '',
+  description: '',
+  image: '',
+  article: '',
+};
+
 export default SEO;
