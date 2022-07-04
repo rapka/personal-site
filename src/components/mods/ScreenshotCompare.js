@@ -13,6 +13,7 @@ function ScreenshotCompare({ gameId, images }) {
       key={i}
       className={classNames('screenshotCompare-thumb', { active: i === activeImage })}
       onClick={() => setActiveImage(i)}
+      alt="Screenshot thumbnail"
     />
   ));
 

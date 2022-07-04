@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactModal from 'react-modal';
 import { titleCase } from 'title-case';
 import Header from '../Header';
 import YouTubeEmbed from '../../embed/YouTube';
@@ -8,7 +7,7 @@ import BandcampEmbed from '../../embed/Bandcamp';
 
 import './ReleasePage.scss';
 
-function ReleasePage({ path, pageContext }) {
+function ReleasePage({ pageContext }) {
   const {
     title,
     year,

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Router, Link, Location } from '@reach/router';
+import { Link } from 'gatsby';
 import shuffle from 'lodash/shuffle';
 import ClickableImage from './ClickableImage';
 

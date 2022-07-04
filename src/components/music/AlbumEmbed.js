@@ -30,6 +30,7 @@ function AlbumEmbed({
         <img className="albumEmbed-art" alt={title} src={`/images/music/${alias}/${slug}.jpg`} />
       </Link>
       {bandcampId && <BandcampEmbed albumId={bandcampId} options={bandcampOptions} />}
+      {youtubeId && <YouTubeEmbed videoId={youtubeId} options={youtubeOptions} />}
     </div>
   );
 }

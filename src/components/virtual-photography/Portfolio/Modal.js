@@ -11,19 +11,22 @@ function Modal({
       <button className="modal-closeButton" onClick={closeModal}>
         (close)
       </button>
+      <div className="modal-counter">
+
+      </div>
       <div className="modal-imageText">
         <div className="modal-imageTitle">{title}</div>
         <div className="modal-imageYear">{year}</div>
         <div className="modal-imageDesc">{description}</div>
       </div>
       <div className="modal-imageContainer">
-        <img className="modal-imageGlow" src={url} />
-        <img className="modal-image" src={url} />
+        <img className="modal-imageGlow" src={url} alt="" />
+        <img className="modal-image" src={url} alt={title} />
       </div>
 
       <form>
-        <button>prev</button>
-        <button>next</button>
+        <button type="button">prev</button>
+        <button type="button">next</button>
       </form>
     </div>
   );

@@ -23,7 +23,7 @@ class Scope extends React.Component {
       // Space bar
       if (event.keyCode === 32) {
         event.preventDefault();
-        this.setState({ playing: !this.state.playing });
+        this.setState((prevState) => ({ playing: !prevState.playing }));
       }
     };
     this.audioCtx = null;
@@ -69,10 +69,11 @@ class Scope extends React.Component {
 
     const draw = () => {
       const { colors, rotationOffset, rotateColors } = this.props;
+      const { playing } = this.state;
       HEIGHT = window.innerHeight;
       WIDTH = window.innerWidth - PADDING;
 
-      if (this.state.playing) {
+      if (playing) {
         H = (H + 0.5) % 360;
       }
 
@@ -89,7 +90,7 @@ class Scope extends React.Component {
       bassValue = Math.max(0, 10 * (Math.exp(bassValue * 0.02) - 2));
       const bassNormalized = Math.min(bassValue / 1500, 1) / 2;
 
-      const highValue = sum(bassArray.slice(768)) / 256;
+      // const highValue = sum(bassArray.slice(768)) / 256;
       const midValue = sum(bassArray.slice(512)) / 512;
 
       window.bassNormalized = bassNormalized;
@@ -152,14 +153,16 @@ class Scope extends React.Component {
       return;
     }
 
+    const { playing } = this.state;
+
     HEIGHT = window.innerHeight;
     WIDTH = window.innerWidth - PADDING;
 
-    if (!prevState.playing && this.state.playing) {
+    if (!prevState.playing && playing) {
       this.audioCtx.resume().then(() => {
         this.player.current.play();
       });
-    } else if (prevState.playing && !this.state.playing) {
+    } else if (prevState.playing && !playing) {
       this.player.current.pause();
     }
   }
@@ -173,12 +176,14 @@ class Scope extends React.Component {
   }
 
   render() {
+    const { audioSrc } = this.props;
+
     return (
       <div className="viz-container">
         <canvas id="canvas" />
-        <img id="scope-icon" src="/favicon.png" />
+        <img id="scope-icon" src="/favicon.png" alt="" />
         <div id="scope-blurtext">blurs on beat!</div>
-        <audio ref={this.player} src={this.props.audioSrc} type="audio/mpeg" preload="auto" loop />
+        <audio ref={this.player} src={audioSrc} type="audio/mpeg" preload="auto" loop />
       </div>
     );
   }

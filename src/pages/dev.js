@@ -19,7 +19,7 @@ function Dev() {
             year="2022-present"
           />
           <ul className="devPage-details">
-            <li className="devPage-detail">My personal website. You're on it right now!</li>
+            <li className="devPage-detail">My personal website. You&apos;re on it right now!</li>
             <li className="devPage-detail">
               Hosted on
               {' '}
@@ -81,7 +81,6 @@ function Dev() {
               {' '}
               <code>Pug</code>
               , and
-              {' '}
               <code>JQuery</code>
             </li>
           </ul>

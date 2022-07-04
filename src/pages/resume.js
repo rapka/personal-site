@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Link, Location } from '@reach/router';
+import { Link } from 'gatsby';
 import Header from '../components/Header';
 
 function App() {

@@ -6,7 +6,7 @@ import mods from '../modData';
 import './Mods.scss';
 
 function App() {
-  const modComponents = mods.map((mod, i) => <DolphinMod {...mod} />);
+  const modComponents = mods.map((mod) => <DolphinMod key={mod.gameId} {...mod} />);
 
   return (
     <div>
@@ -20,7 +20,6 @@ function App() {
           <code>Dolphin Emulator\Load\Textures\GAME_ID</code>
           {' '}
           where
-          {' '}
           <code>GAME_ID</code>
           {' '}
           is the id of the game (
@@ -29,10 +28,10 @@ function App() {
           for example).
         </p>
         <p className="modSection-p">
-          If you're using these textures alongside other texture packs(such as
+          If you&apos;re using these textures alongside other texture packs(such as
           {' '}
           <a href="https://onthegreatsea.tumblr.com/post/133505457500/hypatias-viewtiful-joe-mod-download-link">
-            Hypatia's Viewtiful Joe textures
+            Hypatia&apos;s Viewtiful Joe textures
           </a>
           ), create a new folder inside
           {' '}
