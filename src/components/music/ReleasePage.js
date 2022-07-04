@@ -17,7 +17,6 @@ function ReleasePage({ pageContext }) {
     youtubeId,
     youtubeOptions,
     bandcampId,
-    bandcampOptions,
     slug,
   } = pageContext.releaseData;
 
@@ -65,11 +64,20 @@ function ReleasePage({ pageContext }) {
 }
 
 ReleasePage.propTypes = {
-  path: PropTypes.string.isRequired,
   pageContext: PropTypes.shape({
-    releaseData: PropTypes.object.isRequired,
+    releaseData: PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      slug: PropTypes.string.isRequired,
+      year: PropTypes.number,
+      genres: PropTypes.arrayOf(PropTypes.string),
+      bandcampId: PropTypes.string,
+      description: PropTypes.string,
+      recordLabel: PropTypes.string,
+      youtubeId: PropTypes.string,
+      youtubeOptions: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+    }).isRequired,
     alias: PropTypes.string.isRequired,
-  }),
+  }).isRequired,
 };
 
 export default ReleasePage;

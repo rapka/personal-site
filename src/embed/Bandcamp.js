@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './Bandcamp.scss';
 
-function BandcampEmbed({ size, options, albumId }) {
+function BandcampEmbed({ size, albumId }) {
   let width = 'min(100vw, 700px)';
   let height = '120px';
   let bgColor = '333333';
@@ -58,7 +58,6 @@ BandcampEmbed.propTypes = {
 
 BandcampEmbed.defaultProps = {
   size: 'small',
-  showTracklist: false,
   options: {},
 };
 

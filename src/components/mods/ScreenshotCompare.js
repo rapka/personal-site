@@ -8,13 +8,20 @@ function ScreenshotCompare({ gameId, images }) {
   const [active, setActive] = useState(false);
   const [activeImage, setActiveImage] = useState(0);
   const thumbs = images.map((image, i) => (
-    <img
-      src={`/images/screens/${gameId}/${image.modded}`}
-      key={i}
-      className={classNames('screenshotCompare-thumb', { active: i === activeImage })}
+    <button
+      type="button"
       onClick={() => setActiveImage(i)}
-      alt="Screenshot thumbnail"
-    />
+      onKeyDown={() => setActiveImage(i)}
+      className={classNames('screenshotCompare-thumb', { active: i === activeImage })}
+    >
+      <img
+        src={`/images/screens/${gameId}/${image.modded}`}
+        key={image.modded}
+        role="presentation"
+        alt="Screenshot thumbnail"
+        className="screenshotCompare-thumbImage"
+      />
+    </button>
   ));
 
   return (
@@ -26,14 +33,14 @@ function ScreenshotCompare({ gameId, images }) {
         onMouseLeave={() => setActive(false)}
       >
         <img
+          alt="Original game screenshot"
           src={`/images/screens/${gameId}/${images[activeImage].original}`}
           className="screenshotCompare-original"
-          alt="Original game screenshot"
         />
         <img
+          alt="Modded game screenshot"
           src={`/images/screens/${gameId}/${images[activeImage].modded}`}
           className="screenshotCompare-modded"
-          alt="Modded game screenshot"
         />
       </div>
       <div className="screenshotCompare-label">{active ? 'HD textures' : 'original textures'}</div>

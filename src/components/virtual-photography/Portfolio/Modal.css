@@ -37,13 +37,18 @@
 }
 
 .modal-image,
+.modal-imageThumb,
 .modal-imageGlow {
   max-height: 100%;
 }
 
 .modal-image {
-  z-index: 2;
+  z-index: 3;
+  position: absolute;
+}
 
+.modal-imageThumb {
+  z-index: 2;
   position: absolute;
 }
 
@@ -73,7 +78,6 @@
   border-radius: 8px;
 }
 
-
 .modal-imageYear, .modal-imageDesc {
   font-size: 1.25rem;
 }
@@ -90,6 +94,11 @@
   font-size: 2rem;
   z-index: 2;
   margin: 1rem 0;
+}
+
+.modal-counter {
+  top: 0;
+  left: 0;
 }
 
 .ReactModal__Overlay {

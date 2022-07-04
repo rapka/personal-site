@@ -23,7 +23,7 @@ function Gallery({
     <div className="galleryItem">
       <ClickableImage
         isFocused={activeImage === i}
-        onFocus={() => onFocus(i)}
+        onFocus={() => onFocus(id, i)}
         openModal={openModal}
         {...imageProps}
       />
@@ -66,7 +66,12 @@ Gallery.propTypes = {
   openModal: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
-  images: PropTypes.array,
+  images: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string,
+    description: PropTypes.string,
+    url: PropTypes.string.isRequired,
+    thumbnail: PropTypes.string,
+  })),
   year: PropTypes.number,
   id: PropTypes.string.isRequired,
 };
@@ -76,7 +81,6 @@ Gallery.defaultProps = {
   year: 0,
   description: '',
   images: [],
-  id: '',
 };
 
 export default Gallery;

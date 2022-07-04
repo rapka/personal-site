@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import './ClickableImage.css';
 
 function ClickableImage({
-  url, thumbnail, title, description, isFocused, onFocus, openModal,
+  url, thumbnail, title, isFocused, onFocus, openModal,
 }) {
   const imgUrl = thumbnail || url;
 
@@ -18,7 +18,13 @@ function ClickableImage({
   const focusedOverlay = (
     <div className="clickableImage-focusedOverlay">
       {title && <div className="clickableImage-title">{title}</div>}
-      <div className="clickableImage-fullSize" onClick={onClick} role="button" tabIndex="0">
+      <div
+        className="clickableImage-fullSize"
+        onClick={onClick}
+        onKeyDown={onClick}
+        role="button"
+        tabIndex="0"
+      >
         Full size
       </div>
     </div>
@@ -27,7 +33,12 @@ function ClickableImage({
   return (
     <div className={classNames('clickableImage', { isFocused })}>
       <div className="clickableImage-container">
-        <img src={imgUrl} className="clickableImage-img" style={{ backgroundImage: imgUrl }} />
+        <img
+          src={imgUrl}
+          alt={title || 'Game screenshot'}
+          className="clickableImage-img"
+          style={{ backgroundImage: imgUrl }}
+        />
         {false && (
           <div className="clickableImage-img" style={{ backgroundImage: `url(${imgUrl})` }} />
         )}
@@ -42,18 +53,12 @@ ClickableImage.propTypes = {
   onFocus: PropTypes.func.isRequired,
   openModal: PropTypes.func.isRequired,
   title: PropTypes.string,
-  description: PropTypes.string,
   url: PropTypes.string,
   thumbnail: PropTypes.string,
-  onClick: PropTypes.func,
 };
 
 ClickableImage.defaultProps = {
-  onClick: (data) => {
-    console.log(`Image clicked: ${data.url}`);
-  },
   title: '',
-  description: '',
   url: 'https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg',
   thumbnail: 'https://upload.wikimedia.org/wikipedia/en/a/a9/Example.jpg',
 };
