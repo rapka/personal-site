@@ -37,21 +37,26 @@
 	overflow-x: scroll;
 	display: flex;
 	flex-direction: row;
+	height: 100px;
+}
+
+.screenshotCompare-thumbImage {
+	height: 100%;
 }
 
 .screenshotCompare-thumb {
-	width: 200px;
-	padding: 4px;
-	margin: 4px;
+	padding: 0;
+	margin: 3px;
 	cursor: pointer;
+	height: calc(100% - 3px);
+	border: 1px solid transparent;
+	background-color: transparent;
 }
 
 .screenshotCompare-thumb:hover {
 	border: 1px dotted var(--pink);
-	margin: 3px;
 }
 
 .screenshotCompare-thumb.active {
 	border: 1px solid var(--pink);
-	margin: 3px;
 }

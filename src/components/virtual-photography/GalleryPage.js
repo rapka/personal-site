@@ -10,12 +10,15 @@ import '../../pages/VirtualPhotography.scss';
 
 import config from '../../photos.json';
 
-function GalleryPage({ path }) {
+function GalleryPage({ pageContext }) {
   let appElement;
   const [modalIsOpen, setIsOpen] = React.useState(false);
   const [activeImage, setActiveImage] = React.useState(-1);
+  const { galleryKey } = pageContext;
 
-  const galleryData = path === '/*' ? config.galleries['elden-ring-npcs'] : config.galleries[path];
+  console.log('galleryKey', galleryKey);
+
+  const galleryData = galleryKey === '/*' ? config.galleries['elden-ring-npcs'] : config.galleries[galleryKey];
   const activeImageData = activeImage === -1 ? {} : galleryData[activeImage];
 
   const openModal = () => {
@@ -52,6 +55,7 @@ function GalleryPage({ path }) {
         <Gallery
           expanded
           {...galleryData}
+          id={galleryKey}
           openModal={openModal}
           onFocus={openImage}
           activeImage={activeImage}
@@ -62,7 +66,7 @@ function GalleryPage({ path }) {
 }
 
 GalleryPage.propTypes = {
-  path: PropTypes.string.isRequired,
+  pageContext: PropTypes.object.isRequired,
 };
 
 export default GalleryPage;

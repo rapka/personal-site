@@ -25,7 +25,7 @@ function ProjectTitle({
       <div className="projTitle-github">
         (
         <a href={`https://github.com/rapka/${githubUrl}`} className="projTitle-githubLink">
-          github repo
+          github
         </a>
         )
       </div>

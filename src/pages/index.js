@@ -10,6 +10,8 @@ function IndexPage() {
       <title>Home Page</title>
       <Header />
       <main className="indexPage">
+        <br />
+        <h3>Hello, friend!</h3>
         <h3>This is the personal website for Richard &quot;College Hill&quot; Adjogah.</h3>
         <p>
           I love

@@ -15,7 +15,7 @@ exports.createPages = ({ graphql, actions }) => {
       path: `/virtual-photography/${key}`,
       component: galleryPage,
       context: {
-        // path: key,
+        galleryKey: key,
       },
     })
   });

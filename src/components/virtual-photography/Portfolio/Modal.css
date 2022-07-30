@@ -44,6 +44,7 @@
 
 .modal-image {
   z-index: 3;
+  max-width: 100%;
   position: absolute;
 }
 
@@ -83,6 +84,7 @@
 }
 
 .modal-imageGlow {
+  max-width: 100%;
   filter: blur(10px);
   transform: scale(1.02);
   opacity: 0.5;

@@ -20,7 +20,7 @@ function Gallery({
   const MAX_IMAGES = 8;
 
   const imageComponents = images.map((imageProps, i) => (
-    <div className="galleryItem">
+    <div className="galleryItem" key={imageProps.url}>
       <ClickableImage
         isFocused={activeImage === i}
         onFocus={() => onFocus(id, i)}

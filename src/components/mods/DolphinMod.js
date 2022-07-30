@@ -25,7 +25,7 @@ function DolphinMod({
             {gameId}
           </p>
           <a className="dolphinMod-download" href={downloadLink} target="_blank" rel="noreferrer">
-            Download via Mega
+            Download
           </a>
         </div>
       </div>

@@ -127,8 +127,24 @@ function Dev() {
             </li>
             <li className="devPage-detail">live demo!</li>
             <li className="devPage-scope">
-              <Scope />
+              {/*<Scope />*/}
             </li>
+          </ul>
+        </li>
+        <li className="devPage-item">
+          <ProjectTitle
+            title="ESRGAN scripting tools for batch texture upscaling"
+            url=""
+            githubUrl="dolphin-textures"
+            year="201?"
+          />
+          <ul className="devPage-details">
+            <li className="devPage-detail">
+              <code>node</code>
+              -based scripts used for mass upscaling game textures with ESRGAN
+            </li>
+            <li className="devPage-detail">developed logic to upscale alpha layers in textures</li>
+            <li className="devPage-detail">See mods page for more info</li>
           </ul>
         </li>
         <li className="devPage-item">
@@ -185,7 +201,7 @@ function Dev() {
             year="2021-present"
           />
           <ul className="devPage-details">
-            <li className="devPage-detail">an idle game. wip. pre-alpha</li>
+            <li className="devPage-detail">an idle game. currently a WIP pre-alpha</li>
             <li className="devPage-detail">
               built with
               {' '}
@@ -200,22 +216,6 @@ function Dev() {
               {' '}
               <code>Electron</code>
             </li>
-          </ul>
-        </li>
-        <li className="devPage-item">
-          <ProjectTitle
-            title="ESRGAN scripting tools for batch texture upscaling"
-            url=""
-            githubUrl="dolphin-textures"
-            year="201?"
-          />
-          <ul className="devPage-details">
-            <li className="devPage-detail">
-              <code>node</code>
-              -based scripts used for mass upscaling game textures with ESRGAN
-            </li>
-            <li className="devPage-detail">developed logic to upscale alpha layers in textures</li>
-            <li className="devPage-detail">See mods page for more info</li>
           </ul>
         </li>
       </ul>
