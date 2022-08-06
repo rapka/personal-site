@@ -74,10 +74,6 @@ function Portfolio({ galleries }) {
 
   const shouldRender = !!galleryComponents.length;
 
-  if (document && document.getElementById) {
-    appElement = document.getElementById('___gatsby');
-  }
-
   return (
     <div className="react-portfolio" id="react-portfolio">
       <ReactModal

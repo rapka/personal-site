@@ -33,14 +33,9 @@ function GalleryPage({ pageContext }) {
 
   const contentLabel = `${activeImageData ? activeImageData.title : 'Closed'} Modal`;
 
-  // useEffect(() => {
-  //   appElement = document.getElementById('react-portfolio');
-  // });
-
-  if (document && document.getElementById) {
-    appElement = document.getElementById('__gatsby');
-  }
-  console.log('wwrr', galleryData, activeImage, activeImageData);
+  useEffect(() => {
+    appElement = document.getElementById('react-portfolio');
+  });
 
   let renderModal;
   if (activeImage !== -1 && !isEmpty(activeImageData)) {
