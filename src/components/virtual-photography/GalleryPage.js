@@ -47,7 +47,7 @@ function GalleryPage({ pageContext }) {
         onRequestClose={closeModal}
         className="reactPortfolio-modal"
         contentLabel={contentLabel}
-        appElement={appElement}
+        appElement={document.getElementById('__gatsby')}
       >
         {!isEmpty(activeImageData) && <Modal closeModal={closeModal} {...activeImageData} />}
       </ReactModal>

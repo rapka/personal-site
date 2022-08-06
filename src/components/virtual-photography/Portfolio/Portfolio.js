@@ -59,12 +59,9 @@ function Portfolio({ galleries }) {
     <a className="anchorLinks-link" href={`#${key}`}>{galleryData.title}</a>
   ));
 
-  const renderModal = () => {
-    if (!activeGallery || !isEmpty(activeImageData)) {
-      return null;
-    }
-
-    return (
+  let renderModal;
+  if (activeGallery && !isEmpty(activeImageData)) {
+    renderModal = (
       <Modal
         closeModal={closeModal}
         index={activeImage}
@@ -72,7 +69,7 @@ function Portfolio({ galleries }) {
         {...activeImageData}
       />
     );
-  };
+  }
 
   const shouldRender = !!galleryComponents.length;
 
@@ -84,7 +81,7 @@ function Portfolio({ galleries }) {
         onRequestClose={closeModal}
         className="reactPortfolio-modal"
         contentLabel={contentLabel}
-        appElement={appElement}
+        appElement={document.getElementById('___gatsby')}
       >
         {renderModal}
       </ReactModal>
