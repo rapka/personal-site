@@ -65,7 +65,7 @@ function Portfolio({ galleries }) {
       <Modal
         closeModal={closeModal}
         index={activeImage}
-        maxImages={galleries[activeGallery].images.legnth}
+        maxImages={galleries[activeGallery].images.length}
         {...activeImageData}
       />
     );

@@ -15,9 +15,9 @@ function Modal({
         {`${index}/${maxImages}`}
       </div>
       <div className="modal-imageText">
-        <div className="modal-imageTitle">{title}</div>
-        <div className="modal-imageYear">{year}</div>
-        <div className="modal-imageDesc">{description}</div>
+        {title && <div className="modal-imageTitle">{title}</div>}
+        {year && <div className="modal-imageYear">{year}</div>}
+        {description && <div className="modal-imageDesc">{description}</div>}
       </div>
       <div className="modal-imageContainer">
         <img className="modal-imageGlow" src={url} alt="" />
@@ -25,10 +25,10 @@ function Modal({
         <img className="modal-image" src={url} alt={title} />
       </div>
 
-      <form>
-        <button type="button">prev</button>
-        <button type="button">next</button>
-      </form>
+      <div className="modal-pageButtons">
+        <button className="modal-pageButton" type="button">prev</button>
+        <button className="modal-pageButton" type="button">next</button>
+      </div>
     </div>
   );
 }
