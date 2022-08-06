@@ -37,7 +37,7 @@ function Gallery({
   }
 
   return (
-    <div className="galleryItem-container">
+    <div className="galleryItem-container" id={id}>
       <div className="galleryItem-row">
         <h2 className="galleryItem-title">{title}</h2>
         {!!year && (

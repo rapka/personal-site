@@ -1,7 +1,7 @@
 {
   "galleries": {
     "elden-ring-npcs": {
-      "title": "Elden Ring Photography: NPC Portraits",
+      "title": "Elden Ring: NPC Portraits",
       "year": 2022,
       "description": "Captured at 5K resolution on PC using Otis' photo mode mod, McFly's SSRTGI, and other ReShade effects.",
       "images": [
@@ -248,7 +248,7 @@
       ]
     },
     "elden-ring-landscapes": {
-      "title": "Elden Ring Photography: Landscapes",
+      "title": "Elden Ring: Landscapes",
       "description": "Captured at 5K resolution on PC using Otis' photo mode mod, McFly's SSRTGI, and other ReShade effects.",
       "year": 2022,
       "images": [
@@ -360,7 +360,7 @@
       ]
     },
     "elden-ring-enemies": {
-      "title": "Elden Ring Photography - Enemies",
+      "title": "Elden Ring: Enemies",
       "description": "Captured at 5K resolution on PC using Otis' photo mode mod, McFly's SSRTGI, and other ReShade effects.",
       "year": 2022,
       "images": [
@@ -662,7 +662,7 @@
       ]
     },
     "division-2": {
-      "title": "Tom Clancy's The Division 2 Photo Mode",
+      "title": "The Division 2: Washington, DC",
       "description": "Captured @ 1440p using the in-game Photo Mode. Interestingly, the mode does not use standard aspect ratios.",
       "year": 2021,
       "images": [
@@ -1094,7 +1094,7 @@
       ]
     },
     "re4-noire": {
-      "title": "Resident Evil 4 Noire",
+      "title": "Resident Evil 4: Noire",
       "year": 2016,
       "description": "Captured at 1080p on PC. The black and white filter was done by modding the tone mapping feature added to the Ultimate HD version. I played through the entire game like this!",
       "images": [
@@ -1389,7 +1389,7 @@
       ]
     },
     "quake-3": {
-      "title": "Quake 3 Arena Photography: Defrag",
+      "title": "Quake 3 Arena: Defrag Landscapes",
       "description": "Shots of maps for the Defrag mod. Captured at 1080p on PC.",
       "year": "2016",
       "images": [
@@ -1726,7 +1726,7 @@
       ]
     },
     "gotg": {
-      "title": "Guardians of the Galaxy Photo Mode",
+      "title": "Guardians of the Galaxy",
       "description": "Captured @ 1440p on PC using the in-game Photo Mode.",
       "year": 2022,
       "images": [

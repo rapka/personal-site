@@ -1,3 +1,28 @@
+.anchorLinks {
+  font-size: 1.125rem;
+  padding: 16px 8px 4px 8px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.anchorLinks-link {
+  margin: 12px 4px 0 4px;
+  max-width: 175px;
+  min-width: 100px;
+  text-decoration: none;
+  border-color: #888888;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+}
+
+.anchorLinks-link:hover {
+  text-decoration: underline;
+}
+
 .react-portfolio {
   font-family: 'Red Hat', sans-serif;
   font-size: 24px;

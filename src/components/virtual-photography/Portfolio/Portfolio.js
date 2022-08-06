@@ -39,6 +39,7 @@ function Portfolio({ galleries }) {
   });
 
   const galleryComponents = [];
+  const anchorLinks = [];
   each(galleries, (galleryData, key) => galleryComponents.push(
     <Gallery
       expanded={false}
@@ -52,6 +53,10 @@ function Portfolio({ galleries }) {
       onFocus={openImage}
       activeImage={activeGallery === key ? activeImage : -1}
     />,
+  ));
+
+  each(galleries, (galleryData, key) => anchorLinks.push(
+    <a className="anchorLinks-link" href={`#${key}`}>{galleryData.title}</a>
   ));
 
   const renderModal = () => {
@@ -69,6 +74,8 @@ function Portfolio({ galleries }) {
     );
   };
 
+  const shouldRender = !!galleryComponents.length;
+
   return (
     <div className="react-portfolio" id="react-portfolio">
       <ReactModal
@@ -81,7 +88,8 @@ function Portfolio({ galleries }) {
       >
         {renderModal}
       </ReactModal>
-      {!!galleryComponents.length && <div>{galleryComponents}</div>}
+      {shouldRender && <div className="anchorLinks">{anchorLinks}</div>}
+      {shouldRender && <div>{galleryComponents}</div>}
     </div>
   );
 }
