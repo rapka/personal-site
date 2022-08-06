@@ -16,17 +16,15 @@ function GalleryPage({ pageContext }) {
   const [activeImage, setActiveImage] = React.useState(-1);
   const { galleryKey } = pageContext;
 
-  console.log('galleryKey', galleryKey);
-
   const galleryData = galleryKey === '/*' ? config.galleries['elden-ring-npcs'] : config.galleries[galleryKey];
-  const activeImageData = activeImage === -1 ? {} : galleryData[activeImage];
+  const activeImageData = activeImage === -1 ? {} : galleryData.images[activeImage];
 
   const openModal = () => {
     setIsOpen(true);
   };
 
-  const openImage = (imageIndex) => {
-    setActiveImage(imageIndex);
+  const openImage = (imageIndex, arg2) => {
+    setActiveImage(arg2);
   };
 
   const closeModal = () => {
@@ -35,9 +33,27 @@ function GalleryPage({ pageContext }) {
 
   const contentLabel = `${activeImageData ? activeImageData.title : 'Closed'} Modal`;
 
-  useEffect(() => {
-    appElement = document.getElementById('react-portfolio');
-  });
+  // useEffect(() => {
+  //   appElement = document.getElementById('react-portfolio');
+  // });
+
+  if (document && document.getElementById) {
+    appElement = document.getElementById('__gatsby');
+  }
+  console.log('wwrr', galleryData, activeImage, activeImageData);
+
+  let renderModal;
+  if (activeImage !== -1 && !isEmpty(activeImageData)) {
+    renderModal = (
+      <Modal
+        openImage={openImage}
+        closeModal={closeModal}
+        index={activeImage}
+        maxImages={galleryData.images.length}
+        {...activeImageData}
+      />
+    );
+  }
 
   return (
     <div className="virtualPhotography" id="galleryPage">
@@ -47,9 +63,9 @@ function GalleryPage({ pageContext }) {
         onRequestClose={closeModal}
         className="reactPortfolio-modal"
         contentLabel={contentLabel}
-        appElement={document.getElementById('__gatsby')}
+        appElement={appElement}
       >
-        {!isEmpty(activeImageData) && <Modal closeModal={closeModal} {...activeImageData} />}
+        {!isEmpty(activeImageData) && renderModal}
       </ReactModal>
       <div>
         <Gallery

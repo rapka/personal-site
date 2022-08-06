@@ -4,8 +4,20 @@ import PropTypes from 'prop-types';
 import './Modal.css';
 
 function Modal({
-  title, description, url, thumbnail, closeModal, year, index, maxImages,
+  title, description, url, thumbnail, closeModal, year, index, maxImages, openImage
 }) {
+  const nextPage = () => {
+    if (index <= (maxImages - 1)) {
+      openImage(null, index + 1);
+    }
+  };
+
+  const prevPage = () => {
+    if (index > 0) {
+      openImage(null, index - 1);
+    }
+  };
+
   return (
     <div className="modal-contents">
       <button type="button" className="modal-closeButton" onClick={closeModal}>
@@ -21,19 +33,31 @@ function Modal({
       </div>
       <div className="modal-imageContainer">
         <img className="modal-imageGlow" src={url} alt="" />
-        <img className="modal-imageThumb" src={thumbnail} alt={title} />
         <img className="modal-image" src={url} alt={title} />
       </div>
 
       <div className="modal-pageButtons">
-        <button className="modal-pageButton" type="button">prev</button>
-        <button className="modal-pageButton" type="button">next</button>
+        <button
+          className="modal-pageButton"
+          type="button"
+          onClick={prevPage}
+        >
+          prev
+        </button>
+        <button
+          className="modal-pageButton"
+          type="button"
+          onClick={nextPage}
+        >
+          next
+        </button>
       </div>
     </div>
   );
 }
 
 Modal.propTypes = {
+  openImage: PropTypes.func.isRequired,
   closeModal: PropTypes.func.isRequired,
   title: PropTypes.string,
   description: PropTypes.string,

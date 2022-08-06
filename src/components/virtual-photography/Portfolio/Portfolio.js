@@ -64,6 +64,7 @@ function Portfolio({ galleries }) {
     renderModal = (
       <Modal
         closeModal={closeModal}
+        openImage={openImage}
         index={activeImage}
         maxImages={galleries[activeGallery].images.length}
         {...activeImageData}
@@ -73,6 +74,10 @@ function Portfolio({ galleries }) {
 
   const shouldRender = !!galleryComponents.length;
 
+  if (document && document.getElementById) {
+    appElement = document.getElementById('___gatsby');
+  }
+
   return (
     <div className="react-portfolio" id="react-portfolio">
       <ReactModal
@@ -81,7 +86,7 @@ function Portfolio({ galleries }) {
         onRequestClose={closeModal}
         className="reactPortfolio-modal"
         contentLabel={contentLabel}
-        appElement={document.getElementById('___gatsby')}
+        appElement={appElement}
       >
         {renderModal}
       </ReactModal>
