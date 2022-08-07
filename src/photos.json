@@ -661,6 +661,41 @@
         }
       ]
     },
+    "re3-food": {
+      "title": "Resident Evil 3 Remake: Food",
+      "description": "Captured @ 5K resolution using the RTX patch + McFly's SSRTGI plugin.",
+      "year": 2022,
+      "images": [
+        {
+          "url": "https://live.staticflickr.com/65535/52159932605_1b93e34588_o.png",
+          "thumbnail": "https://live.staticflickr.com/65535/52159932605_2b140eb9b8.jpg"
+        },
+        {
+          "url": "https://live.staticflickr.com/65535/52158420017_cef76eaf59_o.png",
+          "thumbnail": "https://live.staticflickr.com/65535/52158420017_1e9ab34db3.jpg"
+        },
+        {
+          "url": "https://live.staticflickr.com/65535/52159932190_e11966d34f_o.png",
+          "thumbnail": "https://live.staticflickr.com/65535/52159932190_683bcfd2a4.jpg"
+        },
+        {
+          "url": "https://live.staticflickr.com/65535/52158419607_2b78d9d608_o.png",
+          "thumbnail": "https://live.staticflickr.com/65535/52158419607_8f4c669b0f.jpg"
+        },
+        {
+          "url": "https://live.staticflickr.com/65535/52159444963_2161d83024_o.png",
+          "thumbnail": "https://live.staticflickr.com/65535/52159444963_ffe0c3da7e.jpg"
+        },
+        {
+          "url": "https://live.staticflickr.com/65535/52158418847_b61bf18e43_o.png",
+          "thumbnail": "https://live.staticflickr.com/65535/52158418847_53767797c4.jpg"
+        },
+        {
+          "url": "https://live.staticflickr.com/65535/52159930560_c637419fea_o.png",
+          "thumbnail": "https://live.staticflickr.com/65535/52159930560_1f0329d6c2.jpg"
+        }
+      ]
+    },
     "division-2": {
       "title": "The Division 2: Washington, DC",
       "description": "Captured @ 1440p using the in-game Photo Mode. Interestingly, the mode does not use standard aspect ratios.",
