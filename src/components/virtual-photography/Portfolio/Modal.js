@@ -21,7 +21,7 @@ function Modal({
   return (
     <div className="modal-contents">
       <button type="button" className="modal-closeButton" onClick={closeModal}>
-        (close)
+        close
       </button>
       <div className="modal-counter">
         {`${index}/${maxImages}`}
