@@ -7,6 +7,8 @@ import BandcampEmbed from '../../embed/Bandcamp';
 
 import './ReleasePage.scss';
 
+const formatText = (text) => text.split('\n').join('<br />');
+
 function ReleasePage({ pageContext }) {
   const {
     title,
@@ -27,6 +29,7 @@ function ReleasePage({ pageContext }) {
     <div className="releasePage">
       <Header />
       <div className="releasePage-content" style={{ backgroundImage: `url(${artUrl})` }}>
+        <div className="releasePage-headerContainer">
         <div className="releasePage-header">
           <h2 className="releasePage-alias">{aliasName}</h2>
           {!!title && <h2 className="releasePage-title">{title}</h2>}
@@ -50,15 +53,21 @@ function ReleasePage({ pageContext }) {
               )
             </div>
           )}
-          {description && <div className="releasePage-desc">{description}</div>}
+          {description && <div
+            className="releasePage-desc"
+            dangerouslySetInnerHTML={{ __html: formatText(description)}}
+          />}
+        </div>
         </div>
         {youtubeId && <YouTubeEmbed videoId={youtubeId} options={youtubeOptions} />}
+
         {bandcampId && (
           <div className="releasePage-bandcamp">
             <BandcampEmbed albumId={bandcampId} size="large" options={{ width: '700px' }} />
           </div>
         )}
       </div>
+
     </div>
   );
 }
