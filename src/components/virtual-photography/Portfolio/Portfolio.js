@@ -76,6 +76,7 @@ function Portfolio({ galleries }) {
 
   return (
     <div className="react-portfolio" id="react-portfolio">
+      <h2 className="virtualPhotography-title">Video Game Photography</h2>
       <ReactModal
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}

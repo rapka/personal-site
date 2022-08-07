@@ -1,13 +1,13 @@
 .anchorLinks {
   font-size: 1.125rem;
-  padding: 16px 8px 4px 8px;
+  padding: 0 8px 4px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .anchorLinks-link {
-  margin: 12px 4px 0 4px;
+  margin: 0 4px 12x;
   max-width: 175px;
   min-width: 100px;
   text-decoration: none;
@@ -30,3 +30,12 @@
   z-index: 0;
 }
 
+.virtualPhotography-title {
+  display: block;
+  margin: auto;
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: 10px;
+  text-transform: lowercase;
+  padding: 12px 0 4px;
+}
