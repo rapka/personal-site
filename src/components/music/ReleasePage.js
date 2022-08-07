@@ -27,8 +27,8 @@ function ReleasePage({ pageContext }) {
 
   return (
     <div className="releasePage">
-      <Header />
       <div className="releasePage-content" style={{ backgroundImage: `url(${artUrl})` }}>
+        <Header />
         <div className="releasePage-headerContainer">
         <div className="releasePage-header">
           <h2 className="releasePage-alias">{aliasName}</h2>
