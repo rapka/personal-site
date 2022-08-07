@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './Modal.css';
 
 function Modal({
-  title, description, url, thumbnail, closeModal, year, index, maxImages, openImage
+  title, description, url, thumbnail, closeModal, year, index, maxImages, openImage,
 }) {
   const nextPage = () => {
     if (index <= (maxImages - 1)) {

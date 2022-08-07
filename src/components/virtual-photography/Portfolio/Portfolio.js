@@ -56,7 +56,7 @@ function Portfolio({ galleries }) {
   ));
 
   each(galleries, (galleryData, key) => anchorLinks.push(
-    <a className="anchorLinks-link" href={`#${key}`}>{galleryData.title}</a>
+    <a className="anchorLinks-link" href={`#${key}`}>{galleryData.title}</a>,
   ));
 
   let renderModal;
