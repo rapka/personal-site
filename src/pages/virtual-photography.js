@@ -10,6 +10,7 @@ function App() {
   return (
     <div className="virtualPhotography">
       <Header />
+      <h2 className="virtualPhotography-title">Video Game Photography</h2>
       <Portfolio {...config} />
     </div>
   );
