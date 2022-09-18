@@ -6,14 +6,43 @@ import './AliasSection.scss';
 import './CollegeHill.scss';
 
 function CollegeHill() {
-  const albumComponents = musicData['college-hill'].album.map((releaseData) => (
-    <AlbumEmbed {...releaseData} type="album" alias="college-hill" size="large" />
+  const data = musicData['college-hill'];
+  const albumComponents = data.album.map((releaseData) => (
+    <AlbumEmbed
+      {...releaseData}
+      type="album"
+      alias="college-hill"
+      size="large"
+      artistName="College Hill"
+    />
   ));
-  const epComponents = musicData['college-hill'].ep.map((releaseData) => (
-    <AlbumEmbed {...releaseData} type="ep" alias="college-hill" size="medium" />
+  const epComponents = data.ep.map((releaseData) => (
+    <AlbumEmbed
+      {...releaseData}
+      type="ep"
+      alias="college-hill"
+      size="medium"
+      artistName="College Hill"
+    />
   ));
-  const singleComponents = musicData['college-hill'].single.map((releaseData) => (
-    <AlbumEmbed {...releaseData} type="single" alias="college-hill" size="small" />
+  const singleComponents = data.single.map((releaseData) => (
+    <AlbumEmbed
+      {...releaseData}
+      type="single"
+      alias="college-hill"
+      size="small"
+      artistName="College Hill"
+    />
+  ));
+
+  const mixComponents = data.mixes.map((releaseData) => (
+    <AlbumEmbed
+      {...releaseData}
+      type="mixes"
+      alias="college-hill"
+      size="small"
+      artistName="College Hill"
+    />
   ));
 
   return (
@@ -28,10 +57,10 @@ function CollegeHill() {
       <div className="alias-releases alias-eps">{epComponents}</div>
       <h4 className="alias-releaseType">Singles</h4>
       <div className="alias-releases alias-singles">{singleComponents}</div>
-      <h4 className="alias-releaseType">Remixes</h4>
-      <p>TODO</p>
+      {/*<h4 className="alias-releaseType">Remixes</h4>*/}
+      {/*<p>TODO</p>*/}
       <h4 className="alias-releaseType">Mixes</h4>
-      <p>TODO</p>
+      <div className="alias-releases alias-mixes">{mixComponents}</div>
     </section>
   );
 }

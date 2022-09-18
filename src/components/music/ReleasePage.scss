@@ -1,15 +1,24 @@
+$bottomPadding: 40px;
+
 .releasePage {
 
 }
 
+.releasePage-embed {
+  width: 100%;
+  max-width: 700px;
+}
+
 .releasePage-content {
-  margin: 0.5rem 0 0 0;
+  // header height = 38px
+  min-height: calc(100vh - 38px - $bottomPadding);
+  margin: 0;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-direction: column;
   align-items: center;
   background-size: cover;
-  padding-bottom: 40px;
+  padding-bottom: $bottomPadding;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -76,10 +85,11 @@
  display: flex;
  justify-content: center;
  align-items: center;
+ padding-top: 0.5rem;
 }
 
 .releasePage-header {
-  // width: 100%;
+  width: 100%;
   text-align: center;
 
   display: flex;

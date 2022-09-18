@@ -27,6 +27,14 @@
     ],
     "ep": [
       {
+        "title": "150 Bulletz 2K13 EP",
+        "slug": "150-bulletz-2k13",
+        "year": 2022,
+        "genres": ["Grime", "15BPM", "Bass", "Experimental"],
+        "bandcampId": "3692302418",
+        "description": "Flipping a handful of mainstream pop tunes into something brand new, this tune is a groovy house earworm that will have you singing \"please don't go!\" for weeks.\n\n Originally produced 2017. Club mix produced 2021. Instrumental + drum track included for the DJ's <3 "
+      },
+      {
         "title": "Begging U Plz Don't Go",
         "slug": "begging-u-plz-dont-go",
         "year": 2021,
@@ -312,8 +320,135 @@
       }
     ],
     "remixes": [],
-    "mixes": []
+    "mixes": [
+      {
+        "title": "L.E.N.G. Noods Radio Mix",
+        "slug": "leng-noods",
+        "year": 2018,
+        "genres": ["Grime", "Techno", "Garage"],
+        "soundcloudId": "539402526",
+        "description": ""
+      },
+      {
+        "title": "Bass God",
+        "slug": "bass-god-mix",
+        "year": 2011,
+        "genres": ["150BPM", "Grime", "Dubstep"],
+        "soundcloudId": "3692091829",
+        "description": "Two alternate versions of tunes from the previous year: 'Pulse Claw' is a Pulse X style edit of 'The Claw' from Molting Ep while 'Takyon Bass Mix' is a stripped-down instrumental mix of College Hill's remix of Death Grips - Takyon. Free download."
+      },
+      {
+        "title": "Top Producers, Not Commercial",
+        "slug": "top-producers-not-commercial",
+        "year": 2014,
+        "genres": ["Remixes", "Grime", "Dubstep", "Club"],
+        "soundcloudId": "136392576",
+        "description": "A mix 100% consisting of refixes, edits, and bootleg remixes."
+      },
+      {
+        "title": "150 Style Pt. 1",
+        "slug": "150-style-pt-1",
+        "year": 2011,
+        "genres": ["150BPM", "Grime", "Dubstep", "Bass"],
+        "soundcloudId": "1344016984",
+        "description": "A mix of 150BPM bass music. The first of several."
+      },
+      {
+        "title": "150 Style Pt. 2",
+        "slug": "150-style-pt-2",
+        "year": 2012,
+        "genres": ["150BPM", "Grime", "Dubstep", "Bass"],
+        "soundcloudId": "705051133",
+        "description": "A mix of 150BPM bass music. The second of several."
+      },
+      {
+        "title": "150 Style Pt. 3",
+        "slug": "150-style-pt-3",
+        "year": 2012,
+        "genres": ["150BPM", "Grime", "Dubstep", "Bass"],
+        "soundcloudId": "1345914634",
+        "description": "A mix of 150BPM bass music. The third of several."
+      },
+      {
+        "title": "150 Style Pt. 4",
+        "slug": "150-style-pt-4",
+        "year": 2013,
+        "genres": ["150BPM", "Grime", "Dubstep", "Bass"],
+        "soundcloudId": "124336542",
+        "description": "A mix of 150BPM bass music. The fourth of several."
+      },
+      {
+        "title": "Homme Du Feu Pt. 1",
+        "slug": "homme-du-feu-pt-1",
+        "year": 2011,
+        "genres": ["Dubstep", "Bass"],
+        "soundcloudId": "1337220583",
+        "description": ""
+      },
+      {
+        "title": "Homme Du Feu Pt. 2",
+        "slug": "homme-du-feu-pt-2",
+        "year": 2011,
+        "genres": ["Dubstep", "Bass"],
+        "soundcloudId": "1337206447",
+        "description": ""
+      },
+      {
+        "title": "shivering bass",
+        "slug": "shivering-bass",
+        "year": 2022,
+        "genres": ["Dubstep", "Bass"],
+        "soundcloudId": "1332115564",
+        "description": ""
+      },
+      {
+        "title": "coming out",
+        "slug": "coming-out",
+        "year": 2022,
+        "genres": ["House", "Techno", "Garage"],
+        "soundcloudId": "1328126071",
+        "description": ""
+      },
+      {
+        "title": "the right temperature",
+        "slug": "the-right-temperature",
+        "year": 2022,
+        "genres": ["Techno", "House", "Bass"],
+        "soundcloudId": "1328402665",
+        "description": ""
+      }
+    ]
   },
-  "morphologist": {},
-  "fury": {}
+  "morphologist": {
+
+  },
+  "fury": {
+    "mixes": [
+      {
+        "title": "Live @ L.E.N.G.",
+        "slug": "live-at-leng",
+        "year": 2017,
+        "genres": ["Footwork", "Juke", "Bass"],
+        "soundcloudId": "666002141",
+
+        "description": "Two alternate versions of tunes from the previous year: 'Pulse Claw' is a Pulse X style edit of 'The Claw' from Molting Ep while 'Takyon Bass Mix' is a stripped-down instrumental mix of College Hill's remix of Death Grips - Takyon. Free download."
+      },
+      {
+        "title": "Live @ U Street",
+        "slug": "live-at-u-street",
+        "year": 2012,
+         "genres": ["Footwork", "Juke", "Bass"],
+        "bandcampId": "3692091829",
+        "description": "Two alternate versions of tunes from the previous year: 'Pulse Claw' is a Pulse X style edit of 'The Claw' from Molting Ep while 'Takyon Bass Mix' is a stripped-down instrumental mix of College Hill's remix of Death Grips - Takyon. Free download."
+      },
+      {
+        "title": "Fury x Kush Jones Rinse Mix",
+        "slug": "kush-jones-rinse-mix",
+        "year": 2012,
+        "genres": ["Footwork", "Juke", "Bass"],
+        "bandcampId": "3692091829",
+        "description": "Two alternate versions of tunes from the previous year: 'Pulse Claw' is a Pulse X style edit of 'The Claw' from Molting Ep while 'Takyon Bass Mix' is a stripped-down instrumental mix of College Hill's remix of Death Grips - Takyon. Free download."
+      }
+    ]
+  }
 }

@@ -1,10 +1,10 @@
 import React from 'react';
-import Portfolio from '../components/virtual-photography/Portfolio/Portfolio';
 import Header from '../components/Header';
-
-import config from '../photos.json';
+import Portfolio from '../components/virtual-photography/Portfolio/Portfolio';
 
 import './VirtualPhotography.scss';
+
+import config from '../photos.json';
 
 function App() {
   return (

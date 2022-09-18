@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { titleCase } from 'title-case';
 import Header from '../Header';
 import YouTubeEmbed from '../../embed/YouTube';
 import BandcampEmbed from '../../embed/Bandcamp';
+import SoundcloudEmbed from '../../embed/Soundcloud';
 
 import './ReleasePage.scss';
 
@@ -19,19 +19,21 @@ function ReleasePage({ pageContext }) {
     youtubeId,
     youtubeOptions,
     bandcampId,
+    bandcampOptions,
+    soundcloudId,
+    alias,
     slug,
   } = pageContext.releaseData;
 
   const artUrl = `/images/music/${pageContext.alias}/${slug}.jpg`;
-  const aliasName = titleCase(pageContext.alias.replace('-', ' '));
 
   return (
-    <div className="releasePage">
-      <div className="releasePage-content" style={{ backgroundImage: `url(${artUrl})` }}>
-        <Header />
+    <div className="releasePage" style={{ backgroundImage: `url(${artUrl})` }}>
+      <Header />
+      <div className="releasePage-content">
         <div className="releasePage-headerContainer">
         <div className="releasePage-header">
-          <h2 className="releasePage-alias">{aliasName}</h2>
+          <h2 className="releasePage-alias">{pageContext.artistName.toLowerCase()}</h2>
           {!!title && <h2 className="releasePage-title">{title}</h2>}
           {!!year && (
             <h3 className="releasePage-year">
@@ -59,15 +61,19 @@ function ReleasePage({ pageContext }) {
           />}
         </div>
         </div>
+        <div className="releasePage-embed">
+        {bandcampId && <BandcampEmbed albumId={bandcampId} options={bandcampOptions} />}
         {youtubeId && <YouTubeEmbed videoId={youtubeId} options={youtubeOptions} />}
-
-        {bandcampId && (
-          <div className="releasePage-bandcamp">
-            <BandcampEmbed albumId={bandcampId} size="large" options={{ width: '700px' }} />
-          </div>
-        )}
+        {soundcloudId && <SoundcloudEmbed
+          trackId={soundcloudId}
+          title={title}
+          artist={alias}
+          artistName={pageContext.artistName}
+          slug={slug}
+          size='m'
+        />}
+        </div>
       </div>
-
     </div>
   );
 }
@@ -86,6 +92,7 @@ ReleasePage.propTypes = {
       youtubeOptions: PropTypes.object, // eslint-disable-line react/forbid-prop-types
     }).isRequired,
     alias: PropTypes.string.isRequired,
+    artistName: PropTypes.string.isRequired,
   }).isRequired,
 };
 

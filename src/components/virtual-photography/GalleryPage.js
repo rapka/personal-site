@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
 import isEmpty from 'lodash/isEmpty';
+
 import Header from '../Header';
 import Modal from './Portfolio/Modal';
 import Gallery from './Portfolio/Gallery';

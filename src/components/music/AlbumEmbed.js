@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import YouTubeEmbed from '../../embed/YouTube';
 import BandcampEmbed from '../../embed/Bandcamp';
+import SoundcloudEmbed from '../../embed/Soundcloud';
 
 import './AlbumEmbed.scss';
 
@@ -15,8 +16,10 @@ function AlbumEmbed({
   youtubeOptions,
   bandcampId,
   bandcampOptions,
+  soundcloudId,
   slug,
   alias,
+  artistName,
   size,
   type,
 }) {
@@ -31,6 +34,7 @@ function AlbumEmbed({
       </Link>
       {bandcampId && <BandcampEmbed albumId={bandcampId} options={bandcampOptions} />}
       {youtubeId && <YouTubeEmbed videoId={youtubeId} options={youtubeOptions} />}
+      {false && soundcloudId && <SoundcloudEmbed trackId={soundcloudId} title={title} artist={alias} artistName={artistName} slug={slug} />}
     </div>
   );
 }
@@ -42,12 +46,14 @@ AlbumEmbed.propTypes = {
   bandcampOptions: PropTypes.shape({
     size: PropTypes.string,
   }),
+  soundcloudId: PropTypes.string,
   recordLabel: PropTypes.string,
   title: PropTypes.string,
   year: PropTypes.number,
   genres: PropTypes.arrayOf(PropTypes.string),
   slug: PropTypes.string.isRequired,
   alias: PropTypes.string.isRequired,
+  artistName: PropTypes.string.isRequired,
   size: PropTypes.string,
   type: PropTypes.string,
 };
@@ -59,6 +65,7 @@ AlbumEmbed.defaultProps = {
   bandcampOptions: {},
   title: '',
   recordLabel: '',
+  soundcloudId: '',
   year: undefined,
   genres: [],
   size: 'medium',
