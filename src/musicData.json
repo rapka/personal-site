@@ -27,12 +27,20 @@
     ],
     "ep": [
       {
+        "title": "Unfiinished Suicide Note EP",
+        "slug": "unfiinished-suicide-note",
+        "year": 2022,
+        "genres": ["Grime", "15BPM", "Bass", "Experimental"],
+        "bandcampId": "1464559028",
+        "description": "Another set of 150 BPM grimey bangers! These distorted, experimental beats date back to the sessions that led to the 2016 \"Murder-Suicide\" EP on Slit Jockey Records. Re-edited and remastered in 2022, these bass-heavy, minimal tunes are some of the most challenging tracks in the College Hill catalog. The first two tracks take the lo-fi concept to an extreme, occasionally descending into pure noise while the latter tracks blend grime and dubstep with elements of alternative and punk rock."
+      },
+      {
         "title": "150 Bulletz 2K13 EP",
         "slug": "150-bulletz-2k13",
         "year": 2022,
         "genres": ["Grime", "15BPM", "Bass", "Experimental"],
         "bandcampId": "3692302418",
-        "description": "Flipping a handful of mainstream pop tunes into something brand new, this tune is a groovy house earworm that will have you singing \"please don't go!\" for weeks.\n\n Originally produced 2017. Club mix produced 2021. Instrumental + drum track included for the DJ's <3 "
+        "description": ""
       },
       {
         "title": "Begging U Plz Don't Go",
@@ -40,7 +48,7 @@
         "year": 2021,
         "genres": ["House", "Baltimore Club"],
         "bandcampId": "3062325382",
-        "description": "Flipping a handful of mainstream pop tunes into something brand new, this tune is a groovy house earworm that will have you singing \"please don't go!\" for weeks.\n\n Originally produced 2017. Club mix produced 2021. Instrumental + drum track included for the DJ's <3 "
+        "description": "Flipping a handful of mainstream pop tunes into something brand new, this tune is a groovy house earworm that will have you singing \"Please don't go!\" for weeks.\n\n Originally produced 2017. Club mix produced 2021. Instrumental + drum track included for the DJ's <3 "
       },
       {
         "title": "Ultraviolence EP",
@@ -84,6 +92,22 @@
       }
     ],
     "single": [
+      {
+        "title": "Unicorn Hunter Hunter",
+        "slug": "unicorn-hunter-hunter",
+        "year": 2022,
+        "genres": ["Dubstep", "Grime", "Breakstep"],
+        "bandcampId": "2021529195",
+        "description": "Produced in 2018. Retouched & remastered in 2022. Artwork by College Hill using Stable Diffusion."
+      },
+      {
+        "title": "Medusa Dread Rmx",
+        "slug": "medusa-dread-rmx",
+        "year": 2022,
+        "genres": ["UK Garage", "2-Step", "Trap"],
+        "bandcampId": "1914797540",
+        "description": "2-step mixes of \"Medusa Dread\" off the \"Stranger in Gotham\" album. Original version produced 2017, remixes produced 2021. Artwork by College Hill using Stable Diffusion."
+      },
       {
         "title": "I Don't Know You, I Don't Belong",
         "slug": "i-dont-know-you-i-dont-belong",
