@@ -16,6 +16,15 @@ function CollegeHill() {
       artistName="College Hill"
     />
   ));
+  const remixComponents = data.remixes.map((releaseData) => (
+    <AlbumEmbed
+      {...releaseData}
+      type="album"
+      alias="college-hill"
+      size="large"
+      artistName="College Hill"
+    />
+  ));
   const epComponents = data.ep.map((releaseData) => (
     <AlbumEmbed
       {...releaseData}
@@ -53,6 +62,8 @@ function CollegeHill() {
       </h3>
       <h4 className="alias-releaseType">Albums</h4>
       <div className="alias-releases alias-albums">{albumComponents}</div>
+      <h4 className="alias-releaseType">Remixes</h4>
+      <div className="alias-releases alias-albums">{remixComponents}</div>
       <h4 className="alias-releaseType">EPs</h4>
       <div className="alias-releases alias-eps">{epComponents}</div>
       <h4 className="alias-releaseType">Singles</h4>

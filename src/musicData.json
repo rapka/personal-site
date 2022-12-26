@@ -6,12 +6,11 @@
         "slug": "salvation",
         "year": 2022,
         "genres": ["Grime", "150BPM", "Experimental", "Bass"],
-        "bandcampId": "948407697",
+        "bandcampId": "2086370122",
         "description": "After several full length compilations, remix albums and side projects, College Hill finally releases his debut album of original material: SALVATION. These tracks were originally written between 2011 and 2015 but were left largely incomplete and eventually forgotten until they were rediscovered in 2016. They were then completed, remixed, remastered, and finally compiled into this album in a digital \"salvage\" operation. A decade removed from the golden era of dubstep, College Hill maintains the tradition of freewheeling experimentation established by the pioneers of the genre by bumping the tempo up to 150BPM and incorporating aspects of IDM, grime, and trap. The result is minimal, melodic album suite of music that is emblematic of College Hill's singular approach to bass music. Highlights include \"phthalo\", a blissful couple of minutes of twinkling synths and skittering drums as well as the finale \"American Youth Part 2\" which closes with an ethereal bolero rhythm.",
         "bandcampOptions": {
           "size": "medium"
-        },
-        "youtubeId": "wVvy1dLo19s"
+        }
       },
       {
         "title": "Overground Underground",
@@ -34,8 +33,8 @@
         "bandcampId": "3658324833",
         "bandcampOptions": {
           "size": "large"
-        }
-      }
+        },
+      },
     ],
     "ep": [
       {
