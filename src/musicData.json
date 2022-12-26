@@ -2,15 +2,16 @@
   "college-hill": {
     "album": [
       {
-        "title": "Rico Suavve Phaze 1: A Stranger In Gotham",
-        "slug": "a-stranger-in-gotham",
-        "year": 2018,
-        "genres": ["Trap", "Hip-Hop", "Instrumental"],
-        "description": "The first in a series of beat tapes recorded under the 'Rico Suavve' pseudonym, A Stranger in Gotham is a collection of 12 instrumental trap tracks. Even more sample-heavy than a usual College Hill release, these tracks prominently sample other dubstep and dance music producers in a way that would be transgressive when viewed as a traditional bass music release. As such, these tracks were produced from a crate digging hip-hop perspective, a outsider's. Free download. Track 10 is a partial remake of the instrumental to 21 Savage - Bank Account.",
-        "bandcampId": "3658324833",
+        "title": "Salvation",
+        "slug": "salvation",
+        "year": 2022,
+        "genres": ["Grime", "150BPM", "Experimental", "Bass"],
+        "bandcampId": "948407697",
+        "description": "After several full length compilations, remix albums and side projects, College Hill finally releases his debut album of original material: SALVATION. These tracks were originally written between 2011 and 2015 but were left largely incomplete and eventually forgotten until they were rediscovered in 2016. They were then completed, remixed, remastered, and finally compiled into this album in a digital \"salvage\" operation. A decade removed from the golden era of dubstep, College Hill maintains the tradition of freewheeling experimentation established by the pioneers of the genre by bumping the tempo up to 150BPM and incorporating aspects of IDM, grime, and trap. The result is minimal, melodic album suite of music that is emblematic of College Hill's singular approach to bass music. Highlights include \"phthalo\", a blissful couple of minutes of twinkling synths and skittering drums as well as the finale \"American Youth Part 2\" which closes with an ethereal bolero rhythm.",
         "bandcampOptions": {
-          "size": "large"
-        }
+          "size": "medium"
+        },
+        "youtubeId": "wVvy1dLo19s"
       },
       {
         "title": "Overground Underground",
@@ -23,6 +24,17 @@
           "size": "medium"
         },
         "youtubeId": "wVvy1dLo19s"
+      },
+      {
+        "title": "Rico Suavve Phaze 1: A Stranger In Gotham",
+        "slug": "a-stranger-in-gotham",
+        "year": 2018,
+        "genres": ["Trap", "Hip-Hop", "Instrumental"],
+        "description": "The first in a series of beat tapes recorded under the 'Rico Suavve' pseudonym, A Stranger in Gotham is a collection of 12 instrumental trap tracks. Even more sample-heavy than a usual College Hill release, these tracks prominently sample other dubstep and dance music producers in a way that would be transgressive when viewed as a traditional bass music release. As such, these tracks were produced from a crate digging hip-hop perspective, a outsider's. Free download. Track 10 is a partial remake of the instrumental to 21 Savage - Bank Account.",
+        "bandcampId": "3658324833",
+        "bandcampOptions": {
+          "size": "large"
+        }
       }
     ],
     "ep": [
@@ -92,6 +104,46 @@
       }
     ],
     "single": [
+      {
+        "title": "Five This / Ribcage Hitachi",
+        "slug": "five-this",
+        "year": 2022,
+        "genres": ["Dubstep"],
+        "bandcampId": "531251541",
+        "description": "Two dubstep bangers. Produced 2017, retouched & remastered 2022."
+      },
+      {
+        "title": "Israfel / Ramiel",
+        "slug": "israfel-ramiel",
+        "year": 2022,
+        "genres": ["Grime", "Dubstep", "Experimental"],
+        "bandcampId": "1918172216",
+        "description": "College Hill's biggest dubplate finally gets a release. Originally conceived as part of a massive Neon Genesis Evangelion-themed bass music double album, these seven minute epics were produced in 2014 at the peak of the new wave grime / deconstructed club movements. Heavily distorted bass, tribal percussion, and extended weightless sections feature prominently in both tracks alongside College Hill's signature melodic sensibilities."
+      },
+      {
+        "title": "Antifa Jungle",
+        "slug": "antifa-jungle",
+        "year": 2022,
+        "genres": ["Jungle", "Drum & Bass"],
+        "bandcampId": "1918172216",
+        "description": "Produced 2019-2021. FIGHT FOR SOCIALISM OVER FASCISM"
+      },
+      {
+        "title": "Wavs You've Been Craving",
+        "slug": "wavs-youve-been-craving",
+        "year": 2022,
+        "genres": ["Deep House", "Filter House"],
+        "bandcampId": "2368752288",
+        "description": "College Hill is back on that house ish! Is the floor sticky or something?! START MOVING YOUR FEET! * Contains a hidden bonus track ;)"
+      },
+      {
+        "title": "Deady Heat Wavs",
+        "slug": "deadly-heat-wavs",
+        "year": 2022,
+        "genres": ["House", "UK Funky", "Funk"],
+        "bandcampId": "972704691",
+        "description": "A pair of house heaters based around flipping African funk samples in a hybrid UK Funky/French Touch style. Produced 2019, retouched & remastered 2021."
+      },
       {
         "title": "Unicorn Hunter Hunter",
         "slug": "unicorn-hunter-hunter",
@@ -345,12 +397,20 @@
     ],
     "remixes": [
       {
+        "title": "Unauthorized 2: Remixes 2012-2016",
+        "slug": "unauthorized-2",
+        "year": 2022,
+        "genres": ["Grime", "Dubstep", "Bass", "Trap"],
+        "bandcampId": "1210464155",
+        "description": "Even more remixes I've done over the years, now on Bandcamp! Originally produced 2012-2016, newly remastered in 2022 along with with new artwork."
+      },
+      {
         "title": "Nirvana In Dub",
         "slug": "nirvana-in-dub",
         "year": 2022,
         "genres": ["Dub", "Grunge", "Reggae", "Experimental"],
         "bandcampId": "3692091829",
-        "description": ""
+        "description": "Dropping on the 31st anniversary of Nevermind's original release, College Hill gives Nirvana a proper dub treatment! Pulling material from all of their albums, these nine classic grunge songs have be re-imagined in a dub style."
       },
       {
         "title": "Unauthorized: Remixes 2009-2011",
@@ -358,15 +418,7 @@
         "year": 2012,
         "genres": ["Grime", "Dubstep", "Bass"],
         "bandcampId": "2953467339",
-        "description": ""
-      },
-      {
-        "title": "808 Jihad",
-        "slug": "808-jihad",
-        "year": 2016,
-        "genres": ["Piano", "Covers", "Instrumental", "Trap"],
-        "bandcampId": "1934937929",
-        "description": ""
+        "description": "Various remixes I've done over the years, now on Bandcamp. Originally produced 2009-2022, remastered in 2022 along with with new artwork."
       },
       {
         "title": "College Hill vs The World 2",
@@ -374,7 +426,7 @@
         "year": 2014,
         "genres": ["Grime", "150BPM", "Instrumental"],
         "bandcampId": "2057295027",
-        "description": ""
+        "description": "College Hill reworks more of his dubs into classic tunes. \"It's time to make my move!\""
       },
       {
         "title": "College Hill vs The World",
@@ -382,7 +434,15 @@
         "year": 2013,
         "genres": ["Grime", "150BPM", "Instrumental"],
         "bandcampId": "1951757268",
-        "description": ""
+        "description": "College Hill reworks a selection of his unreleased dubs into classic grime tunes."
+      },
+      {
+        "title": "808 Jihad",
+        "slug": "808-jihad",
+        "year": 2016,
+        "genres": ["Piano", "Covers", "Instrumental", "Trap"],
+        "bandcampId": "1934937929",
+        "description": "Two arrangements of popular trap songs for piano and drums: Future - Blow a Bag and Young Thug - Best Friend."
       }
     ],
     "mixes": [
