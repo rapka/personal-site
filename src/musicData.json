@@ -544,7 +544,12 @@
     ]
   },
   "morphologist": {
-
+    "morphologistAlbums": [
+      {
+        "title": "Extant Africana",
+        "year": 2023
+      }
+    ]
   },
   "fury": {
     "mixes": [

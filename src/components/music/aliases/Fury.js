@@ -8,8 +8,7 @@ function Fury() {
     <section className="alias-container" id="alias-fury">
       <h4 className="alias-title">Fury</h4>
       <h5 className="alias-description">Footwork.</h5>
-      <h4 className="alias-releaseType">Albums</h4>
-      <p>TODO</p>
+      <h5 className="alias-description">Coming soon.</h5>
     </section>
   );
 }

@@ -36,6 +36,13 @@
   font-style: normal;
 }
 
+@font-face {
+	font-family: 'Montreal';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/montreal.ttf') format('truetype');
+}
+
 body {
 	margin: 0;
 	font-family: 'Cutive', sans-serif;

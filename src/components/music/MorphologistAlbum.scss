@@ -1,0 +1,70 @@
+.morphologistAlbum {
+  font-family: 'Montreal';
+  color: white;
+  margin: 0 0.5rem 0 0;
+  // max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  position: relative;
+}
+
+.morphologistAlbum-text {
+  font-size: 7rem;
+  line-height: 0.5;
+  letter-spacing: 80px;
+  position: absolute;
+}
+
+.morphologistAlbum-trackArtContainer {
+  display: flex;
+  flex-wrap: wrap;
+  // padding: 20px;
+  max-width: 100%;
+}
+
+.morphologistAlbum-trackArt {
+  // flex: 0 0 50%;
+  width: 25%;
+}
+
+.morphologistAlbum-title {
+  margin: 0;
+
+  /*text-decoration: underline;*/
+}
+
+.morphologistAlbum-label {
+  font-size: 1.5rem;
+}
+
+.morphologistAlbum-year {
+  margin: 8px 0;
+  text-align: right;
+  font-size: 5rem;
+}
+
+.morphologistAlbum-genres {
+  font-size: 1.125rem;
+  margin-bottom: 6px;
+}
+
+.morphologistAlbum-desc {
+  font-size: 1.15rem;
+}
+
+.morphologistAlbum-artLink {
+  font-size: 0;
+}
+
+.morphologistAlbum-art {
+  display: none;
+}
+
+.morphologistAlbum-release {
+  text-align: center;
+  font-family: 'Montreal';
+}
