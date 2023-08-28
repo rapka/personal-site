@@ -9,10 +9,12 @@ import './Scope.css';
 
 const isBrowser = typeof window !== 'undefined';
 
-const PADDING = 50 * 2; // 50px on each side
-let WIDTH = 1920 / 2;
-let HEIGHT = 1080;
+const PADDING = 0;
+const HEIGHT = 128;
+const Y_OFFSET = HEIGHT / 2;
+
 let H = 0;
+let WIDTH = 960 - PADDING;
 
 class Scope extends React.Component {
   constructor(props) {
@@ -26,6 +28,10 @@ class Scope extends React.Component {
         this.setState((prevState) => ({ playing: !prevState.playing }));
       }
     };
+    this.playClick = () => {
+      this.setState((prevState) => ({ playing: !prevState.playing }));
+    };
+
     this.audioCtx = null;
 
     if (isBrowser) {
@@ -40,7 +46,6 @@ class Scope extends React.Component {
     // Add spacebar hotkey
     document.addEventListener('keydown', this.playEvent, false);
 
-    HEIGHT = window.innerHeight;
     WIDTH = window.innerWidth - PADDING;
     const audioElement = this.player.current;
     const { audioCtx } = this;
@@ -70,7 +75,6 @@ class Scope extends React.Component {
     const draw = () => {
       const { colors, rotationOffset, rotateColors } = this.props;
       const { playing } = this.state;
-      HEIGHT = window.innerHeight;
       WIDTH = window.innerWidth - PADDING;
 
       if (playing) {
@@ -103,7 +107,7 @@ class Scope extends React.Component {
       canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
       canvasCtx.lineWidth = Math.max(bassValue / 100, 2);
 
-      const Y_OFFSET = 180;
+
 
       times(colors.length, (index) => {
         const rotatedH = ((H + rotationOffset) * index) % 360;
@@ -155,7 +159,6 @@ class Scope extends React.Component {
 
     const { playing } = this.state;
 
-    HEIGHT = window.innerHeight;
     WIDTH = window.innerWidth - PADDING;
 
     if (!prevState.playing && playing) {
@@ -177,13 +180,18 @@ class Scope extends React.Component {
 
   render() {
     const { audioSrc } = this.props;
+    const clickText = this.state.playing ? '⏯️ Pause demo' : '⏯️ Click here to play demo';
 
     return (
-      <div className="viz-container">
-        <canvas id="canvas" />
-        <img id="scope-icon" src="/favicon.png" alt="" />
-        <div id="scope-blurtext">blurs on beat!</div>
-        <audio ref={this.player} src={audioSrc} type="audio/mpeg" preload="auto" loop />
+      <div className="scope-container">
+        <div id="scope-blurtext" onClick={this.playClick}>({clickText})</div>
+        <div className="viz-container">
+          <div id="scope-icon">
+            {'🔊'}
+          </div>
+          <canvas id="canvas" />
+          <audio ref={this.player} src={audioSrc} type="audio/mpeg" preload="auto" loop />
+        </div>
       </div>
     );
   }

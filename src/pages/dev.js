@@ -125,9 +125,8 @@ function Dev() {
               {' '}
               <code>webgl</code>
             </li>
-            <li className="devPage-detail">live demo!</li>
             <li className="devPage-scope">
-              {/*<Scope />*/}
+              <Scope />
             </li>
           </ul>
         </li>
@@ -136,7 +135,7 @@ function Dev() {
             title="ESRGAN scripting tools for batch texture upscaling"
             url=""
             githubUrl="dolphin-textures"
-            year="201?"
+            year="2019"
           />
           <ul className="devPage-details">
             <li className="devPage-detail">
@@ -144,7 +143,7 @@ function Dev() {
               -based scripts used for mass upscaling game textures with ESRGAN
             </li>
             <li className="devPage-detail">developed logic to upscale alpha layers in textures</li>
-            <li className="devPage-detail">See mods page for more info</li>
+            <li className="devPage-detail">See <a href="/mods">mods page</a> for more info</li>
           </ul>
         </li>
         <li className="devPage-item">
