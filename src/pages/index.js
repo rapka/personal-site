@@ -9,20 +9,24 @@ function IndexPage() {
     <>
       <title>Home Page</title>
       <Header />
+      <br />
       <main className="indexPage">
-        <br />
-        <h3>Hello, friend!</h3>
-        <h3>This is the personal website for Rae &quot;College Hill&quot; Adjogah.</h3>
+        <h3>hi</h3>
+        <p>my name's Rae and this is my website</p>
         <p>
-          I love
-          {' '}
-          <Link to="/music/">making music</Link>
-          ,
-          {' '}
-          <Link to="/dev/">writing code</Link>
-          , and
-          {' '}
-          <Link to="/mods/">video games</Link>
+          i make things like
+          <br />
+          <br />
+          <Link to="/music/">electronic music</Link>
+          <br />
+          <br />
+          <Link to="/dev/">code</Link>
+          <br />
+          <br />
+          <Link to="/mods/">video game mods</Link>
+          <br />
+          <br />
+          <Link to="/virtual-photography/">video game screenshots</Link>
         </p>
       </main>
     </>
