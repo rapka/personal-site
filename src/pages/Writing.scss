@@ -1,0 +1,57 @@
+.writingPage {
+	font-size: 1.25rem;
+	position: relative;
+}
+
+.writingPage a:hover {
+	color: var(--darkGreen);
+}
+
+.writingPage-pageTitle {
+	font-size: 2.5rem;
+	text-align: center;
+	letter-spacing: 10px;
+	text-transform: lowercase;
+}
+
+.writingPage-itemList {
+	margin: 1rem 50px;
+}
+
+.writingPage-item {
+	margin: 12px 0;
+	list-style-type: '~$ ';
+}
+
+.writingPage-scope {
+	list-style-type: none;
+	/*position: relative;*/
+}
+
+.writingPage-detail {
+	list-style-type: '~# ';
+	padding-top: 4px;
+}
+
+.writingPage-siteTitle {
+	font-size: 1.75rem;
+}
+
+.writingPage-details {
+	font-size: 1.25rem;
+}
+
+.writingPage-bloody {
+	color: #ED3838;
+	display: inline;
+	letter-spacing: 5px;
+	text-shadow:
+	0px 4px 1px #300000,
+	0px 6px 1px #400000,
+	0px 8px 1px #500000,
+	0px 10px 1px #600000,
+	0px 12px 1px #700000,
+	0px 14px 1px #800000,
+	0px 16px 1px #900000,
+	0px 18px 1px #A00000;
+}
