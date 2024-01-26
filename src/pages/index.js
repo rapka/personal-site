@@ -11,7 +11,7 @@ function IndexPage() {
       <Header />
       <br />
       <main className="indexPage">
-        <h3>hi</h3>
+        <h3>hi!</h3>
         <p>my name's Rae and this is my website</p>
         <p>
           i make things like
