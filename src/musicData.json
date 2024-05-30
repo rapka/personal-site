@@ -546,11 +546,77 @@
     "morphologistAlbums": [
       {
         "title": "Extant Africana",
-        "year": 2023
+        "year": 2023,
+        "description": ""
+      },
+      {
+        "title": "Extant Americana",
+        "year": 2023,
+        "description": ""
+      },
+      {
+        "title": "Extant Aquatica",
+        "year": 2023,
+        "description": ""
+      },
+      {
+        "title": "Extant Oceania",
+        "year": 2023,
+        "description": ""
       }
     ]
   },
   "fury": {
+    "albums": [
+      {
+        "title": "34 Minutes of Fury",
+        "slug": "34_minutes_of_fury",
+        "year": 2024,
+        "description": ""
+      },
+      {
+        "title": "15 Minutes of Fury Instrumentals",
+        "slug": "15_minutes_of_fury",
+        "year": 2024,
+        "description": ""
+      },
+      {
+        "title": "44 Minutes",
+        "slug": "44_minutes",
+        "year": 2024,
+        "description": ""
+      },
+      {
+        "title": "31 Minutes",
+        "slug": "31_minutes",
+        "year": 2024,
+        "description": ""
+      },
+      {
+        "title": "Fifty One [Redacted]",
+        "slug": "fifty_one",
+        "year": 2024,
+        "description": ""
+      },
+      {
+        "title": "Fifty Five",
+        "slug": "fifty_five",
+        "year": 2024,
+        "description": ""
+      },
+      {
+        "title": "Forth",
+        "slug": "forth",
+        "year": 2024,
+        "description": ""
+      },
+      {
+        "title": "Faint",
+        "slug": "faint",
+        "year": 2024,
+        "description": ""
+      }
+    ],
     "mixes": [
       {
         "title": "Live @ L.E.N.G.",
@@ -558,7 +624,6 @@
         "year": 2017,
         "genres": ["Footwork", "Juke", "Bass"],
         "soundcloudId": "666002141",
-
         "description": ""
       },
       {
