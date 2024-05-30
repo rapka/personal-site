@@ -26,12 +26,12 @@
 	font-family: 'Cutive';
 	font-style: normal;
 	font-weight: 400;
-	src: url('/cutive.ttf') format('truetype');
+	src: url('/fonts/cutive.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Red Hat';
-  src: url('/redhat.woff2') format('woff2');
+  src: url('/fonts/redhat.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -40,7 +40,14 @@
 	font-family: 'Montreal';
 	font-style: normal;
 	font-weight: 400;
-	src: url('/montreal.ttf') format('truetype');
+	src: url('/fonts/montreal.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Digital Dream';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/Digital dream.ttf') format('truetype');
 }
 
 body {
