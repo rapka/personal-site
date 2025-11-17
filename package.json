@@ -29,6 +29,10 @@
   "bugs": {
     "url": "https://github.com/rapka/personal-site/issues"
   },
+  "engines" : { 
+    "npm" : "~11.6.2",
+    "node" : "~24.11.1"
+  },
   "homepage": "https://github.com/rapka/personal-site#readme",
   "dependencies": {
     "array-move": "^4.0.0",
