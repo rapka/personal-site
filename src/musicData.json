@@ -525,20 +525,12 @@
         "description": "Dropping on the 31st anniversary of Nevermind's original release, College Hill gives Nirvana a proper dub treatment! Pulling material from all of their albums, these nine classic grunge songs have be re-imagined in a dub style."
       },
       {
-        "title": "College Hill vs The World 2",
-        "slug": "college-hill-vs-the-world-2",
-        "year": 2014,
-        "genres": ["Grime", "150BPM", "Instrumental"],
-        "bandcampId": "2057295027",
-        "description": "College Hill reworks more of her dubs into classic tunes. \"It's time to make my move!\""
-      },
-      {
-        "title": "College Hill vs The World",
-        "slug": "college-hill-vs-the-world",
-        "year": 2013,
-        "genres": ["Grime", "150BPM", "Instrumental"],
-        "bandcampId": "1951757268",
-        "description": "College Hill reworks a selection of her unreleased dubs into classic grime tunes."
+        "title": "College Hill vs The Galaxy",
+        "slug": "college-hill-vs-the-galaxy",
+        "year": 2024,
+        "genres": ["Grime", "150BPM", "Instrumental", "Bootlegs"],
+        "bandcampId": "82190274",
+        "description": "An updated compilation of College Hill vs. The World Volumes 1 & 2, released in 2013 and 2014 respectively. These tracks use elements from original College Hill tunes to recreate classic grime tracks, blurring the line between remix, cover, and mashup. This remastered release features two additional tracks produced in 2015 and 2018."
       },
       {
         "title": "808 Jihad",
