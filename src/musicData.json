@@ -2,6 +2,72 @@
   "college-hill": {
     "album": [
       {
+        "title": "Feminization Loops LP",
+        "slug": "feminization-loops-lp",
+        "year": 2025,
+        "genres": ["Club", "Dub Techno", "Breakbeat", "Bass"],
+        "bandcampId": "3929036151",
+        "description": "Feiminzation Loops is the remix album companion to Transition Loops LP. Dedicated to the memory of Jessie Riot, The Immortal.",
+        "bandcampOptions": {
+          "size": "medium"
+        }
+      },
+      {
+        "title": "Transition Loops LP",
+        "slug": "transition-loops-lp",
+        "year": 2025,
+        "genres": ["Club", "Dub Techno", "Breakbeat", "Bass"],
+        "bandcampId": "2443156657",
+        "description": "This is my gender album and the 5th College Hill LP of 2025. Composed of equal parts Baltimore club, dub techno, funk, breaks, and estradiol.",
+        "bandcampOptions": {
+          "size": "medium"
+        }
+      },
+      {
+        "title": "Assimilation Loops LP",
+        "slug": "assimilation-loops-lp",
+        "year": 2025,
+        "genres": ["Club", "Dub Techno", "Funk", "Breakbeat"],
+        "bandcampId": "1604827881",
+        "description": "My fourth album of 2025! Assimilation Loops is the remix album of the Miscegenation Loops LP released in March. Each new mix expands on the original version with more sonic exploration of mixing club music with dub techno and a smattering of other genres while adding politically charged samples from the likes of James Baldwin and Michael Parenti.",
+        "bandcampOptions": {
+          "size": "medium"
+        }
+      },
+      {
+        "title": "Reification Loops LP",
+        "slug": "reification-loops-lp",
+        "year": 2025,
+        "genres": ["Club", "Dub Techno", "Breakbeat", "Dubstep"],
+        "bandcampId": "547354748",
+        "description": "Reification Loops is the second of six original College Hill LPs releasing in 2025! This is a companion remix album to the Alienation Loops LP and features reworks completed throughout 2023 and 2024.",
+        "bandcampOptions": {
+          "size": "medium"
+        }
+      },
+      {
+        "title": "Alienation Loops LP",
+        "slug": "alienation-loops-lp",
+        "year": 2025,
+        "genres": ["Club", "Dub Techno", "Breakbeat", "Dubstep"],
+        "bandcampId": "1026562746",
+        "description": "Alienation Loops is the first of six original College Hill LPs releasing in 2025! The album is composed of left field bass tracks with themes of sex, drugs, and communism. Recorded between 2017-2018, it contains some of my earliest experiments with breakbeat-heavy club tracks.",
+        "bandcampOptions": {
+          "size": "medium"
+        }
+      },
+      {
+        "title": "Loops LP I-VI Versions",
+        "slug": "loops-lp-i-vi-versions",
+        "year": 2025,
+        "genres": ["Bass", "Club", "Dub Techno", "Breakbeat"],
+        "bandcampId": "2492181014",
+        "description": "FInstrumental versions of the 6 College Hill LPs released in 2025. Alienation + Reification + Miscegenation + Assimilation + Transition + Feminization Loops.",
+        "bandcampOptions": {
+          "size": "medium"
+        }
+      },
+      {
         "title": "Salvation",
         "slug": "salvation",
         "year": 2022,
@@ -33,9 +99,33 @@
         "bandcampOptions": {
           "size": "large"
         }
-      }
+      },
     ],
     "ep": [
+      {
+        "title": "T4T Dub EP",
+        "slug": "t4t-dub-ep",
+        "year": 2025,
+        "genres": ["Ambient", "Dancehall", "Drum & Bass"],
+        "bandcampId": "4200179410",
+        "description": "Four psychedelic remixes of \"T4T Dub\" from 2025's Transition Loops LP."
+      },
+      {
+        "title": "Spinny EP",
+        "slug": "spinny-ep",
+        "year": 2025,
+        "genres": ["Dub Techno", "Techno", "Amibent"],
+        "bandcampId": "210790434",
+        "description": "Four trippy dub techno remixes of \"Spinny (First Dress)\" from 2025's Transition Loops LP. Skirt go spinny!!!"
+      },
+      {
+        "title": "Brutalization Loops EP",
+        "slug": "brutalization-loops-ep",
+        "year": 2025,
+        "genres": ["Drub & Bass", "Club", "Bass"],
+        "bandcampId": "1618997893",
+        "description": "Two hard & fast remixes of tracks from the Assimilation Loops LP. \"Glowing One v3\" speeds up \"Abolition Version\" into drum & bass territory while the VIP Club Mix of \"Havana Syndrome\" twists the original into a pounding, psychedelic Jersey club track."
+      },
       {
         "title": "Arbitration",
         "slug": "arbitration",
@@ -110,6 +200,14 @@
       }
     ],
     "single": [
+      {
+        "title": "Stand Up 4 Trans Lives",
+        "slug": "trans-lives",
+        "year": 2025,
+        "genres": ["Dubstep", "Bass", "Grime"],
+        "bandcampId": "1008036038",
+        "description": "STAND UP FIGHT FOR YOUR RIGHTS! THE TIME IS NOW! R U GONNA STAND UP?"
+      },
       {
         "title": "Five This / Ribcage Hitachi",
         "slug": "five-this",
