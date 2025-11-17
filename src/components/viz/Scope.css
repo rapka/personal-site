@@ -25,7 +25,8 @@
   top: 0;
   left: 100px;
   z-index: -5;
-  font-size: 8rem;
+  font-size: 4rem;
+  line-height: 11rem;
   height: 128px;
 }
 
