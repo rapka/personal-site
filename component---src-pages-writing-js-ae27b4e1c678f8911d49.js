@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkpersonal_site=self.webpackChunkpersonal_site||[]).push([[5],{9675:function(e,n,s){s.r(n);var t=s(6540);n.default=function(){return t.createElement("div",{className:"writingPage"},"TODO")}}}]);
+//# sourceMappingURL=component---src-pages-writing-js-ae27b4e1c678f8911d49.js.map
